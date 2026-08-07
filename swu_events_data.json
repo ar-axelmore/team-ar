@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "description": "Base de suivi des évènements Star Wars Unlimited pour Team AR : weeklies à Lille (<20 min), Planetary Qualifiers (<3h de Lille), Sector & Regional Qualifiers en Europe.",
+    "last_updated": "2026-08-07",
+    "notes": "Ludotrotter Lille confirmé hebdomadaire le samedi 10h30 (sauf 15/08/2026, remplacé par un tournoi Gundam TCG ce jour-là). Semaines de septembre au-delà du 05/09 à ajouter dès qu'elles seront publiées sur leur calendrier. Penser à chercher activement les Store Showdown (type intermédiaire, une fois par saison, pas forcément visible dans le flux hebdo classique) chez chaque boutique suivie à chaque rafraîchissement.",
+    "reference_location": "Lille, France",
+    "zone_3h": {
+      "description": "Zone de référence pour le filtre '<3h de route de Lille' appliqué aux Planetary Qualifiers",
+      "includes": [
+        "France: Hauts-de-France, Île-de-France, Normandie, ouest du Grand Est (jusqu'à Reims)",
+        "Belgique: pays entier",
+        "Pays-Bas: sud uniquement (Zélande, Brabant)",
+        "Allemagne: bordure ouest uniquement (jusqu'à Cologne / Aix-la-Chapelle)",
+        "Royaume-Uni: Londres et le Sud-Est",
+        "Luxembourg: pays entier"
+      ],
+      "confirmed_by_user": true
+    },
+    "weekly_zone_km": 20,
+    "weekly_zone_note": "boutiques à Lille même ou à moins de 20 min en voiture",
+    "event_types": {
+      "weekly": "Tournoi hebdomadaire / boutique régulier",
+      "showdown": "Store Showdown : palier intermédiaire entre weekly et Planetary Qualifier, organisé par une boutique une seule fois par saison de jeu (à chercher spécifiquement chez chaque boutique suivie, pas seulement dans le flux hebdo habituel)",
+      "planetary": "Planetary Qualifier",
+      "sector": "Sector Qualifier",
+      "regional": "Regional Qualifier / Championship"
+    }
+  },
+  "sources": {
+    "qualifiers": [
+      {
+        "name": "SWU Competitive Hub - Upcoming Events",
+        "url": "https://www.swu-competitivehub.com/upcoming-events/",
+        "covers": ["planetary", "sector", "regional", "galactic_championship"],
+        "notes": "Compendium communautaire mondial, peut être incomplet ou en retard. Nécessite web_fetch simple (pas de JS requis)."
+      },
+      {
+        "name": "Star Wars Unlimited - Official Event Locator",
+        "url": "https://starwarsunlimited.com/search?type=events",
+        "covers": ["weekly_play", "prerelease", "store_showdown", "planetary", "sector", "regional"],
+        "notes": "Base officielle FFG mais très incomplète pour les weeklies (peu de boutiques françaises y enregistrent leurs sessions). Nécessite le navigateur (Chrome, JS lourd) : renseigner Address='Lille, France', Use My Location=off, Distance en km, Event Type au choix, puis 'Search Events'."
+      }
+    ],
+    "weekly_shops": [
+      {
+        "shop_name": "Au Beau Jeu",
+        "address": "127 rue du Molinel, 59000 Lille",
+        "events_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
+        "shop_site": "https://aubeaujeu.com/evenements/",
+        "cadence": "Hebdomadaire, jeudi 19h15",
+        "format_default": "Premier (Construit)",
+        "fetch_notes": "App JS (TCG Arena). tcg=6 correspond au filtre Star Wars Unlimited. Nécessite navigateur."
+      },
+      {
+        "shop_name": "Ludotrotter Lille",
+        "address": "357 avenue de Dunkerque, Lomme, 59160 Lille",
+        "events_url": "https://lille.ludotrotter.com/",
+        "shop_site": "https://www.billetweb.fr/planning-ludotrotter-lille",
+        "cadence": "Hebdomadaire, samedi 10h30 ('SWU - Tournoi Boutique'), sauf semaines où un autre TCG occupe le créneau (ex. 15/08/2026 : Gundam)",
+        "format_default": "Premier (Construit)",
+        "fetch_notes": "Deux couches sur lille.ludotrotter.com : le widget FullCalendar affiche les vraies cartes d'évènement par TCG (chercher les <a class='am-event-block'> contenant 'SWU' ou 'Star Wars', lire l'attribut data-date du <td> parent) ; à côté, des blocs génériques 'PLANNING BILLETWEB' pointent vers https://www.billetweb.fr/planning-ludotrotter-lille (calendrier détaillé, à ouvrir case par case). Bien lire le calendrier FullCalendar en premier avant de se rabattre sur le lien générique, sinon les créneaux SWU spécifiques sont invisibles."
+      },
+      {
+        "shop_name": "Lord of the Games",
+        "address": "Lille (voir site)",
+        "events_url": "https://www.eventbrite.fr/o/79110845433",
+        "shop_site": "https://www.eventbrite.fr/o/79110845433",
+        "cadence": "Variable, via Eventbrite",
+        "format_default": "Premier (Construit)",
+        "fetch_notes": "Page organisateur Eventbrite. get_page_text après scroll fonctionne bien (chargement JS mais texte accessible)."
+      },
+      {
+        "shop_name": "Rocambole",
+        "address": "36 rue de la Clef, 59800 Lille",
+        "events_url": "https://rocambole.fr/evenements/",
+        "shop_site": "https://rocambole.fr/evenements/",
+        "cadence": "Inconnue - rien publié au 2026-08-07",
+        "format_default": "Premier (Construit)",
+        "fetch_notes": "Calendrier WordPress (The Events Calendar), simple web_fetch suffit. Vérifier aussi leur page Facebook si rien ne sort ici.",
+        "facebook": "https://www.facebook.com/rocambole.lille/"
+      }
+    ]
+  },
+  "events": [
+    {
+      "date": "2026-08-08",
+      "day_of_week": "Samedi",
+      "type": "weekly",
+      "name": "SWU - Tournoi Boutique 10h30",
+      "shop_or_organizer": "Ludotrotter Lille",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "info_url": "https://lille.ludotrotter.com/"
+    },
+    {
+      "date": "2026-08-13",
+      "day_of_week": "Jeudi",
+      "type": "weekly",
+      "name": "Tournoi hebdo 19h15",
+      "shop_or_organizer": "Au Beau Jeu",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
+      "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6"
+    },
+    {
+      "date": "2026-08-15",
+      "day_of_week": "Samedi",
+      "type": "sector",
+      "name": "Sector Qualifier Berlin",
+      "shop_or_organizer": null,
+      "format": "Premier",
+      "location": "Berlin",
+      "country": "Allemagne",
+      "distance_note": null,
+      "registration_url": "https://www.fanfinity.gg/event/star-wars-unlimited-sector-qualifier-turin-2026/",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-08-20",
+      "day_of_week": "Jeudi",
+      "type": "weekly",
+      "name": "Tournoi hebdo 19h15",
+      "shop_or_organizer": "Au Beau Jeu",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
+      "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6"
+    },
+    {
+      "date": "2026-08-22",
+      "day_of_week": "Samedi",
+      "type": "weekly",
+      "name": "SWU - Tournoi Boutique 10h30 (15 places)",
+      "shop_or_organizer": "Ludotrotter Lille",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "info_url": "https://lille.ludotrotter.com/"
+    },
+    {
+      "date": "2026-08-22",
+      "day_of_week": "Samedi",
+      "type": "planetary",
+      "name": "Planetary Qualifier Sotteville-lès-Rouen",
+      "shop_or_organizer": null,
+      "format": "Premier",
+      "location": "Sotteville-lès-Rouen",
+      "country": "France",
+      "distance_note": "~2h20 de Lille",
+      "registration_url": "https://starwarsunlimited.com/search?store=4001",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-08-22",
+      "day_of_week": "Samedi",
+      "type": "planetary",
+      "name": "Planetary Qualifier Stokkem",
+      "shop_or_organizer": null,
+      "format": "Premier",
+      "location": "Stokkem",
+      "country": "Belgique",
+      "distance_note": "~2h de Lille",
+      "registration_url": "https://starwarsunlimited.com/search?store=1721",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-08-27",
+      "day_of_week": "Jeudi",
+      "type": "weekly",
+      "name": "Tournoi hebdo 19h15",
+      "shop_or_organizer": "Au Beau Jeu",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
+      "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6"
+    },
+    {
+      "date": "2026-08-29",
+      "day_of_week": "Samedi",
+      "type": "weekly",
+      "name": "SWU - Tournoi Boutique 10h30 (15 places)",
+      "shop_or_organizer": "Ludotrotter Lille",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "info_url": "https://lille.ludotrotter.com/"
+    },
+    {
+      "date": "2026-08-30",
+      "day_of_week": "Dimanche",
+      "type": "planetary",
+      "name": "Planetary Qualifier Paris",
+      "shop_or_organizer": null,
+      "format": "Limited",
+      "location": "Paris",
+      "country": "France",
+      "distance_note": "~2h10 de Lille",
+      "registration_url": "https://starwarsunlimited.com/search?store=490",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-09-04",
+      "day_of_week": "Vendredi",
+      "type": "weekly",
+      "name": "Tournoi Construit 19h00",
+      "shop_or_organizer": "Lord of the Games",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://www.eventbrite.fr/o/79110845433",
+      "info_url": "https://www.eventbrite.fr/o/79110845433"
+    },
+    {
+      "date": "2026-09-05",
+      "day_of_week": "Samedi",
+      "type": "weekly",
+      "name": "SWU - Tournoi Boutique 10h30 (16 places)",
+      "shop_or_organizer": "Ludotrotter Lille",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "info_url": "https://lille.ludotrotter.com/"
+    },
+    {
+      "date": "2026-09-06",
+      "day_of_week": "Dimanche",
+      "type": "planetary",
+      "name": "Planetary Qualifier Oberhausen",
+      "shop_or_organizer": null,
+      "format": "Limited",
+      "location": "Oberhausen",
+      "country": "Allemagne",
+      "distance_note": "~2h de Lille, limite de zone",
+      "registration_url": "https://starwarsunlimited.com/search?store=3023",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-09-13",
+      "day_of_week": "Dimanche",
+      "type": "planetary",
+      "name": "Planetary Qualifier Wasquehal",
+      "shop_or_organizer": null,
+      "format": "Premier",
+      "location": "Wasquehal",
+      "country": "France",
+      "distance_note": "~10 min de Lille",
+      "registration_url": "https://starwarsunlimited.com/search?store=462",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-09-19",
+      "day_of_week": "Samedi",
+      "type": "planetary",
+      "name": "Planetary Qualifier Bois-De-Villers",
+      "shop_or_organizer": null,
+      "format": "Premier",
+      "location": "Bois-De-Villers",
+      "country": "Belgique",
+      "distance_note": "~1h40 de Lille",
+      "registration_url": "https://starwarsunlimited.com/search?store=4348",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-09-19",
+      "day_of_week": "Samedi",
+      "type": "planetary",
+      "name": "Planetary Qualifier Paris",
+      "shop_or_organizer": null,
+      "format": "Premier",
+      "location": "Paris",
+      "country": "France",
+      "distance_note": "~2h10 de Lille",
+      "registration_url": "https://starwarsunlimited.com/search?store=3788",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-09-19",
+      "day_of_week": "Samedi",
+      "type": "sector",
+      "name": "Sector Qualifier Turin",
+      "shop_or_organizer": null,
+      "format": "Limited",
+      "location": "Turin",
+      "country": "Italie",
+      "distance_note": null,
+      "registration_url": "https://www.fanfinity.gg/event/star-wars-unlimited-sector-qualifier-turin-2026/",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-10-03",
+      "day_of_week": "Samedi",
+      "type": "planetary",
+      "name": "Planetary Qualifier Tours",
+      "shop_or_organizer": null,
+      "format": "Premier",
+      "location": "Tours",
+      "country": "France",
+      "distance_note": "~3h30-3h40 de Lille, hors zone stricte",
+      "registration_url": "https://starwarsunlimited.com/search?store=3947",
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-10-03",
+      "day_of_week": "Samedi",
+      "type": "showdown",
+      "name": "Store Showdown - Les Cendres de l'Empire",
+      "shop_or_organizer": "Lord of the Games",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "status": "Sold Out",
+      "registration_url": "https://www.eventbrite.fr/o/79110845433",
+      "info_url": "https://www.eventbrite.fr/o/79110845433"
+    },
+    {
+      "date": "2026-10-30",
+      "day_of_week": "Vendredi",
+      "type": "regional",
+      "name": "Regional Championship Utrecht (Limited)",
+      "shop_or_organizer": null,
+      "format": "Limited",
+      "location": "Utrecht",
+      "country": "Pays-Bas",
+      "distance_note": null,
+      "registration_url": null,
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    },
+    {
+      "date": "2026-10-31",
+      "day_of_week": "Samedi",
+      "type": "regional",
+      "name": "Regional Championship Utrecht (Premier)",
+      "shop_or_organizer": null,
+      "format": "Premier",
+      "location": "Utrecht",
+      "country": "Pays-Bas",
+      "distance_note": null,
+      "registration_url": null,
+      "info_url": "https://www.swu-competitivehub.com/upcoming-events/"
+    }
+  ]
+}

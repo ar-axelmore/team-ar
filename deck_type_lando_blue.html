@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Team AR Meta Analysis — Lando Calrissian, Full Sabacc</title>
+<style>
+  :root { --bg:#0f1115; --panel:#171a21; --border:#2a2e38; --text:#e8e8ec; --muted:#9aa0ac; --accent:#d4af37; --accent2:#6ea8fe; --best:#9a7fd4; }
+  * { box-sizing: border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; margin:0; padding:32px 24px 64px; }
+  .wrap { max-width:1100px; margin:0 auto; }
+  .site-brand { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: #d4af37; margin-bottom: 4px; font-weight: 600; }
+  .back-nav { margin-bottom: 18px; }
+  .back-nav a { color: #6ea8fe; text-decoration: none; font-size: 0.85rem; }
+  .back-nav a:hover { text-decoration: underline; }
+  header { border-bottom:1px solid var(--border); padding-bottom:20px; margin-bottom:28px; }
+  header h1 { margin:0 0 6px; font-size:1.6rem; color:var(--accent); }
+  header .subtitle { color:var(--muted); font-size:0.95rem; }
+  header .meta { margin-top:10px; font-size:0.85rem; color:var(--muted); }
+  header .meta a { color:var(--accent2); }
+  .warning { margin-top:14px; background:#2a2013; border:1px solid #4a3820; border-radius:8px; padding:10px 14px; font-size:0.85rem; color:#e0c080; }
+  .best-info { margin-top:10px; background:#1f1a2e; border:1px solid #3d2f5c; border-radius:8px; padding:10px 14px; font-size:0.85rem; color:#c3b3e8; }
+  details.decks { margin-top:16px; background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:10px 14px; }
+  details.decks summary { cursor:pointer; color:var(--accent2); font-size:0.9rem; }
+  details.decks table { margin-top:10px; }
+  section.category { margin-bottom:36px; }
+  section.category h2 { font-size:1.15rem; border-left:3px solid var(--accent); padding-left:10px; margin-bottom:10px; }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+  th, td { padding:8px 12px; text-align:left; border-bottom:1px solid var(--border); font-size:0.9rem; }
+  th { background:#1d212b; color:var(--muted); font-weight:600; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.03em; }
+  td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
+  td.cost { color: var(--accent); font-weight: 700; text-align: right; }
+  td.unknown-cost { color: var(--muted); font-weight: 400; font-style: italic; }
+  td.best, th.best { color: var(--best); font-weight: 600; }
+  td.suggested, th.suggested { color:var(--accent2); font-weight:600; }
+  tr.zero-suggested td { color:var(--muted); }
+  tr.zero-suggested td.suggested { color:var(--muted); font-weight:600; }
+  tr:last-child td { border-bottom:none; }
+  section.global-summary { margin-bottom:36px; }
+  section.global-summary h2 { font-size:1.15rem; border-left:3px solid var(--accent2); padding-left:10px; margin-bottom:10px; }
+  tr.grand-total td { font-weight:700; background:#1d212b; }
+  tr.cat-subtotal th { border-bottom:2px solid var(--border); background:#1a1e27; }
+  footer { margin-top:40px; color:var(--muted); font-size:0.8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="back-nav"><a href="index.html">&larr; Accueil</a> &nbsp;·&nbsp; <a href="swu_ranking_season.html">Retour au classement saison</a></div>
+  <div class="site-brand">Team AR Meta Analysis</div>
+  <header>
+    <h1>Deck ideal - Lando Calrissian, Full Sabacc</h1>
+    <div class="subtitle">Base etudiee : Blue (30 PV) - 6 decks (saison complete, 16 competitions), coefficient total 88.22</div>
+    <div class="meta">
+      Source : agregation de plusieurs tournois (voir <a href="swu_ranking_season.html">classement saison</a>) - Decklists via melee.gg<br>
+      Derniere mise a jour de ce rapport : 2026-08-03
+    </div>
+    <div class="warning">
+      Colonne "Cout" : 40/40 cartes verifiees (source : swuhub.com). Cartes triees par cout croissant au sein de chaque categorie.<br>
+      6 decks sur la saison (1 Galactic Championship + 5 issus de 4 tournois qualificatifs). Bases reelles jouees (toutes considerees comme equivalentes a 30 PV) : Fortress of the Great Mothers (2), Nevarro City Restored (1), Shield Generator Complex (1), City in the Clouds (1), Uscru Entertainment District (1). Attention : un 2e deck 'Lando Calrissian' du Galactic (TheTacoKid, rang 41) est en realite le LEADER DIFFERENT 'Lando Calrissian, Eyes Open' (ASH) malgre le meme libellage sur swu-competitivehub - il n'est pas inclus ici (deck non analyse a ce jour, 1 seule occurrence sur la saison).
+    </div>
+    <div class="best-info">
+      Colonne "Meilleur classement" : deck de ECL_Bminny18 (Galactic Championship 2026 - Las Vegas, rang 7 - le deck avec le plus de points sur la saison, tous tournois ponderes confondus).
+    </div>
+    <details class="decks">
+      <summary>Voir les 6 decks utilises et leur poids (points ponderes par tournoi)</summary>
+      <table>
+        <thead><tr><th>Tournoi</th><th>Rang</th><th>Joueur</th><th>Base reelle jouee</th><th>Poids (pts)</th></tr></thead>
+        <tbody>
+        <tr><td>Galactic Championship 2026 - Las Vegas</td><td>7</td><td>ECL_Bminny18</td><td>Fortress of the Great Mothers</td><td>58.00</td></tr>
+        <tr><td>Planetary Qualifier Ayrshire</td><td>1</td><td>SpudsTT</td><td>Nevarro City, Restored</td><td>13.69</td></tr>
+        <tr><td>Planetary Qualifier Northridge</td><td>7</td><td>SYC_Vernastyr</td><td>Shield Generator Complex</td><td>6.60</td></tr>
+        <tr><td>Planetary Qualifier Clermont-Ferrand</td><td>7</td><td>TGG_Martin</td><td>Fortress of the Great Mothers</td><td>5.03</td></tr>
+        <tr><td>Planetary Qualifier Clermont-Ferrand</td><td>8</td><td>TGG_KhyAA</td><td>City in the Clouds</td><td>2.52</td></tr>
+        <tr><td>Gamescon Indi FRI - 9AM</td><td>6</td><td>Harkins, Cory</td><td>Uscru Entertainment District</td><td>2.37</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </header>
+
+  <section class="global-summary">
+    <h2>Total global</h2>
+    <table>
+      <thead><tr><th></th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Maindeck</td><td class="num">50.2</td><td class="num">50.0</td><td class="num best">50.0</td><td class="num suggested">50</td></tr>
+        <tr><td class="name">Sideboard</td><td class="num">10.0</td><td class="num">10.0</td><td class="num best">10.0</td><td class="num suggested">10</td></tr>
+        <tr class="grand-total"><td class="name">Total (maindeck + sideboard)</td><td class="num">60.2</td><td class="num">60.0</td><td class="num best">60.0</td><td class="num suggested">60</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+        <section class="category">
+          <h2>Unit - Ground</h2>
+          <table>
+            <thead>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
+              <tr class="cat-subtotal">
+                <th>Total Unit - Ground</th><th></th><th class="num">33.3</th><th class="num">33.2</th><th class="num best">33.0</th><th class="num suggested">33</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr class="card-row">
+              <td class="name">Owen Lars | Oncle Dévoué</td>
+              <td class="num cost">1</td>
+              <td class="num">3.00</td>
+              <td class="num">3.00</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Huyang | Votre Aptitude S'Avère Insuffisante</td>
+              <td class="num cost">2</td>
+              <td class="num">3.00</td>
+              <td class="num">3.00</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Anakin Skywalker | Pilote De Module Clairvoyant</td>
+              <td class="num cost">2</td>
+              <td class="num">2.83</td>
+              <td class="num">2.84</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Yaddle | Une Chance De Bien Faire</td>
+              <td class="num cost">2</td>
+              <td class="num">2.17</td>
+              <td class="num">2.16</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Tourelle Laser Droïde</td>
+              <td class="num cost">3</td>
+              <td class="num">2.00</td>
+              <td class="num">2.74</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Barriss Offee | Se Rachète</td>
+              <td class="num cost">3</td>
+              <td class="num">2.00</td>
+              <td class="num">2.03</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Ryder Azadi | Gouverneur Réinstauré</td>
+              <td class="num cost">3</td>
+              <td class="num">0.67</td>
+              <td class="num">0.17</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Lieutenant Gorn | Je Mérite Pire</td>
+              <td class="num cost">3</td>
+              <td class="num">0.50</td>
+              <td class="num">0.08</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Kanan Jarrus | Spectre Un</td>
+              <td class="num cost">4</td>
+              <td class="num">3.00</td>
+              <td class="num">3.00</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Koska Reeves | Guerrière De Mandalore</td>
+              <td class="num cost">4</td>
+              <td class="num">3.00</td>
+              <td class="num">3.00</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Galen Erso | Vous Ne Gagnerez Jamais</td>
+              <td class="num cost">4</td>
+              <td class="num">1.33</td>
+              <td class="num">1.83</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Le Mandalorien | Sauveteur Dévoué</td>
+              <td class="num cost">4</td>
+              <td class="num">0.67</td>
+              <td class="num">0.17</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Anakin Skywalker | Champion De Mortis</td>
+              <td class="num cost">6</td>
+              <td class="num">3.00</td>
+              <td class="num">3.00</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Capitaine Rex | Dans Un Échange De Tirs</td>
+              <td class="num cost">6</td>
+              <td class="num">1.33</td>
+              <td class="num">1.83</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Pre Vizsla | Dirigeant Déterminé</td>
+              <td class="num cost">8</td>
+              <td class="num">1.83</td>
+              <td class="num">1.33</td>
+              <td class="num best">1.00</td>
+              <td class="num suggested">1</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Bo-Katan Kryze | Seule</td>
+              <td class="num cost">9</td>
+              <td class="num">3.00</td>
+              <td class="num">3.00</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="category">
+          <h2>Unit - Space</h2>
+          <table>
+            <thead>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
+              <tr class="cat-subtotal">
+                <th>Total Unit - Space</th><th></th><th class="num">9.7</th><th class="num">9.9</th><th class="num best">10.0</th><th class="num suggested">10</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr class="card-row">
+              <td class="name">Corona Quatre | Justice Pour Alderaan</td>
+              <td class="num cost">2</td>
+              <td class="num">3.00</td>
+              <td class="num">3.00</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">B-Wing de l'Arrière-Garde</td>
+              <td class="num cost">4</td>
+              <td class="num">1.00</td>
+              <td class="num">1.68</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Gauntlet de Bo-Katan | Renfort Dominateur</td>
+              <td class="num cost">5</td>
+              <td class="num">0.67</td>
+              <td class="num">0.17</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Chimaera | Une Réalité Effrayante</td>
+              <td class="num cost">7</td>
+              <td class="num">3.00</td>
+              <td class="num">3.00</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Home One | Cœur De La Flotte</td>
+              <td class="num cost">8</td>
+              <td class="num">2.00</td>
+              <td class="num">2.00</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="category">
+          <h2>Event</h2>
+          <table>
+            <thead>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
+              <tr class="cat-subtotal">
+                <th>Total Event</th><th></th><th class="num">7.2</th><th class="num">7.0</th><th class="num best">7.0</th><th class="num suggested">7</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr class="card-row">
+              <td class="name">Coup au But !</td>
+              <td class="num cost">4</td>
+              <td class="num">1.33</td>
+              <td class="num">1.83</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">L'Arbre se Souvient</td>
+              <td class="num cost">4</td>
+              <td class="num">1.00</td>
+              <td class="num">0.32</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Perdu et Oublié</td>
+              <td class="num cost">6</td>
+              <td class="num">2.83</td>
+              <td class="num">2.84</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Désastre Hyperspatial</td>
+              <td class="num cost">7</td>
+              <td class="num">2.00</td>
+              <td class="num">2.00</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="category">
+          <h2>Sideboard</h2>
+          <table>
+            <thead>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
+              <tr class="cat-subtotal">
+                <th>Total Sideboard</th><th></th><th class="num">10.0</th><th class="num">10.0</th><th class="num best">10.0</th><th class="num suggested">10</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr class="card-row">
+              <td class="name">Coupe Circuit</td>
+              <td class="num cost">2</td>
+              <td class="num">1.00</td>
+              <td class="num">1.78</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Barriss Offee | Se Rachète</td>
+              <td class="num cost">3</td>
+              <td class="num">0.17</td>
+              <td class="num">0.16</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Le Mandalorien | Sauveteur Dévoué</td>
+              <td class="num cost">4</td>
+              <td class="num">1.33</td>
+              <td class="num">1.83</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">L'As Bleu | Concurrent Haut En Couleurs</td>
+              <td class="num cost">4</td>
+              <td class="num">1.00</td>
+              <td class="num">1.52</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">B-Wing de l'Arrière-Garde</td>
+              <td class="num cost">4</td>
+              <td class="num">1.00</td>
+              <td class="num">0.26</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Galen Erso | Vous Ne Gagnerez Jamais</td>
+              <td class="num cost">4</td>
+              <td class="num">0.17</td>
+              <td class="num">0.16</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Lando Calrissian | Les Yeux Ouverts</td>
+              <td class="num cost">5</td>
+              <td class="num">0.33</td>
+              <td class="num">0.05</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Finn | Regarde De Plus Près</td>
+              <td class="num cost">6</td>
+              <td class="num">1.33</td>
+              <td class="num">1.83</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Perdu et Oublié</td>
+              <td class="num cost">6</td>
+              <td class="num">0.17</td>
+              <td class="num">0.16</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Désastre Hyperspatial</td>
+              <td class="num cost">7</td>
+              <td class="num">1.00</td>
+              <td class="num">1.00</td>
+              <td class="num best">1.00</td>
+              <td class="num suggested">1</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Qui-Gon Jinn | Les Négociations Ne Dureront Pas</td>
+              <td class="num cost">7</td>
+              <td class="num">1.00</td>
+              <td class="num">0.26</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Tantive IV | Porteur D'Espoir</td>
+              <td class="num cost">7</td>
+              <td class="num">0.17</td>
+              <td class="num">0.03</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Pre Vizsla | Dirigeant Déterminé</td>
+              <td class="num cost">8</td>
+              <td class="num">0.33</td>
+              <td class="num">0.73</td>
+              <td class="num best">1.00</td>
+              <td class="num suggested">1</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Rey | Skywalker</td>
+              <td class="num cost">8</td>
+              <td class="num">0.67</td>
+              <td class="num">0.17</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Home One | Cœur De La Flotte</td>
+              <td class="num cost">8</td>
+              <td class="num">0.33</td>
+              <td class="num">0.09</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+
+  <footer>
+    Qte moyenne = moyenne simple sur les 6 decks. Qte ponderee = moyenne ponderee par le poids de chaque deck
+    (poids = 64 x racine(joueurs_tournoi/546) x (top_n+1-rang)/top_n, formule saison validee - reference = Galactic Championship, 546 joueurs).
+    Meilleur classement = quantite jouee dans le deck ayant le poids (points) le plus eleve de la saison pour cet archetype.
+    Qte suggeree = qte ponderee arrondie (bornee 0-3). Ajustements +/- appliques pour respecter 50 cartes en maindeck et 10 en sideboard.
+    Au sein de chaque categorie, les cartes sont classees par cout croissant (a cout egal, la carte la plus jouee en premier).
+    Couts de cartes : swuhub.com (voir swu_cards_costs.json).
+  </footer>
+</div>
+</body>
+</html>

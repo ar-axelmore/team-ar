@@ -1,0 +1,1161 @@
+{
+ "_readme": "Base de couts de cartes SWU (en francais), constituee au fil des analyses de deck type pour eviter de re-chercher les memes cartes a chaque fois. Cle = nom exact de la carte tel qu'affiche sur melee.gg (ex: 'Marrok | Guerrier Mystérieux'). Valeur = {cost, source, verified_on}. Sources possibles : 'swucardhub.fr' (base FR communautaire, cartes + filtre par cout), 'starwarsunlimited.com' (site officiel, a un catalogue FR), 'swu-db.com' (base EN officieuse, tres complete mais anglais uniquement - utile pour recouper). Workflow : (1) verifier si la carte est deja dans ce fichier avant toute recherche, (2) si absente, chercher sur swucardhub.fr (recherche texte, filtrable par cout) via le navigateur Chrome, (3) ajouter l'entree ici avec la source et la date, (4) reutiliser cette base pour remplir la colonne Cout de tous les rapports de deck type, passes et futurs. MISE A JOUR MAJEURE (03/08/2026) : toutes les valeurs de cout ont ete recuperees/ecrasees depuis swuhub.com (endpoint interne /api/cards/grid, qui expose nameFr/subtitleFr/nameEn/subtitleEn/cost/set/cardNumber pour chaque carte) - c'est desormais la source de reference unique et fiable, largement preferable aux recherches carte-par-carte sur swu-db.com. Methode : fetch de https://www.swuhub.com/api/cards/grid (2178 cartes, pas de pagination), puis filtrage par (nameFr, subtitleFr) exact.",
+ "last_updated": "2026-08-03",
+ "cards": {
+  "Marrok | Guerrier Mystérieux": {
+   "cost": 3,
+   "set": "ASH 30",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Pre Vizsla | Dirigeant Déterminé": {
+   "cost": 8,
+   "set": "ASH 53",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Koska Reeves | Guerrière De Mandalore": {
+   "cost": 4,
+   "set": "ASH 79",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Latts Razzi | Maîtrise Mortelle Du Fouet": {
+   "cost": 3,
+   "set": "LAW 39",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "HK-47 | Exclamation : Meurs, Sac À Viande !": {
+   "cost": 2,
+   "set": "LOF 130",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "BT-1 | Blastomech": {
+   "cost": 2,
+   "set": "LAW 173",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "IG-2000 | Aggressor De L'Assassin": {
+   "cost": 4,
+   "set": "JTL 140",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Justifier | Implacable": {
+   "cost": 5,
+   "set": "ASH 146",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chimaera | Une Réalité Effrayante": {
+   "cost": 7,
+   "set": "ASH 52",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Avant-Garde de TIE Dagger": {
+   "cost": 3,
+   "set": "JTL 239",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Brute de l'Escadron Onyx": {
+   "cost": 2,
+   "set": "JTL 33",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Anakin Skywalker | Champion De Mortis": {
+   "cost": 6,
+   "set": "LOF 70",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Commando Blindé Impérial": {
+   "cost": 4,
+   "set": "ASH 48",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "La Neuvième Sœur | Inquisitrice Imposante": {
+   "cost": 7,
+   "set": "ASH 148",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Transport Cabossé": {
+   "cost": 2,
+   "set": "ASH 71",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Pas de Gloire, Seulement des Résultats": {
+   "cost": 5,
+   "set": "JTL 43",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Gardien de Rancor": {
+   "cost": 2,
+   "set": "ASH 32",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Connétable de la Bordure Extérieure": {
+   "cost": 2,
+   "set": "SEC 163",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Oggdo Bogdo | Bête Sauvage De Bogano": {
+   "cost": 3,
+   "set": "LOF 63",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Le Cyborg Mecha | Menace Mystérieuse": {
+   "cost": 6,
+   "set": "ASH 147",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Syril Karn | Où Est-Il ?": {
+   "cost": 2,
+   "set": "SEC 133",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Condamner": {
+   "cost": 3,
+   "set": "SEC 38",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Négociations Agressives": {
+   "cost": 3,
+   "set": "SEC 179",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Cad Bane | Impressionné Maintenant ?": {
+   "cost": 5,
+   "set": "SEC 34",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Devastator | Traque La Rébellion": {
+   "cost": 8,
+   "set": "JTL 143",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "B-Wing de l'Arrière-Garde": {
+   "cost": 4,
+   "set": "ASH 78",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Punishing One | Ne Fait Pas De Prisonniers": {
+   "cost": 5,
+   "set": "SEC 171",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "0-0-0 | Traduction Et Torture": {
+   "cost": 3,
+   "set": "LAW 174",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Dommage Collatéral": {
+   "cost": 3,
+   "set": "LAW 208",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Arvel Skeen | Gagner Et S'En Aller": {
+   "cost": 3,
+   "set": "LAW 191",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Tourelle Laser Droïde": {
+   "cost": 3,
+   "set": "LAW 118",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Yaddle | Une Chance De Bien Faire": {
+   "cost": 2,
+   "set": "LOF 45",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Obi-Wan Kenobi | Padawan Protecteur": {
+   "cost": 3,
+   "set": "LOF 96",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Han Solo | Mal De L'Hibernation": {
+   "cost": 1,
+   "set": "LAW 37",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Huyang | Votre Aptitude S'Avère Insuffisante": {
+   "cost": 2,
+   "set": "ASH 56",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Gungi | S'Est Trouvé": {
+   "cost": 2,
+   "set": "LOF 93",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Jar Jar Binks | Missa Propose…": {
+   "cost": 2,
+   "set": "SEC 111",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Guetteur Lepi": {
+   "cost": 2,
+   "set": "LAW 38",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Marines du Groupe Massassi": {
+   "cost": 3,
+   "set": "LAW 146",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Neel | Le Garçon Le Plus Mignon": {
+   "cost": 1,
+   "set": "ASH 248",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Reine Amidala | Défend Son Peuple": {
+   "cost": 5,
+   "set": "SEC 101",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Galen Erso | Vous Ne Gagnerez Jamais": {
+   "cost": 4,
+   "set": "SEC 46",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Nef Royale Naboo | Aménagée Pour Une Reine": {
+   "cost": 4,
+   "set": "SEC 99",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ezra Bridger | Spectre Six": {
+   "cost": 4,
+   "set": "LAW 35",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Droïde Fourmi": {
+   "cost": 1,
+   "set": "ASH 116",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Mercenaire Sacrifiable": {
+   "cost": 4,
+   "set": "LAW 159",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Moff Gideon | Commandant Subsistant": {
+   "cost": 3,
+   "set": "ASH 97",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Marcheur de Trask": {
+   "cost": 8,
+   "set": "ASH 133",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Guerrière Sœur de la Nuit": {
+   "cost": 2,
+   "set": "LOF 59",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Enoch | Serviteur Cérémonieux": {
+   "cost": 4,
+   "set": "ASH 27",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Owen Lars | Oncle Dévoué": {
+   "cost": 1,
+   "set": "LOF 57",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Perdu et Oublié": {
+   "cost": 6,
+   "set": "LAW 133",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ryder Azadi | Gouverneur Réinstauré": {
+   "cost": 3,
+   "set": "ASH 77",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Désastre Hyperspatial": {
+   "cost": 7,
+   "set": "SEC 78",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Coup au But !": {
+   "cost": 4,
+   "set": "JTL 78",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "L'Arbre se Souvient": {
+   "cost": 4,
+   "set": "LAW 132",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Allumage Primaire du Réacteur": {
+   "cost": 8,
+   "set": "LAW 44",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Kelleran Beq | La Main Sabrée": {
+   "cost": 7,
+   "set": "LOF 100",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Le Sabre Noir | Symbole Du Commandement": {
+   "cost": 4,
+   "set": "ASH 135",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Le Mandalorien | Sauveteur Dévoué": {
+   "cost": 4,
+   "set": "ASH 62",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Croiseur Arrestor Cantwell": {
+   "cost": 7,
+   "set": "SEC 37",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Amiral de Flotte Chevronné": {
+   "cost": 2,
+   "set": "JTL 111",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Appelons ça une Guerre": {
+   "cost": 3,
+   "set": "SEC 180",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Avide de Pouvoir": {
+   "cost": 5,
+   "set": "LOF 91",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Blue Leader | Support Aérien Sur Scarif": {
+   "cost": 3,
+   "set": "JTL 96",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Bombardement Planétaire": {
+   "cost": 6,
+   "set": "JTL 181",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur d'Escorte Impulsif": {
+   "cost": 3,
+   "set": "JTL 112",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chef d'Œuvre de Sabine | Extravagance Colorée": {
+   "cost": 3,
+   "set": "JTL 250",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Cobb Vanth | Laisse-Moi Régler Ça": {
+   "cost": 4,
+   "set": "ASH 60",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Dark Nihilus | Seigneur De La Faim": {
+   "cost": 7,
+   "set": "SEC 244",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Dark Trooper Impérial": {
+   "cost": 2,
+   "set": "SEC 80",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Dedra Meero | Avec Des Données Vérifiables": {
+   "cost": 6,
+   "set": "SEC 87",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Directeur Krennic | À Deux Doigts De La Gloire": {
+   "cost": 2,
+   "set": "JTL 32",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Droïde d'Alimentation GNK": {
+   "cost": 2,
+   "set": "SEC 110",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "First Light | Menace Élégante": {
+   "cost": 7,
+   "set": "SEC 88",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Gauntlet de Bo-Katan | Renfort Dominateur": {
+   "cost": 5,
+   "set": "ASH 63",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Honnah | Oink ! Squee !": {
+   "cost": 4,
+   "set": "LAW 50",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Intercepteur TIE de Vonreg | As Du Premier Ordre": {
+   "cost": 3,
+   "set": "JTL 137",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Juggernaut de Guerre": {
+   "cost": 6,
+   "set": "JTL 170",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "L'Œil d'Aldhani": {
+   "cost": 1,
+   "set": "SEC 73",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Migs Mayfeld | Si Nous Portions Un Toast ?": {
+   "cost": 2,
+   "set": "ASH 168",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Mina Bonteri | Arrêtez Cette Guerre !": {
+   "cost": 2,
+   "set": "SEC 94",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Navette T-6 1974 | Avec Le Dévouement D'Un Mentor": {
+   "cost": 4,
+   "set": "ASH 109",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Navette du Gouverneur": {
+   "cost": 5,
+   "set": "LAW 99",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Patrouilleurs de Kijimi": {
+   "cost": 2,
+   "set": "JTL 82",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Paz Vizsla | Pour Un Futur Plus Radieux": {
+   "cost": 5,
+   "set": "ASH 28",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Plus Aucune Raison d'Avoir Peur": {
+   "cost": 5,
+   "set": "LAW 41",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ravager | Ultime Ordre Impérial": {
+   "cost": 9,
+   "set": "ASH 102",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Rey | Skywalker": {
+   "cost": 8,
+   "set": "LAW 149",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Salve de Turbolaser": {
+   "cost": 7,
+   "set": "JTL 131",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Transport Ravitailleur": {
+   "cost": 6,
+   "set": "JTL 119",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "A-Wing": {
+   "cost": 1,
+   "set": "SEC 213",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "A-Wing de l'Escadron Phoenix": {
+   "cost": 2,
+   "set": "JTL 95",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Abattre": {
+   "cost": 2,
+   "set": "JTL 176",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Accusé de Trahison": {
+   "cost": 4,
+   "set": "SEC 182",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Aethersprite de Kit Fisto | Bonne Chasse": {
+   "cost": 5,
+   "set": "LOF 147",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Aggressor en Chasse": {
+   "cost": 4,
+   "set": "JTL 165",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ailier Victor Deux | Mauler Mithel": {
+   "cost": 2,
+   "set": "JTL 84",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ailiers de l'Escadron Danger": {
+   "cost": 4,
+   "set": "ASH 157",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Amiral Ackbar | En Formation D'Attaque": {
+   "cost": 5,
+   "set": "ASH 110",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Anakin Skywalker | Pilote De Module Clairvoyant": {
+   "cost": 2,
+   "set": "LAW 88",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Anakin Skywalker | Tu Avais Raison À Mon Sujet": {
+   "cost": 5,
+   "set": "ASH 255",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Annihilator | Vaisseau Amiral De Tagge": {
+   "cost": 11,
+   "set": "JTL 41",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Arrestation": {
+   "cost": 2,
+   "set": "SEC 195",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Barriss Offee | Se Rachète": {
+   "cost": 3,
+   "set": "ASH 44",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Black One | Droit Sur Eux": {
+   "cost": 2,
+   "set": "JTL 147",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Bo-Katan Kryze | Seule": {
+   "cost": 9,
+   "set": "SEC 51",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Boba Fett | Chasseur De Primes Redouté": {
+   "cost": 5,
+   "set": "JTL 189",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Bombardier TIE": {
+   "cost": 2,
+   "set": "JTL 237",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Bombardier Tactique Lourd": {
+   "cost": 5,
+   "set": "JTL 152",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Bombardier des As Jaunes": {
+   "cost": 3,
+   "set": "ASH 253",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Capitaine Rex | Dans Un Échange De Tirs": {
+   "cost": 6,
+   "set": "SEC 48",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Capitaine Typho | Toutes Les Précautions Nécessaires": {
+   "cost": 4,
+   "set": "SEC 98",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chancelier Palpatine | Le Sénat C'Est Moi": {
+   "cost": 3,
+   "set": "SEC 82",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur Diabolique de Marrok | Redoutable Poursuivant": {
+   "cost": 3,
+   "set": "ASH 241",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur Diabolique de Shin Hati | Compact Et Réactif": {
+   "cost": 2,
+   "set": "ASH 191",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur Jedi": {
+   "cost": 2,
+   "set": "LOF 144",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur Snub Pirate": {
+   "cost": 2,
+   "set": "LAW 135",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur Snub Rôdant": {
+   "cost": 3,
+   "set": "SEC 189",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur TIE Strident": {
+   "cost": 1,
+   "set": "SEC 185",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur TIE du Premier Ordre": {
+   "cost": 1,
+   "set": "JTL 81",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chewbacca | Fidèle Second": {
+   "cost": 5,
+   "set": "JTL 103",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Cinta Kaz | La Lutte Avant Tout": {
+   "cost": 6,
+   "set": "SEC 172",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Corona Quatre | Justice Pour Alderaan": {
+   "cost": 2,
+   "set": "ASH 43",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Coupe Circuit": {
+   "cost": 2,
+   "set": "LAW 127",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Course dans la Tranchée": {
+   "cost": 1,
+   "set": "JTL 156",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Dark Vador | Affronte Ton Destin": {
+   "cost": 5,
+   "set": "ASH 243",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Decimator des Dissidents": {
+   "cost": 4,
+   "set": "JTL 138",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Droïde Assassin en Chasse": {
+   "cost": 3,
+   "set": "SEC 134",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Droïde Sonde DRK-1": {
+   "cost": 2,
+   "set": "LOF 155",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Droïde d'Interrogatoire": {
+   "cost": 2,
+   "set": "LAW 75",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Débuter les Festivités": {
+   "cost": 1,
+   "set": "LAW 202",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Détenu pour Interrogatoire": {
+   "cost": 3,
+   "set": "LAW 217",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Elzar Mann | Hanté Par Une Vision": {
+   "cost": 6,
+   "set": "ASH 224",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Escadron Blue de la Résistance": {
+   "cost": 4,
+   "set": "JTL 102",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Escadron de Combat Clone": {
+   "cost": 4,
+   "set": "JTL 115",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Escadron de Mini-chasseurs": {
+   "cost": 4,
+   "set": "ASH 194",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Eviscerator | Carbonisez-Les": {
+   "cost": 8,
+   "set": "ASH 149",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Faire Pencher la Balance": {
+   "cost": 2,
+   "set": "LOF 226",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Faucon Millenium | Besoin D'Aide Pour Pousser ?": {
+   "cost": 3,
+   "set": "JTL 249",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Fennec Shand | La Galaxie Est Dangereuse": {
+   "cost": 3,
+   "set": "ASH 192",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ferrailleuse Provocatrice": {
+   "cost": 3,
+   "set": "LAW 106",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Finn | Regarde De Plus Près": {
+   "cost": 6,
+   "set": "LAW 95",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Firespray de Fett | Silhouette Intimidante": {
+   "cost": 4,
+   "set": "JTL 240",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Fouiller de Fond en Comble": {
+   "cost": 7,
+   "set": "LAW 66",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Frégate d'Assaut MC30": {
+   "cost": 5,
+   "set": "JTL 118",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Fulminatrix | Tueur De Flotte": {
+   "cost": 8,
+   "set": "SEC 142",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Férocité Soudaine": {
+   "cost": 3,
+   "set": "SEC 176",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Galen Erso | Détruit Sa Création": {
+   "cost": 3,
+   "set": "LAW 233",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Garindan | Courtier En Informations": {
+   "cost": 2,
+   "set": "SEC 186",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Green Leader | Sacrifice De Crynyd": {
+   "cost": 2,
+   "set": "ASH 153",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Guetteurs Subsistants": {
+   "cost": 3,
+   "set": "ASH 220",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Home One | Cœur De La Flotte": {
+   "cost": 8,
+   "set": "ASH 65",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Hound's Tooth | Fiable Et Mortel": {
+   "cost": 3,
+   "set": "JTL 185",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ils Détestent ce Vaisseau": {
+   "cost": 1,
+   "set": "JTL 155",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Intercepteur Subsistant": {
+   "cost": 2,
+   "set": "ASH 95",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Interdictor de la Flotte": {
+   "cost": 7,
+   "set": "JTL 40",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "K-Wing en Orbite": {
+   "cost": 4,
+   "set": "JTL 166",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Kanan Jarrus | Spectre Un": {
+   "cost": 4,
+   "set": "LAW 89",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Karis Nemik | La Liberté Est Une Idée Pure": {
+   "cost": 2,
+   "set": "SEC 148",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "L'As Bleu | Concurrent Haut En Couleurs": {
+   "cost": 4,
+   "set": "SEC 204",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "La Hache Oublie": {
+   "cost": 2,
+   "set": "LAW 246",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "La Main Invisible | Entourée De Chasseurs Vulture": {
+   "cost": 6,
+   "set": "JTL 89",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Lando Calrissian | Les Yeux Ouverts": {
+   "cost": 5,
+   "set": "LAW 108",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Lawbringer | Une Ombre Sur Lothal": {
+   "cost": 8,
+   "set": "LAW 101",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Le Dévoué Général Pryde | Impitoyable Et Loyal": {
+   "cost": 2,
+   "set": "JTL 133",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Le Huitième Frère | Chassons Ensemble": {
+   "cost": 6,
+   "set": "LOF 87",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Le Mandalorien | Pilote Amoindri": {
+   "cost": 5,
+   "set": "JTL 210",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Lieutenant Gorn | Je Mérite Pire": {
+   "cost": 3,
+   "set": "LAW 221",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Luke Skywalker | Tu Es Toujours Avec Moi ?": {
+   "cost": 2,
+   "set": "JTL 94",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Manœuvre Remarquable": {
+   "cost": 1,
+   "set": "JTL 174",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Merrin | Seule Avec Les Morts": {
+   "cost": 3,
+   "set": "LOF 160",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Monter une Équipe": {
+   "cost": 1,
+   "set": "LAW 166",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Montrer sa Puissance": {
+   "cost": 4,
+   "set": "SEC 123",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Navette ST-149 | Sous L'Autorité De Krennic": {
+   "cost": 4,
+   "set": "JTL 242",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ne pas Lâcher la Cible": {
+   "cost": 2,
+   "set": "JTL 177",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Partisan Tenu par l'Honneur": {
+   "cost": 2,
+   "set": "LAW 58",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Patrouilleur du Soleil Noir": {
+   "cost": 2,
+   "set": "LAW 211",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Plateforme à Missiles Droïde": {
+   "cost": 3,
+   "set": "JTL 162",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Prototype de TIE Advanced": {
+   "cost": 3,
+   "set": "LAW 175",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Qui-Gon Jinn | Les Négociations Ne Dureront Pas": {
+   "cost": 7,
+   "set": "LOF 200",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Razor Crest | Armement Activé": {
+   "cost": 4,
+   "set": "ASH 172",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Red Cinq | Remonte La Tranchée": {
+   "cost": 3,
+   "set": "JTL 151",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Regarde Ça": {
+   "cost": 6,
+   "set": "IBH 52",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Renflouement": {
+   "cost": 0,
+   "set": "JTL 121",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Renverser le Sommet": {
+   "cost": 5,
+   "set": "SEC 183",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Réquisitionner": {
+   "cost": 5,
+   "set": "JTL 235",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Sheathipede de l'Émissaire": {
+   "cost": 2,
+   "set": "SEC 215",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Shin Hati | Tu Vas Quelque Part ?": {
+   "cost": 5,
+   "set": "ASH 49",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Starhopper Zygérien": {
+   "cost": 2,
+   "set": "JTL 183",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Starhopper de Contrebande": {
+   "cost": 2,
+   "set": "SEC 161",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Supériorité Aérienne": {
+   "cost": 2,
+   "set": "JTL 125",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Système Impacté": {
+   "cost": 1,
+   "set": "JTL 175",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Séduire": {
+   "cost": 3,
+   "set": "SEC 233",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "TIE Outland Protecteur": {
+   "cost": 1,
+   "set": "ASH 117",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "TR-TT Raider": {
+   "cost": 4,
+   "set": "ASH 98",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Tantive IV | Porteur D'Espoir": {
+   "cost": 7,
+   "set": "LAW 109",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Taxation des Routes Commerciales": {
+   "cost": 2,
+   "set": "SEC 126",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Technicien Impérial de la Porte": {
+   "cost": 1,
+   "set": "LAW 97",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Tirailleur B-Wing": {
+   "cost": 4,
+   "set": "LAW 183",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Tirailleur de l'Espace Funeste": {
+   "cost": 3,
+   "set": "JTL 217",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Tourelle Dorsale": {
+   "cost": 1,
+   "set": "JTL 120",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Transport Blindé Volé": {
+   "cost": 3,
+   "set": "JTL 221",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Transport d'Assaut Gozanti": {
+   "cost": 5,
+   "set": "ASH 99",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Transport de Luthen | Équipé De Contre-Mesures": {
+   "cost": 5,
+   "set": "SEC 153",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Très Très Lointaine": {
+   "cost": 3,
+   "set": "ASH 236",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "U-Wing de l'Escadron Alphabet | Dévotion Silencieuse": {
+   "cost": 5,
+   "set": "ASH 159",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Uppercut Magistral": {
+   "cost": 4,
+   "set": "LAW 168",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "V-Wing Hors Pair": {
+   "cost": 1,
+   "set": "JTL 158",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Victor Leader | Commandant En Première Ligne": {
+   "cost": 3,
+   "set": "JTL 85",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Vulnérabilité Mortelle": {
+   "cost": 1,
+   "set": "ASH 150",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "X-Wing des Anges des Cavernes": {
+   "cost": 2,
+   "set": "LAW 189",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Y-Wing de l'Escadron Red": {
+   "cost": 2,
+   "set": "JTL 149",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Y-Wing de la République": {
+   "cost": 1,
+   "set": "JTL 212",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Accélérez nos Plans": {
+   "cost": 1,
+   "set": "SEC 228",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur de la Forge": {
+   "cost": 1,
+   "set": "LOF 228",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Croiseur Consulaire": {
+   "cost": 5,
+   "set": "SEC 117",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Crouler sous les Procédures": {
+   "cost": 3,
+   "set": "SEC 234",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Crucible | Des Siècles De Sagesse": {
+   "cost": 6,
+   "set": "SEC 119",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Faites décoller la Chasse": {
+   "cost": 7,
+   "set": "JTL 92",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Grand Amiral Thrawn | Grand Conspirateur": {
+   "cost": 7,
+   "set": "SEC 193",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Jumpmaster Sous Contrat": {
+   "cost": 3,
+   "set": "JTL 184",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Le Legacy Run | Débris Maudits": {
+   "cost": 5,
+   "set": "LOF 213",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Militarisme Corporatiste": {
+   "cost": 4,
+   "set": "SEC 91",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Renforts à Point Nommé": {
+   "cost": 5,
+   "set": "JTL 130",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Canonnière Dornéenne": {
+   "cost": 5,
+   "set": "JTL 116",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Forceur de Blocus": {
+   "cost": 5,
+   "set": "LOF 166",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Hammerhead Provocatrice": {
+   "cost": 6,
+   "set": "LAW 62",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Highsinger | Droïde Mortel": {
+   "cost": 3,
+   "set": "LAW 59",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Grogu | Enfant Mystérieux": {
+   "cost": 3,
+   "set": "LOF 246",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Luke Skywalker | Répond À L'Appel": {
+   "cost": 6,
+   "set": "ASH 112",
+   "source": "swuhub.com (api/cards/grid)"
+  }
+ }
+}

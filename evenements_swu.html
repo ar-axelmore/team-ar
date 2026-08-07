@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Évènements Star Wars Unlimited - Team AR</title>
+<style>
+  :root { --bg:#0f1115; --panel:#171a21; --border:#2a2e38; --text:#e8e8ec; --muted:#9aa0ac; --accent:#d4af37; --accent2:#6ea8fe; --green:#4caf7d; }
+  * { box-sizing: border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; margin:0; padding:32px 24px 64px; }
+  .wrap { max-width:1100px; margin:0 auto; }
+  header { border-bottom:1px solid var(--border); padding-bottom:20px; margin-bottom:28px; }
+  header h1 { margin:0 0 6px; font-size:1.6rem; color:var(--accent); }
+  header .subtitle { color:var(--muted); font-size:0.95rem; }
+  header .meta { margin-top:10px; font-size:0.85rem; color:var(--muted); }
+  header .meta a { color:var(--accent2); }
+  .warning { margin-top:14px; background:#2a2013; border:1px solid #4a3820; border-radius:8px; padding:10px 14px; font-size:0.85rem; color:#e0c080; }
+  section.category { margin-bottom:40px; }
+  section.category h2 { font-size:1.25rem; border-left:3px solid var(--accent); padding-left:10px; margin-bottom:6px; }
+  section.category .desc { color:var(--muted); font-size:0.85rem; margin-bottom:14px; }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+  th, td { padding:9px 12px; text-align:left; border-bottom:1px solid var(--border); font-size:0.88rem; vertical-align:top; }
+  th { background:#1d212b; color:var(--muted); font-weight:600; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.03em; }
+  tr:last-child td { border-bottom:none; }
+  tr:hover td { background:#1b1f28; }
+  a.linkbtn { color:var(--accent2); text-decoration:none; white-space:nowrap; }
+  a.linkbtn:hover { text-decoration:underline; }
+  .badge { display:inline-block; padding:2px 8px; border-radius:12px; font-size:0.72rem; font-weight:600; }
+  .badge-premier { background:#2a3a52; color:#7db4ff; }
+  .badge-eternal { background:#3a2a52; color:#c17dff; }
+  .badge-limited { background:#2a4a2f; color:#7dff9d; }
+  .badge-construit { background:#3a3a3a; color:#cfcfcf; }
+  .badge-weekly { background:#3a3020; color:var(--accent); }
+  .country { color:var(--muted); font-size:0.85rem; }
+  .dow { display:block; color:var(--accent); font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; margin-bottom:1px; }
+  .type-badge { display:inline-flex; align-items:center; gap:5px; padding:3px 9px; border-radius:12px; font-size:0.78rem; font-weight:600; white-space:nowrap; }
+  .type-weekly { background:#3a3020; color:var(--accent); }
+  .type-showdown { background:#20353a; color:#7de0ff; }
+  .type-planetary { background:#20313a; color:#7dd6ff; }
+  .type-sector { background:#2a203a; color:#c17dff; }
+  .type-regional { background:#3a2020; color:#ff8f7d; }
+  .empty-note { color:var(--muted); font-style:italic; font-size:0.85rem; padding:10px 12px; }
+  footer { margin-top:40px; color:var(--muted); font-size:0.8rem; line-height:1.6; }
+  footer h3 { color:var(--text); font-size:0.95rem; margin-bottom:6px; }
+  .back-nav { margin-bottom: 16px; }
+  .back-nav a { color: #6ea8fe; text-decoration: none; font-size: 0.85rem; }
+  .back-nav a:hover { text-decoration: underline; }
+  .site-brand { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: #d4af37; margin-bottom: 4px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="back-nav"><a href="index.html">&larr; Retour à l'accueil</a></div>
+  <div class="site-brand">Team AR Meta Analysis</div>
+  <header>
+    <h1>Évènements Star Wars Unlimited</h1>
+    <div class="subtitle">Weeklies autour de Lille, Planetary Qualifiers &lt; 3h de route, Sector &amp; Regional Qualifiers en Europe</div>
+    <div class="meta">
+      Team AR Meta Analysis — Instantané généré le 07/08/2026, à rafraîchir manuellement (voir note en bas de page)
+    </div>
+    <div class="warning">
+      Ceci est un instantané, pas un flux automatique : les données ont été collectées à la main (navigateur) le 07/08/2026 sur les 4 sources boutiques + swu-competitivehub.com. Pour une mise à jour, redemande simplement "mets à jour la page évènements" dans le chat.
+    </div>
+  </header>
+
+  <section class="category">
+    <h2>📅 Tous les évènements</h2>
+    <div class="desc">
+      Weeklies à Lille (&lt; 20 min) · Store Showdowns (boutiques Lilloises, un par saison) · Planetary Qualifiers (&lt; 3h de Lille — zone : Hauts-de-France / Île-de-France / Normandie / ouest Grand Est, Belgique, sud Pays-Bas, ouest Allemagne, Royaume-Uni Sud-Est, Luxembourg) · Sector &amp; Regional Qualifiers en Europe (sans limite de distance).
+      Triés par ordre chronologique. Source qualifiers : swu-competitivehub.com.
+    </div>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Type</th><th>Évènement</th><th>Format</th><th>Lieu</th><th>Pays</th><th>Inscription</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="dow">Samedi</span>08/08/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Tournoi Boutique 10h30 — Ludotrotter Lille</td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td></tr>
+        <tr><td><span class="dow">Jeudi</span>13/08/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td></tr>
+        <tr><td><span class="dow">Samedi</span>15/08/2026</td><td><span class="type-badge type-sector">⚔️ Sector</span></td><td>Sector Qualifier Berlin</td><td><span class="badge badge-premier">Premier</span></td><td>Berlin</td><td>🇩🇪 Allemagne</td><td><a class="linkbtn" href="https://www.fanfinity.gg/event/star-wars-unlimited-sector-qualifier-turin-2026/" target="_blank">Lien</a></td></tr>
+        <tr><td><span class="dow">Jeudi</span>20/08/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td></tr>
+        <tr><td rowspan="3"><span class="dow">Samedi</span>22/08/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Tournoi Boutique 10h30 (15 places) — Ludotrotter Lille</td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td></tr>
+        <tr><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Sotteville-lès-Rouen</td><td><span class="badge badge-premier">Premier</span></td><td>Sotteville-lès-Rouen <span class="country">(~2h20)</span></td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=4001" target="_blank">Lien</a></td></tr>
+        <tr><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Stokkem</td><td><span class="badge badge-premier">Premier</span></td><td>Stokkem <span class="country">(~2h)</span></td><td>🇧🇪 Belgique</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=1721" target="_blank">Lien</a></td></tr>
+        <tr><td><span class="dow">Jeudi</span>27/08/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td></tr>
+        <tr><td><span class="dow">Samedi</span>29/08/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Tournoi Boutique 10h30 (15 places) — Ludotrotter Lille</td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td></tr>
+        <tr><td><span class="dow">Dimanche</span>30/08/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Paris</td><td><span class="badge badge-limited">Limited</span></td><td>Paris <span class="country">(~2h10)</span></td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=490" target="_blank">Lien</a></td></tr>
+        <tr><td><span class="dow">Vendredi</span>04/09/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi Construit 19h00 — Lord of the Games</td><td><span class="badge badge-premier">Premier</span></td><td>Lille (voir site)</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://www.eventbrite.fr/o/79110845433" target="_blank">Eventbrite</a></td></tr>
+        <tr><td><span class="dow">Samedi</span>05/09/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Tournoi Boutique 10h30 (16 places) — Ludotrotter Lille</td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td></tr>
+        <tr><td><span class="dow">Dimanche</span>06/09/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Oberhausen</td><td><span class="badge badge-limited">Limited</span></td><td>Oberhausen <span class="country">(~2h, limite)</span></td><td>🇩🇪 Allemagne</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=3023" target="_blank">Lien</a></td></tr>
+        <tr><td><span class="dow">Dimanche</span>13/09/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Wasquehal</td><td><span class="badge badge-premier">Premier</span></td><td>Wasquehal <span class="country">(~10 min de Lille)</span></td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=462" target="_blank">Lien</a></td></tr>
+        <tr><td rowspan="3"><span class="dow">Samedi</span>19/09/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Bois-De-Villers</td><td><span class="badge badge-premier">Premier</span></td><td>Bois-De-Villers <span class="country">(~1h40)</span></td><td>🇧🇪 Belgique</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=4348" target="_blank">Lien</a></td></tr>
+        <tr><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Paris</td><td><span class="badge badge-premier">Premier</span></td><td>Paris <span class="country">(~2h10)</span></td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=3788" target="_blank">Lien</a></td></tr>
+        <tr><td><span class="type-badge type-sector">⚔️ Sector</span></td><td>Sector Qualifier Turin</td><td><span class="badge badge-limited">Limited</span></td><td>Turin</td><td>🇮🇹 Italie</td><td><a class="linkbtn" href="https://www.fanfinity.gg/event/star-wars-unlimited-sector-qualifier-turin-2026/" target="_blank">Lien</a></td></tr>
+        <tr><td rowspan="2"><span class="dow">Samedi</span>03/10/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Tours</td><td><span class="badge badge-premier">Premier</span></td><td>Tours <span class="country">(~3h30-3h40, hors zone stricte)</span></td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=3947" target="_blank">Lien</a></td></tr>
+        <tr><td><span class="type-badge type-showdown">🏆 Showdown</span></td><td>Store Showdown "Les Cendres de l'Empire" — Lord of the Games <span class="country">(Sold Out)</span></td><td><span class="badge badge-premier">Premier</span></td><td>Lille</td><td>🇫🇷 France</td><td><a class="linkbtn" href="https://www.eventbrite.fr/o/79110845433" target="_blank">Eventbrite</a></td></tr>
+        <tr><td><span class="dow">Vendredi</span>30/10/2026</td><td><span class="type-badge type-regional">👑 Regional</span></td><td>Regional Championship Utrecht (Limited)</td><td><span class="badge badge-limited">Limited</span></td><td>Utrecht</td><td>🇳🇱 Pays-Bas</td><td class="empty-note">Lien non listé</td></tr>
+        <tr><td><span class="dow">Samedi</span>31/10/2026</td><td><span class="type-badge type-regional">👑 Regional</span></td><td>Regional Championship Utrecht (Premier)</td><td><span class="badge badge-premier">Premier</span></td><td>Utrecht</td><td>🇳🇱 Pays-Bas</td><td class="empty-note">Lien non listé</td></tr>
+      </tbody>
+    </table>
+    <div class="empty-note" style="margin-top:10px;">Ludotrotter Lille (SWU weekly) : hebdomadaire le samedi 10h30, sauf le 15/08 (créneau pris par un tournoi Gundam TCG cette semaine-là). Semaines suivantes à confirmer courant septembre.<br>Rocambole (36 rue de la Clef, 59800 Lille) : aucune session SWU publiée sur leur calendrier au 07/08 — à vérifier directement. <a class="linkbtn" href="https://www.facebook.com/rocambole.lille/" target="_blank">Facebook</a></div>
+  </section>
+
+  <footer>
+    <h3>Sources utilisées</h3>
+    Weeklies : <a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">Au Beau Jeu (TCG Arena)</a>,
+    <a class="linkbtn" href="https://lille.ludotrotter.com/" target="_blank">Ludotrotter Lille</a>,
+    <a class="linkbtn" href="https://www.eventbrite.fr/o/79110845433" target="_blank">Lord of the Games (Eventbrite)</a>,
+    <a class="linkbtn" href="https://rocambole.fr/evenements/" target="_blank">Rocambole</a>.<br>
+    Qualifiers : <a class="linkbtn" href="https://www.swu-competitivehub.com/upcoming-events/" target="_blank">swu-competitivehub.com/upcoming-events</a> (compendium mondial Planetary/Sector/Regional, alimenté par la communauté — peut être incomplet ou en retard, à vérifier auprès de la boutique en cas de doute).<br><br>
+    <h3>Méthode de rafraîchissement</h3>
+    Ce tableau est reconstruit "à la demande" dans le chat plutôt que par un script automatique en tâche de fond, car deux des quatre sources boutiques sont des applications JavaScript qui nécessitent un navigateur (Chrome) pour être lues, et le site officiel starwarsunlimited.com/search fonctionne de la même façon. Pour une mise à jour : redemander dans une conversation avec ce projet actif.<br><br>
+    Zone "3h de Lille" actuelle : Hauts-de-France, Île-de-France, Normandie, ouest du Grand Est (jusqu'à Reims), Belgique entière, sud des Pays-Bas, ouest de l'Allemagne (jusqu'à Cologne/Aix-la-Chapelle), Royaume-Uni Sud-Est, Luxembourg. Ajustable sur demande.
+  </footer>
+</div>
+</body>
+</html>

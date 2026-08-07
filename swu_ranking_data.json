@@ -1,0 +1,1454 @@
+{
+ "_readme": "Fichier maître du classement SWU par archétype (Leader + Base). Chaque compétition ajoutée doit fournir : name, date, source_url, top_n, points_rule, results[]. Un 'result' = {rank, leader, edition, base_name, base_hp}. Les points d'un rang = (top_n + 1 - rank). REGLE DE FUSION : le classement final regroupe uniquement par (leader, base_name) IDENTIQUE. Les PV (base_hp) sont juste une info affichée, PAS un critère de fusion : deux bases de couleurs/aspects différents (ex Blue vs Yellow) ne fusionnent JAMAIS même si elles ont le même nombre de PV, car l'aspect change la construction du deck. MISE A JOUR REGLE DE POINTS (aout 2026) : pour prendre en compte la taille tres variable des tournois (de 13 a plusieurs centaines de joueurs), les points ne sont plus juste (top_n+1-rank) mais ponderes par la taille du tournoi : points(rank, tournoi) = 64 * sqrt(joueurs_tournoi / 546) * (top_n + 1 - rank) / top_n. La reference (poids 1) est Galactic Championship Las Vegas 2026 (546 joueurs, top_n=64) - cette formule redonne exactement l'ancien bareme (65-rank) pour cette competition. Pour agreger plusieurs competitions, sommer les points par (leader, base_name) sur toutes les competitions listees. CORRECTION IMPORTANTE (aout 2026) : 'Luke Skywalker' a deux versions totalement differentes (leader et deck differents) : 'Hero of Yavin' (JTL, deck escadrons spatiaux) et 'I Can Save Him' (ASH, deck troupes au sol) - meme s'ils partagent parfois la meme base (Data Vault). De meme 'Lando Calrissian' a 'Full Sabacc' (LAW, deck principal) et 'Eyes Open' (ASH, different). Les resultats sont maintenant etiquetes avec le sous-titre exact pour eviter toute fusion erronee. Regle generale a retenir : deux cartes Leader de meme nom mais d'edition differente peuvent etre des cartes totalement differentes (texte/pouvoir differents) - toujours verifier le sous-titre exact via la decklist avant de fusionner dans une meme ligne de classement.",
+ "base_hp_reference": {
+  "_comment": "PV connus des bases utilisées jusqu'ici. A completer si de nouvelles bases apparaissent.",
+  "Blue": 30,
+  "Yellow": 30,
+  "Red": 30,
+  "Green": 30,
+  "Data Vault": 33,
+  "Lake Country": 34,
+  "Colossus": 35,
+  "Red Force": 28,
+  "Blue Force": 28,
+  "Blue 27hp Multiaspect": 27,
+  "Alliance Outpost": null
+ },
+ "leader_icon_reference": {
+  "_comment": "URLs d'icônes déjà utilisées (source swu-competitivehub.com), réutilisables pour les prochaines compétitions si le même leader/édition revient.",
+  "Cad Bane|ASH": "https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Cad-Bane-ASH.webp",
+  "Darth Vader|JTL": "https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Darth-Vader-Victor-Squadron-Leader-JTL.webp",
+  "Director Krennic|LAW": "https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Director-Krennic-LAW.webp",
+  "Ahsoka Tano|ASH": "https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp",
+  "Admiral Piett|JTL": "https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp",
+  "Luke Skywalker|JTL": "https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp",
+  "Lando Calrissian|LAW": "https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Lando-Calrissian-LAW.webp",
+  "Dedra Meero|SEC": "https://www.swu-competitivehub.com/wp-content/uploads/2025/11/Dedra-Meero.webp",
+  "Boba Fett|JTL": "https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Boba-Fett-JTL.webp",
+  "Mother Talzin|LOF": "https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Mother-Talzin-LOF.webp",
+  "Grand Admiral Thrawn|JTL": "https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Grand-Amiral-Thrawn-JTL.webp",
+  "Leia Organa|SEC": "https://www.swu-competitivehub.com/wp-content/uploads/2025/10/Leia-Organa.webp",
+  "Greef Karga|ASH": "https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Greef-Karga-ASH.webp",
+  "Aurra Sing|LAW": "https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Aurra-Sing-LAW.webp",
+  "The Mandalorian|ASH": "https://www.swu-competitivehub.com/wp-content/uploads/2026/06/The-Mandalorian-ASH.webp",
+  "Tobias Beckett|LAW": "https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Tobias-Beckett-LAW.webp",
+  "Darth Maul|LOF": "https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Dark-Maul-LOF.webp"
+ },
+ "deck_type_analyses": {
+  "_readme": "Liste des archetypes (Leader+Base identiques) pour lesquels une analyse detaillee 'deck type' a ete produite (fichier HTML separe avec Qte moyenne/ponderee/suggeree par carte). Le detail des decklists source est dans swu_decklists_cache.json (cle 'Leader|Base'). Workflow pour en ajouter un nouveau : (1) recuperer les liens melee.gg des decks de l'archetype depuis la page de classement via le navigateur Chrome (javascript_tool, car melee.gg bloque le fetch direct), (2) recuperer chaque decklist (browser_batch: navigate + get_page_text), (3) encoder dans un data.py (voir swu_decklists_cache.json pour le format), (4) calculer moyenne/ponderee/suggeree avec la regle de coefficient ci-dessus (meme regle que le classement d'archetypes), (5) generer le HTML en reprenant le meme gabarit que les 3 rapports existants, (6) ajouter une entree ici + un lien dans la colonne 'Analyse' de swu_ranking_gc_lasvegas.html.",
+  "analyses": [
+   {
+    "leader": "Cad Bane",
+    "base": "Blue",
+    "decks_analyzed": 16,
+    "output_file": "deck_type_cadbane_blue.html",
+    "competitions_included": [
+     "Galactic Championship 2026 - Las Vegas"
+    ]
+   },
+   {
+    "leader": "Ahsoka Tano",
+    "base": "Blue",
+    "decks_analyzed": 7,
+    "output_file": "deck_type_ahsoka_blue.html",
+    "competitions_included": [
+     "Galactic Championship 2026 - Las Vegas"
+    ]
+   },
+   {
+    "leader": "Director Krennic",
+    "base": "Blue",
+    "decks_analyzed": 5,
+    "output_file": "deck_type_krennic_blue.html",
+    "competitions_included": [
+     "Galactic Championship 2026 - Las Vegas"
+    ]
+   },
+   {
+    "leader": "Darth Vader",
+    "base": "Yellow",
+    "decks_analyzed": 9,
+    "output_file": "deck_type_vader_yellow.html",
+    "competitions_included": [
+     "Galactic Championship 2026 - Las Vegas"
+    ]
+   },
+   {
+    "leader": "Boba Fett",
+    "base": "Lake Country",
+    "decks_analyzed": 2,
+    "output_file": "deck_type_bobafett_lakecountry.html",
+    "competitions_included": [
+     "Galactic Championship 2026 - Las Vegas"
+    ]
+   },
+   {
+    "leader": "Admiral Piett",
+    "base": "Red",
+    "decks_analyzed": 2,
+    "output_file": "deck_type_piett_red.html",
+    "competitions_included": [
+     "Galactic Championship 2026 - Las Vegas"
+    ]
+   },
+   {
+    "leader": "Luke Skywalker",
+    "base": "Data Vault",
+    "decks_analyzed": 16,
+    "output_file": "deck_type_luke_datavault.html",
+    "competitions_included": [
+     "all 16 competitions - Saison ASH"
+    ]
+   },
+   {
+    "leader": "Lando Calrissian",
+    "base": "Blue",
+    "decks_analyzed": 7,
+    "output_file": "deck_type_lando_blue.html",
+    "competitions_included": [
+     "all 16 competitions - Saison ASH"
+    ]
+   }
+  ]
+ },
+ "competitions": [
+  {
+   "name": "Galactic Championship 2026 - Las Vegas",
+   "date": "2026-07-25",
+   "source_url": "https://www.swu-competitivehub.com/event/galactic-championship-2026-07-25-ffg-las-vegas/",
+   "players": 546,
+   "set": "ASH",
+   "top_n": 64,
+   "points_rule": "rank 1 = 64 pts, rank 64 = 1 pt (points = top_n + 1 - rank)",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 3,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 4,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 5,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 7,
+     "leader": "Lando Calrissian (Full Sabacc)",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 8,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 9,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 10,
+     "leader": "Mother Talzin",
+     "edition": "LOF",
+     "base_name": "Red Force",
+     "base_hp": 28
+    },
+    {
+     "rank": 11,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 12,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 13,
+     "leader": "Dedra Meero",
+     "edition": "SEC",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 14,
+     "leader": "Admiral Piett",
+     "edition": "JTL",
+     "base_name": "Red",
+     "base_hp": 30
+    },
+    {
+     "rank": 15,
+     "leader": "Director Krennic",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 16,
+     "leader": "Director Krennic",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 17,
+     "leader": "Dedra Meero",
+     "edition": "SEC",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 18,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 19,
+     "leader": "Director Krennic",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 20,
+     "leader": "Grand Admiral Thrawn",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 21,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 22,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 23,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 24,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 25,
+     "leader": "Admiral Piett",
+     "edition": "JTL",
+     "base_name": "Red",
+     "base_hp": 30
+    },
+    {
+     "rank": 26,
+     "leader": "Director Krennic",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 27,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 28,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 29,
+     "leader": "Leia Organa",
+     "edition": "SEC",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 30,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 31,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 32,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 33,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 34,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 35,
+     "leader": "Dedra Meero",
+     "edition": "SEC",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 36,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 37,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 38,
+     "leader": "Greef Karga",
+     "edition": "ASH",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 39,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 40,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 41,
+     "leader": "Lando Calrissian (Eyes Open)",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 42,
+     "leader": "Aurra Sing",
+     "edition": "LAW",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 43,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 44,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 45,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 46,
+     "leader": "Dedra Meero",
+     "edition": "SEC",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 47,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 48,
+     "leader": "Director Krennic",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 49,
+     "leader": "The Mandalorian",
+     "edition": "ASH",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 50,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 51,
+     "leader": "Tobias Beckett",
+     "edition": "LAW",
+     "base_name": "Red",
+     "base_hp": 30
+    },
+    {
+     "rank": 52,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 53,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 54,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 55,
+     "leader": "Greef Karga",
+     "edition": "ASH",
+     "base_name": "Red",
+     "base_hp": 30
+    },
+    {
+     "rank": 56,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 57,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 58,
+     "leader": "Dedra Meero",
+     "edition": "SEC",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 59,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 60,
+     "leader": "Director Krennic",
+     "edition": "LAW",
+     "base_name": "Blue 27hp Multiaspect",
+     "base_hp": 27
+    },
+    {
+     "rank": 61,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 62,
+     "leader": "Darth Maul",
+     "edition": "LOF",
+     "base_name": "Blue Force",
+     "base_hp": 28
+    },
+    {
+     "rank": 63,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 64,
+     "leader": "Grand Admiral Thrawn",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier March",
+   "date": "2026-08-02",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-02-rollplay-march/",
+   "players": 37,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Admiral Piett",
+     "edition": "JTL",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "The Armorer",
+     "edition": "ASH",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 3,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Green",
+     "base_hp": 30
+    },
+    {
+     "rank": 4,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 5,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 7,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue 27hp Multiaspect",
+     "base_hp": 27
+    },
+    {
+     "rank": 8,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier Clermont-Ferrand",
+   "date": "2026-08-02",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-02-baraka-jeux-shop-clermont-ferrand/",
+   "players": 54,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 2,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 3,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 4,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 5,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 7,
+     "leader": "Lando Calrissian (Full Sabacc)",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 8,
+     "leader": "Lando Calrissian (Full Sabacc)",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier Curicó",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-candlelight-games-spa-curico/",
+   "players": 50,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Luke Skywalker (I Can Save Him)",
+     "edition": "ASH",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 3,
+     "leader": "The Mandalorian",
+     "edition": "ASH",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 4,
+     "leader": "The Mandalorian",
+     "edition": "ASH",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 5,
+     "leader": "Grand Admiral Thrawn",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 7,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 8,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier São Paulo",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-dream-up-tcg-sao-paulo/",
+   "players": 74,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Greef Karga",
+     "edition": "ASH",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 3,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 4,
+     "leader": "Mother Talzin",
+     "edition": "LOF",
+     "base_name": "Red Force",
+     "base_hp": 28
+    },
+    {
+     "rank": 5,
+     "leader": "Admiral Piett",
+     "edition": "JTL",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 7,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 8,
+     "leader": "Admiral Piett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier Lincoln",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-hobbytown-lincoln-lincoln-ne/",
+   "players": 49,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 3,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 4,
+     "leader": "The Mandalorian",
+     "edition": "ASH",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 5,
+     "leader": "The Mandalorian",
+     "edition": "ASH",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 6,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 7,
+     "leader": "The Mandalorian",
+     "edition": "ASH",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 8,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier Wilmington",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-cape-fear-collectibles-wilmington/",
+   "players": 40,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Lando Calrissian (Full Sabacc)",
+     "edition": "LAW",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 2,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 3,
+     "leader": "Grand Admiral Thrawn",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 4,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 5,
+     "leader": "Ezra",
+     "edition": "ASH",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 7,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 8,
+     "leader": "The Mandalorian",
+     "edition": "ASH",
+     "base_name": "Colossus",
+     "base_hp": 35
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier Northridge",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-firedice-northridge/",
+   "players": 93,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 3,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 4,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 5,
+     "leader": "Director Krennic",
+     "edition": "LAW",
+     "base_name": "Blue 27hp Multiaspect",
+     "base_hp": 27
+    },
+    {
+     "rank": 6,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 7,
+     "leader": "Lando Calrissian (Full Sabacc)",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 8,
+     "leader": "Obi-Wan Kenobi",
+     "edition": "LOF",
+     "base_name": "Blue Force",
+     "base_hp": 28
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier Leon",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-cardbastion-leon/",
+   "players": 22,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Dedra Meero",
+     "edition": "SEC",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 2,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 3,
+     "leader": "Aurra Sing",
+     "edition": "LAW",
+     "base_name": "Red",
+     "base_hp": 30
+    },
+    {
+     "rank": 4,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 5,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Luke Skywalker (I Can Save Him)",
+     "edition": "ASH",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 7,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 8,
+     "leader": "Han Solo",
+     "edition": "JTL",
+     "base_name": "Green",
+     "base_hp": 30
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier Ayrshire",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-dominion-ayrshire/",
+   "players": 25,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Lando Calrissian (Full Sabacc)",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 3,
+     "leader": "Admiral Piett",
+     "edition": "JTL",
+     "base_name": "Red 27hp Multiaspect",
+     "base_hp": null
+    },
+    {
+     "rank": 4,
+     "leader": "Greef Karga",
+     "edition": "ASH",
+     "base_name": "Red",
+     "base_hp": 30
+    },
+    {
+     "rank": 5,
+     "leader": "Admiral Piett",
+     "edition": "JTL",
+     "base_name": "Red",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 7,
+     "leader": "Lando Calrissian (Full Sabacc)",
+     "edition": "LAW",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 8,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue Force",
+     "base_hp": 28
+    }
+   ]
+  },
+  {
+   "name": "Planetary Qualifier Strasbourg",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-philibert-strasbourg/",
+   "players": 53,
+   "set": "ASH",
+   "top_n": 8,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 3,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Alliance Outpost",
+     "base_hp": null
+    },
+    {
+     "rank": 4,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 5,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 6,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 7,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 8,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    }
+   ]
+  },
+  {
+   "name": "Gamescon Indi SAT - 9AM",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/minor-tournament-2026-08-01-gencon-indianapolis-ffg-morning-indianapolis/",
+   "players": 24,
+   "set": "ASH",
+   "top_n": 5,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 2,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 3,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 4,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 5,
+     "leader": "Director Krennic",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    }
+   ]
+  },
+  {
+   "name": "Gamescon Indi SAT - 3PM",
+   "date": "2026-08-01",
+   "source_url": "https://www.swu-competitivehub.com/event/minor-tournament-2026-08-01-gencon-indianapolis-ffg-afternoon-indianapolis/",
+   "players": 23,
+   "set": "ASH",
+   "top_n": 4,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Darth Vader",
+     "edition": "JTL",
+     "base_name": "Yellow",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 3,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 4,
+     "leader": "Greef Karga",
+     "edition": "ASH",
+     "base_name": "Red",
+     "base_hp": 30
+    }
+   ]
+  },
+  {
+   "name": "Gamescon Indi FRI - 3PM",
+   "date": "2026-07-31",
+   "source_url": "https://www.swu-competitivehub.com/event/minor-tournament-2026-07-31-gencon-indianapolis-ffg-afternoon-indianapolis/",
+   "players": 20,
+   "set": "ASH",
+   "top_n": 3,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Darth Maul",
+     "edition": "LOF",
+     "base_name": "Blue Force",
+     "base_hp": 28
+    },
+    {
+     "rank": 3,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    }
+   ]
+  },
+  {
+   "name": "Gamescon Indi FRI - 9AM",
+   "date": "2026-07-31",
+   "source_url": "https://www.swu-competitivehub.com/event/minor-tournament-2026-07-31-gencon-indianapolis-ffg-morning-indianapolis/",
+   "players": 27,
+   "set": "ASH",
+   "top_n": 6,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Cad Bane",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Darth Maul",
+     "edition": "LOF",
+     "base_name": "Blue Force",
+     "base_hp": 28
+    },
+    {
+     "rank": 3,
+     "leader": "The Mandalorian",
+     "edition": "ASH",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 4,
+     "leader": "Ahsoka Tano",
+     "edition": "ASH",
+     "base_name": "Blue",
+     "base_hp": 30
+    },
+    {
+     "rank": 5,
+     "leader": "Dedra Meero",
+     "edition": "SEC",
+     "base_name": "Colossus",
+     "base_hp": 35
+    },
+    {
+     "rank": 6,
+     "leader": "Lando Calrissian (Full Sabacc)",
+     "edition": "LAW",
+     "base_name": "Blue",
+     "base_hp": 30
+    }
+   ]
+  },
+  {
+   "name": "Star Wars Jedi Trial",
+   "date": "2026-07-27",
+   "source_url": "https://www.swu-competitivehub.com/event/minor-tournament-2026-07-27-versus-gamecenter-lisboa-lisboa/",
+   "players": 13,
+   "set": "ASH",
+   "top_n": 4,
+   "points_rule": "points(rank) = 64*sqrt(players/546) * (top_n+1-rank)/top_n  [ponderation par taille de tournoi, reference = Galactic Championship Las Vegas 2026, 546 joueurs]",
+   "results": [
+    {
+     "rank": 1,
+     "leader": "Admiral Piett",
+     "edition": "JTL",
+     "base_name": "Red",
+     "base_hp": 30
+    },
+    {
+     "rank": 2,
+     "leader": "Boba Fett",
+     "edition": "JTL",
+     "base_name": "Lake Country",
+     "base_hp": 34
+    },
+    {
+     "rank": 3,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    },
+    {
+     "rank": 4,
+     "leader": "Luke Skywalker (Hero of Yavin)",
+     "edition": "JTL",
+     "base_name": "Data Vault",
+     "base_hp": 33
+    }
+   ]
+  }
+ ]
+}

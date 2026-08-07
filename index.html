@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alliance Rebelle — Team AR Meta Analysis</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    background: #0f1216; color: #e6e8eb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0; padding: 0 32px 48px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .banner {
+    display: flex; align-items: center; gap: 20px;
+    padding: 32px 0 28px; border-bottom: 1px solid #24282f; margin-bottom: 32px;
+  }
+  .banner img {
+    width: 84px; height: 84px; border-radius: 50%; flex-shrink: 0;
+    box-shadow: 0 0 0 2px #3a1414, 0 0 22px rgba(193,68,63,0.35);
+  }
+  .banner-text h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: 0.02em; }
+  .banner-text .site-sub { color: #c1443f; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .tagline { color: #9aa1ab; font-size: 14px; margin-bottom: 8px; }
+  .card {
+    display: block; background: #171b21; border: 1px solid #24282f; border-radius: 10px;
+    padding: 18px 20px; margin-bottom: 14px; text-decoration: none; color: inherit;
+    transition: border-color 0.15s;
+  }
+  .card:hover { border-color: #3b5a78; }
+  .card h2 { margin: 0 0 4px; font-size: 16px; color: #7fa8d3; }
+  .card p { margin: 0; font-size: 13px; color: #9aa1ab; }
+  .section-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
+    color: #6b7280; margin: 28px 0 10px;
+  }
+  .badge {
+    display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 4px;
+    background: #1c2b3d; color: #7fa8d3; margin-left: 8px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="banner">
+      <img src="alliance_rebelle_logo.jpg" alt="Logo Alliance Rebelle">
+      <div class="banner-text">
+        <div class="site-sub">Site web de l'Alliance Rebelle</div>
+        <h1>Team AR Meta Analysis</h1>
+      </div>
+    </div>
+    <div class="tagline">Analyse du métagame Star Wars: Unlimited à partir des résultats de compétitions officielles.</div>
+
+    <div class="section-label">Évènements</div>
+    <a class="card" href="evenements_swu.html">
+      <h2>Calendrier des évènements — Team AR</h2>
+      <p>Weeklies Lille (&lt; 20 min), Planetary Qualifiers (&lt; 3h), Sector &amp; Regional en Europe · Instantané du 07/08/2026</p>
+    </a>
+
+    <div class="section-label">Classement des archétypes</div>
+    <a class="card" href="swu_ranking_season.html">
+      <h2>Classement Saison — 16 compétitions (Set ASH)</h2>
+      <p>Points pondérés par la taille du tournoi · Galactic Championship + 15 Qualifiers/Minors · 6 analyses de deck type disponibles</p>
+    </a>
+    <a class="card" href="swu_ranking_karabast.html">
+      <h2>Classement Karabast — Parties en ligne (Premier)</h2>
+      <p>Win rate par archétype sur les parties Karabast (SWU Stats, semaines 40-43) · Complémentaire du classement tournois</p>
+    </a>
+
+    <div class="section-label">Analyses de deck type</div>
+    <a class="card" href="deck_type_cadbane_blue.html">
+      <h2>Cad Bane, Still Faster than You <span class="badge">Blue</span></h2>
+      <p>16 decks · Vainqueur du tournoi · Archétype dominant du top 64</p>
+    </a>
+    <a class="card" href="deck_type_ahsoka_blue.html">
+      <h2>Ahsoka Tano, Trust in the Force <span class="badge">Blue</span></h2>
+      <p>7 decks · Archétype très consensuel (plusieurs listes strictement identiques)</p>
+    </a>
+    <a class="card" href="deck_type_krennic_blue.html">
+      <h2>Director Krennic, Amidst My Achievement <span class="badge">Blue</span></h2>
+      <p>5 decks · Base variable d'un deck à l'autre</p>
+    </a>
+    <a class="card" href="deck_type_vader_yellow.html">
+      <h2>Darth Vader, Victor Squadron Leader <span class="badge">Yellow</span></h2>
+      <p>9 decks · 2e archétype du classement · Deck full space (Yellow/vaisseaux)</p>
+    </a>
+    <a class="card" href="deck_type_bobafett_lakecountry.html">
+      <h2>Boba Fett, Any Methods Necessary <span class="badge">Lake Country</span></h2>
+      <p>2 decks · Échantillon réduit, à interpréter avec prudence</p>
+    </a>
+    <a class="card" href="deck_type_piett_red.html">
+      <h2>Admiral Piett, Commanding the Armada <span class="badge">Red</span></h2>
+      <p>2 decks · Échantillon réduit, à interpréter avec prudence</p>
+    </a>
+    <a class="card" href="deck_type_luke_datavault.html">
+      <h2>Luke Skywalker, Hero of Yavin <span class="badge">Data Vault</span></h2>
+      <p>16 decks sur la saison · Deck full escadrons spatiaux</p>
+    </a>
+    <a class="card" href="deck_type_lando_blue.html">
+      <h2>Lando Calrissian, Full Sabacc <span class="badge">Blue</span></h2>
+      <p>6 decks sur la saison · Ground midrange avec Chimaera/Corona Quatre</p>
+    </a>
+  </div>
+</body>
+</html>
