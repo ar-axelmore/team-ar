@@ -23,7 +23,7 @@
     margin-bottom: 20px; background: #171b21; border: 1px solid #24282f; border-radius: 8px; padding: 10px 14px;
   }
   details.comps summary { cursor: pointer; color: #7fa8d3; font-size: 0.85rem; }
-  details.comps ul { margin: 10px 0 0; padding-left: 20px; font-size: 0.82rem; color: #c3c8cf; }
+  details.comps ul { margin: 10px 0 0; padding-left: 20px; font-size: 0.82rem; color: #c3c8cf; max-height: 300px; overflow-y: auto; }
   details.comps li { margin-bottom: 4px; }
   details.comps a { color: #7fa8d3; }
   .formula {
@@ -87,35 +87,54 @@
   <div class="site-brand">Team AR Meta Analysis</div>
   <h1>Classement des archétypes — Saison (Set ASH)</h1>
   <div class="meta">
-    Regroupement par archétype (même Leader ET même Base — les PV sont indiqués à titre informatif, jamais comme critère de fusion) · 16 compétitions agrégées à ce jour
+    Regroupement par archétype (même Leader ET même Base — les PV sont indiqués à titre informatif, jamais comme critère de fusion) · 35 compétitions agrégées à ce jour
   </div>
   <div class="formula">
     <strong>Formule de points</strong> (pondérée par la taille du tournoi) : points(rang, tournoi) = 64 × √(joueurs du tournoi / 546) × (top_n + 1 − rang) / top_n.
     Référence = Galactic Championship Las Vegas 2026 (546 joueurs, poids ×1). Les points de chaque deck sont sommés par archétype sur l'ensemble des compétitions listées ci-dessous.
   </div>
   <div class="warning">
-    ⚠️ <strong>Attention aux homonymes</strong> : deux cartes Leader du même nom mais d'édition différente peuvent être des cartes totalement différentes (texte et deck différents). "Luke Skywalker, Hero of Yavin" (JTL) ≠ "Luke Skywalker, I Can Save Him" (ASH). "Lando Calrissian, Full Sabacc" (LAW) ≠ "Lando Calrissian, Eyes Open" (ASH). Ces cas ont été détectés et séparés ci-dessous ; d'autres homonymes similaires pourraient exister ailleurs dans ce tableau et n'ont pas encore été vérifiés un par un.
+    ⚠️ <strong>Attention aux homonymes</strong> : deux cartes Leader du même nom mais d'édition différente peuvent être des cartes totalement différentes. "Luke Skywalker, Hero of Yavin" (JTL) ≠ "Luke Skywalker, I Can Save Him" (ASH). "Lando Calrissian, Full Sabacc" (LAW) ≠ "Lando Calrissian, Eyes Open" (ASH). Seuls ces cas ont été vérifiés et séparés ; d'autres homonymes pourraient exister ailleurs dans ce tableau sans avoir été détectés.<br>
+    Le tournoi "Planetary Qualifier Ridgeland" (09/08) n'a que le vainqueur connu (page détaillée pas encore publiée au moment de la mise à jour) — traité avec un poids de tournoi réduit (top_n=1).
   </div>
   <details class="comps">
-    <summary>Voir les 16 compétitions incluses dans ce classement</summary>
+    <summary>Voir les 35 compétitions incluses dans ce classement</summary>
     <ul>
-      <li><a href="https://www.swu-competitivehub.com/event/galactic-championship-2026-07-25-ffg-las-vegas/">Galactic Championship 2026 - Las Vegas</a> — 25/07/2026, 546 joueurs, Top 64</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-02-rollplay-march/">Planetary Qualifier March</a> — 02/08/2026, 37 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-02-baraka-jeux-shop-clermont-ferrand/">Planetary Qualifier Clermont-Ferrand</a> — 02/08/2026, 54 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-candlelight-games-spa-curico/">Planetary Qualifier Curicó</a> — 01/08/2026, 50 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-dream-up-tcg-sao-paulo/">Planetary Qualifier São Paulo</a> — 01/08/2026, 74 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-hobbytown-lincoln-lincoln-ne/">Planetary Qualifier Lincoln</a> — 01/08/2026, 49 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-cape-fear-collectibles-wilmington/">Planetary Qualifier Wilmington</a> — 01/08/2026, 40 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-firedice-northridge/">Planetary Qualifier Northridge</a> — 01/08/2026, 93 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-cardbastion-leon/">Planetary Qualifier Leon</a> — 01/08/2026, 22 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-dominion-ayrshire/">Planetary Qualifier Ayrshire</a> — 01/08/2026, 25 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-philibert-strasbourg/">Planetary Qualifier Strasbourg</a> — 01/08/2026, 53 joueurs, Top 8</li>
-      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-08-01-gencon-indianapolis-ffg-morning-indianapolis/">Gamescon Indi SAT 9AM</a> — 01/08/2026, 24 joueurs</li>
-      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-08-01-gencon-indianapolis-ffg-afternoon-indianapolis/">Gamescon Indi SAT 3PM</a> — 01/08/2026, 23 joueurs</li>
-      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-07-31-gencon-indianapolis-ffg-afternoon-indianapolis/">Gamescon Indi FRI 3PM</a> — 31/07/2026, 20 joueurs</li>
-      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-07-31-gencon-indianapolis-ffg-morning-indianapolis/">Gamescon Indi FRI 9AM</a> — 31/07/2026, 27 joueurs</li>
-      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-07-27-versus-gamecenter-lisboa-lisboa/">Star Wars Jedi Trial</a> — 27/07/2026, 13 joueurs</li>
-
+      <li><a href="https://www.swu-competitivehub.com/event/galactic-championship-2026-07-25-ffg-las-vegas/">Galactic Championship 2026 - Las Vegas</a> — 2026-07-25, 546 joueurs, Top 64</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-02-rollplay-march/">Planetary Qualifier March</a> — 2026-08-02, 37 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-02-baraka-jeux-shop-clermont-ferrand/">Planetary Qualifier Clermont-Ferrand</a> — 2026-08-02, 54 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-candlelight-games-spa-curico/">Planetary Qualifier Curicó</a> — 2026-08-01, 50 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-dream-up-tcg-sao-paulo/">Planetary Qualifier São Paulo</a> — 2026-08-01, 74 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-hobbytown-lincoln-lincoln-ne/">Planetary Qualifier Lincoln</a> — 2026-08-01, 49 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-cape-fear-collectibles-wilmington/">Planetary Qualifier Wilmington</a> — 2026-08-01, 40 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-firedice-northridge/">Planetary Qualifier Northridge</a> — 2026-08-01, 93 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-cardbastion-leon/">Planetary Qualifier Leon</a> — 2026-08-01, 22 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-dominion-ayrshire/">Planetary Qualifier Ayrshire</a> — 2026-08-01, 25 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-01-philibert-strasbourg/">Planetary Qualifier Strasbourg</a> — 2026-08-01, 53 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-08-01-gencon-indianapolis-ffg-morning-indianapolis/">Gamescon Indi SAT - 9AM</a> — 2026-08-01, 24 joueurs, Top 5</li>
+      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-08-01-gencon-indianapolis-ffg-afternoon-indianapolis/">Gamescon Indi SAT - 3PM</a> — 2026-08-01, 23 joueurs, Top 4</li>
+      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-07-31-gencon-indianapolis-ffg-afternoon-indianapolis/">Gamescon Indi FRI - 3PM</a> — 2026-07-31, 20 joueurs, Top 3</li>
+      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-07-31-gencon-indianapolis-ffg-morning-indianapolis/">Gamescon Indi FRI - 9AM</a> — 2026-07-31, 27 joueurs, Top 6</li>
+      <li><a href="https://www.swu-competitivehub.com/event/minor-tournament-2026-07-27-versus-gamecenter-lisboa-lisboa/">Star Wars Jedi Trial</a> — 2026-07-27, 13 joueurs, Top 4</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-09-dragons-lair-st-marys-edwardstown/">Planetary Qualifier Edwardstown</a> — 2026-08-09, 42 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-09-vans-comics-cards-and-games-ridgeland/">Planetary Qualifier Ridgeland</a> — 2026-08-09, 23 joueurs, Top 1</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-09-ludivers-gellainville/">Planetary Qualifier Gellainville</a> — 2026-08-09, 78 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-la-guarida-del-dragon-las-condes/">Planetary Qualifier Las Condes</a> — 2026-08-08, 66 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-songeniales-bogota/">Planetary Qualifier Bogotá</a> — 2026-08-08, 20 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-bedrock-city-comics-webster-texas/">Planetary Qualifier Webster</a> — 2026-08-08, 41 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-jww-sports-cards-gaming-fargo/">Planetary Qualifier Fargo</a> — 2026-08-08, 42 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-gamers-corps-maryland-ellicott-city-md/">Planetary Qualifier Ellicott City</a> — 2026-08-08, 56 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-millennium-games-rochester/">Planetary Qualifier Rochester</a> — 2026-08-08, 48 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-the-destination-louisville/">Planetary Qualifier Louisville</a> — 2026-08-08, 65 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-living-realms-castleford/">Planetary Qualifier Castleford</a> — 2026-08-08, 50 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-fantasia-north-umea/">Planetary Qualifier Umeå</a> — 2026-08-08, 12 joueurs, Top 4</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-friki-galaxy-valencia/">Planetary Qualifier Valencia</a> — 2026-08-08, 49 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-distrito-zero-valladolid-valladolid/">Planetary Qualifier Valladolid</a> — 2026-08-08, 89 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-mag-planszowy-board-mage-wrocaw/">Planetary Qualifier Wroclaw</a> — 2026-08-08, 81 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-team-lunti-trading-cards-darmstadt/">Planetary Qualifier Darmstadt</a> — 2026-08-08, 42 joueurs, Top 8</li>
+      <li><a href="https://www.swu-competitivehub.com/event/planetary-qualifier-2026-08-08-%e5%ae%9d%e5%ba%93%e5%8d%a1%e7%89%8c-beijing/">Planetary Qualifier Beijing (2)</a> — 2026-08-08, 10 joueurs, Top 4</li>
+      <li><a href="https://www.swu-competitivehub.com/event/store-showdown-2026-08-02-libreriamoebius-las-palmas-grand-canaria/">Showdown Las Palmas</a> — 2026-08-02, 16 joueurs, Top 4</li>
+      <li><a href="https://www.swu-competitivehub.com/event/store-showdown-2026-08-02-board-in-the-city-southampton/">Showdown Southampton</a> — 2026-08-02, 12 joueurs, Top 4</li>
     </ul>
   </details>
   <div class="legend">
@@ -142,9 +161,9 @@
         </td>
         <td class="set"><span class="set-badge">ASH</span></td>
         <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Blue (30 PV)</td>
-        <td class="num points">869.7</td>
-        <td class="num">39</td>
-        <td class="num">13</td>
+        <td class="num points">1301.8</td>
+        <td class="num">73</td>
+        <td class="num">30</td>
         <td class="best-result">1/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td><a class="analysis-link" href="deck_type_cadbane_blue.html">Analyse deck →</a></td>
       </tr>
@@ -156,53 +175,53 @@
         </td>
         <td class="set"><span class="set-badge">JTL</span></td>
         <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
-        <td class="num points">447.8</td>
+        <td class="num points">580.2</td>
+        <td class="num">29</td>
         <td class="num">16</td>
-        <td class="num">7</td>
         <td class="best-result">3/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td><a class="analysis-link" href="deck_type_vader_yellow.html">Analyse deck →</a></td>
       </tr>
       <tr>
         <td class="rank">3</td>
         <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span>
+          <span class="leader-text">Luke Skywalker (Hero of Yavin)</span>
+        </td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command)"></span>Data Vault (33 PV)</td>
+        <td class="num points">349.3</td>
+        <td class="num">30</td>
+        <td class="num">21</td>
+        <td class="best-result">28/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td><a class="analysis-link" href="deck_type_luke_datavault.html">Analyse deck →</a></td>
+      </tr>
+      <tr>
+        <td class="rank">4</td>
+        <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span>
           <span class="leader-text">Ahsoka Tano</span>
         </td>
         <td class="set"><span class="set-badge">ASH</span></td>
         <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Blue (30 PV)</td>
-        <td class="num points">216.3</td>
+        <td class="num points">296.6</td>
+        <td class="num">19</td>
         <td class="num">12</td>
-        <td class="num">6</td>
         <td class="best-result">24/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td><a class="analysis-link" href="deck_type_ahsoka_blue.html">Analyse deck →</a></td>
       </tr>
       <tr>
-        <td class="rank">4</td>
+        <td class="rank">5</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Director-Krennic-LAW.webp')"></span>
           <span class="leader-text">Director Krennic</span>
         </td>
         <td class="set"><span class="set-badge">LAW</span></td>
         <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Blue (30 PV)</td>
-        <td class="num points">203.7</td>
-        <td class="num">6</td>
-        <td class="num">2</td>
+        <td class="num points">274.2</td>
+        <td class="num">11</td>
+        <td class="num">7</td>
         <td class="best-result">15/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td><a class="analysis-link" href="deck_type_krennic_blue.html">Analyse deck →</a></td>
-      </tr>
-      <tr>
-        <td class="rank">5</td>
-        <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span>
-          <span class="leader-text">Luke Skywalker (Hero of Yavin)</span>
-        </td>
-        <td class="set"><span class="set-badge">JTL</span></td>
-        <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command)"></span>Data Vault (33 PV)</td>
-        <td class="num points">198.9</td>
-        <td class="num">17</td>
-        <td class="num">10</td>
-        <td class="best-result">28/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
-        <td><a class="analysis-link" href="deck_type_luke_datavault.html">Analyse deck →</a></td>
       </tr>
       <tr>
         <td class="rank">6</td>
@@ -212,80 +231,80 @@
         </td>
         <td class="set"><span class="set-badge">JTL</span></td>
         <td class="base"><span class="dot" style="background:#8a8f98" title="Gris (Neutre / multi-aspect)"></span>Lake Country (34 PV)</td>
-        <td class="num points">122.6</td>
-        <td class="num">9</td>
-        <td class="num">7</td>
+        <td class="num points">150.6</td>
+        <td class="num">12</td>
+        <td class="num">10</td>
         <td class="best-result">2/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td><a class="analysis-link" href="deck_type_bobafett_lakecountry.html">Analyse deck →</a></td>
       </tr>
       <tr>
         <td class="rank">7</td>
         <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span>
-          <span class="leader-text">Admiral Piett</span>
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/The-Mandalorian-ASH.webp')"></span>
+          <span class="leader-text">The Mandalorian</span>
         </td>
-        <td class="set"><span class="set-badge">JTL</span></td>
-        <td class="base"><span class="dot" style="background:#c1443f" title="Rouge (Aggression)"></span>Red (30 PV)</td>
-        <td class="num points">107.7</td>
-        <td class="num">4</td>
-        <td class="num">3</td>
-        <td class="best-result">14/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
-        <td><a class="analysis-link" href="deck_type_piett_red.html">Analyse deck →</a></td>
-      </tr>
-      <tr>
-        <td class="rank">8</td>
-        <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/11/Dedra-Meero.webp')"></span>
-          <span class="leader-text">Dedra Meero</span>
-        </td>
-        <td class="set"><span class="set-badge">SEC</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
         <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Colossus (35 PV)</td>
-        <td class="num points">95.6</td>
-        <td class="num">5</td>
-        <td class="num">3</td>
-        <td class="best-result">13/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td class="num points">128.0</td>
+        <td class="num">13</td>
+        <td class="num">10</td>
+        <td class="best-result">2/8 — Planetary Qualifier Gellainville (78 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">9</td>
+        <td class="rank">8</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Lando-Calrissian-LAW.webp')"></span>
           <span class="leader-text">Lando Calrissian (Full Sabacc)</span>
         </td>
         <td class="set"><span class="set-badge">LAW</span></td>
         <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Blue (30 PV)</td>
-        <td class="num points">88.2</td>
-        <td class="num">6</td>
-        <td class="num">5</td>
+        <td class="num points">127.7</td>
+        <td class="num">9</td>
+        <td class="num">8</td>
         <td class="best-result">7/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td><a class="analysis-link" href="deck_type_lando_blue.html">Analyse deck →</a></td>
       </tr>
       <tr>
+        <td class="rank">9</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/11/Dedra-Meero.webp')"></span>
+          <span class="leader-text">Dedra Meero</span>
+        </td>
+        <td class="set"><span class="set-badge">SEC</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Colossus (35 PV)</td>
+        <td class="num points">126.3</td>
+        <td class="num">7</td>
+        <td class="num">4</td>
+        <td class="best-result">13/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
         <td class="rank">10</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span>
+          <span class="leader-text">Admiral Piett</span>
+        </td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#c1443f" title="Rouge (Aggression)"></span>Red (30 PV)</td>
+        <td class="num points">114.4</td>
+        <td class="num">5</td>
+        <td class="num">4</td>
+        <td class="best-result">14/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td><a class="analysis-link" href="deck_type_piett_red.html">Analyse deck →</a></td>
+      </tr>
+      <tr>
+        <td class="rank">11</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Cad-Bane-ASH.webp')"></span>
           <span class="leader-text">Cad Bane</span>
         </td>
         <td class="set"><span class="set-badge">ASH</span></td>
         <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
-        <td class="num points">82.5</td>
-        <td class="num">4</td>
-        <td class="num">3</td>
-        <td class="best-result">22/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="rank">11</td>
-        <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/The-Mandalorian-ASH.webp')"></span>
-          <span class="leader-text">The Mandalorian</span>
-        </td>
-        <td class="set"><span class="set-badge">ASH</span></td>
-        <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Colossus (35 PV)</td>
-        <td class="num points">80.6</td>
-        <td class="num">8</td>
+        <td class="num points">101.9</td>
+        <td class="num">6</td>
         <td class="num">5</td>
-        <td class="best-result">49/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td class="best-result">22/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td></td>
       </tr>
       <tr>
@@ -296,9 +315,9 @@
         </td>
         <td class="set"><span class="set-badge">SEC</span></td>
         <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Blue (30 PV)</td>
-        <td class="num points">78.0</td>
-        <td class="num">2</td>
-        <td class="num">1</td>
+        <td class="num points">91.4</td>
+        <td class="num">4</td>
+        <td class="num">3</td>
         <td class="best-result">17/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td></td>
       </tr>
@@ -310,9 +329,9 @@
         </td>
         <td class="set"><span class="set-badge">LOF</span></td>
         <td class="base"><span class="dot" style="background:#c1443f" title="Rouge (Aggression) — variante Force"></span>Red Force (28 PV)</td>
-        <td class="num points">69.7</td>
-        <td class="num">2</td>
-        <td class="num">2</td>
+        <td class="num points">71.9</td>
+        <td class="num">3</td>
+        <td class="num">3</td>
         <td class="best-result">10/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td></td>
       </tr>
@@ -333,19 +352,75 @@
       <tr>
         <td class="rank">15</td>
         <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Dark-Maul-LOF.webp')"></span>
+          <span class="leader-text">Darth Maul</span>
+        </td>
+        <td class="set"><span class="set-badge">LOF</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance) — variante Force"></span>Blue Force (28 PV)</td>
+        <td class="num points">67.0</td>
+        <td class="num">7</td>
+        <td class="num">6</td>
+        <td class="best-result">3/8 — Planetary Qualifier Louisville (65 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">16</td>
+        <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Greef-Karga-ASH.webp')"></span>
           <span class="leader-text">Greef Karga</span>
         </td>
         <td class="set"><span class="set-badge">ASH</span></td>
         <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command)"></span>Data Vault (33 PV)</td>
-        <td class="num points">47.6</td>
-        <td class="num">2</td>
-        <td class="num">2</td>
+        <td class="num points">66.7</td>
+        <td class="num">5</td>
+        <td class="num">5</td>
         <td class="best-result">38/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">16</td>
+        <td class="rank">17</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span>
+          <span class="leader-text">Luke Skywalker (I Can Save Him)</span>
+        </td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command)"></span>Data Vault (33 PV)</td>
+        <td class="num points">59.7</td>
+        <td class="num">5</td>
+        <td class="num">5</td>
+        <td class="best-result">1/8 — Planetary Qualifier Louisville (65 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">18</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span>
+          <span class="leader-text">Admiral Piett</span>
+        </td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Blue (30 PV)</td>
+        <td class="num points">59.1</td>
+        <td class="num">6</td>
+        <td class="num">5</td>
+        <td class="best-result">2/8 — Planetary Qualifier Castleford (50 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">19</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span>
+          <span class="leader-text">Admiral Piett</span>
+        </td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#8a8f98" title="Gris (Neutre / multi-aspect)"></span>Red 27hp Multiaspect</td>
+        <td class="num points">39.9</td>
+        <td class="num">4</td>
+        <td class="num">4</td>
+        <td class="best-result">1/8 — Planetary Qualifier Edwardstown (42 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">20</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/10/Leia-Organa.webp')"></span>
           <span class="leader-text">Leia Organa</span>
@@ -359,21 +434,49 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">17</td>
+        <td class="rank">21</td>
         <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span>
-          <span class="leader-text">Admiral Piett</span>
+          <span class="icon icon-fallback">T</span>
+          <span class="leader-text">The Armorer</span>
         </td>
-        <td class="set"><span class="set-badge">JTL</span></td>
-        <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Blue (30 PV)</td>
-        <td class="num points">28.4</td>
-        <td class="num">2</td>
-        <td class="num">2</td>
-        <td class="best-result">1/8 — Planetary Qualifier March (37 j.)</td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
+        <td class="num points">34.3</td>
+        <td class="num">3</td>
+        <td class="num">3</td>
+        <td class="best-result">1/8 — Planetary Qualifier Webster (41 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">18</td>
+        <td class="rank">22</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Grand-Amiral-Thrawn-JTL.webp')"></span>
+          <span class="leader-text">Grand Admiral Thrawn</span>
+        </td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command)"></span>Data Vault (33 PV)</td>
+        <td class="num points">32.8</td>
+        <td class="num">3</td>
+        <td class="num">3</td>
+        <td class="best-result">5/8 — Planetary Qualifier Gellainville (78 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">23</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Aurra-Sing-LAW.webp')"></span>
+          <span class="leader-text">Aurra Sing</span>
+        </td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command)"></span>Data Vault (33 PV)</td>
+        <td class="num points">30.2</td>
+        <td class="num">2</td>
+        <td class="num">2</td>
+        <td class="best-result">42/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">24</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Lando-Calrissian-LAW.webp')"></span>
           <span class="leader-text">Lando Calrissian (Eyes Open)</span>
@@ -387,35 +490,35 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">19</td>
+        <td class="rank">25</td>
         <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Dark-Maul-LOF.webp')"></span>
-          <span class="leader-text">Darth Maul</span>
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Mother-Talzin-LOF.webp')"></span>
+          <span class="leader-text">Mother Talzin</span>
         </td>
         <td class="set"><span class="set-badge">LOF</span></td>
-        <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance) — variante Force"></span>Blue Force (28 PV)</td>
-        <td class="num points">23.0</td>
-        <td class="num">3</td>
-        <td class="num">3</td>
-        <td class="best-result">2/6 — Gamescon Indi FRI - 9AM (27 j.)</td>
+        <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning) — variante Force"></span>Yellow Force</td>
+        <td class="num points">22.8</td>
+        <td class="num">2</td>
+        <td class="num">2</td>
+        <td class="best-result">3/8 — Planetary Qualifier Darmstadt (42 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">20</td>
+        <td class="rank">26</td>
         <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Aurra-Sing-LAW.webp')"></span>
-          <span class="leader-text">Aurra Sing</span>
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Director-Krennic-LAW.webp')"></span>
+          <span class="leader-text">Director Krennic</span>
         </td>
         <td class="set"><span class="set-badge">LAW</span></td>
-        <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command)"></span>Data Vault (33 PV)</td>
-        <td class="num points">23.0</td>
-        <td class="num">1</td>
-        <td class="num">1</td>
-        <td class="best-result">42/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td class="base"><span class="dot" style="background:#8a8f98" title="Gris (Neutre / multi-aspect)"></span>Blue 27hp Multiaspect (27 PV)</td>
+        <td class="num points">22.6</td>
+        <td class="num">3</td>
+        <td class="num">3</td>
+        <td class="best-result">5/8 — Planetary Qualifier Northridge (93 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">21</td>
+        <td class="rank">27</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Greef-Karga-ASH.webp')"></span>
           <span class="leader-text">Greef Karga</span>
@@ -429,35 +532,21 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">22</td>
+        <td class="rank">28</td>
         <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span>
-          <span class="leader-text">Luke Skywalker (I Can Save Him)</span>
-        </td>
-        <td class="set"><span class="set-badge">ASH</span></td>
-        <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command)"></span>Data Vault (33 PV)</td>
-        <td class="num points">21.8</td>
-        <td class="num">2</td>
-        <td class="num">2</td>
-        <td class="best-result">2/8 — Planetary Qualifier Curicó (50 j.)</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="rank">23</td>
-        <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Director-Krennic-LAW.webp')"></span>
-          <span class="leader-text">Director Krennic</span>
+          <span class="icon icon-fallback">J</span>
+          <span class="leader-text">Jabba the Hutt</span>
         </td>
         <td class="set"><span class="set-badge">LAW</span></td>
         <td class="base"><span class="dot" style="background:#8a8f98" title="Gris (Neutre / multi-aspect)"></span>Blue 27hp Multiaspect (27 PV)</td>
-        <td class="num points">18.2</td>
+        <td class="num points">20.5</td>
         <td class="num">2</td>
         <td class="num">2</td>
-        <td class="best-result">5/8 — Planetary Qualifier Northridge (93 j.)</td>
+        <td class="best-result">3/8 — Planetary Qualifier Gellainville (78 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">24</td>
+        <td class="rank">29</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Lando-Calrissian-LAW.webp')"></span>
           <span class="leader-text">Lando Calrissian (Full Sabacc)</span>
@@ -471,7 +560,21 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">25</td>
+        <td class="rank">30</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Tobias-Beckett-LAW.webp')"></span>
+          <span class="leader-text">Tobias Beckett</span>
+        </td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#c1443f" title="Rouge (Aggression)"></span>Red (30 PV)</td>
+        <td class="num points">16.2</td>
+        <td class="num">2</td>
+        <td class="num">2</td>
+        <td class="best-result">51/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">31</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span>
           <span class="leader-text">Ahsoka Tano</span>
@@ -485,35 +588,49 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">26</td>
+        <td class="rank">32</td>
         <td class="leader">
-          <span class="icon icon-fallback">T</span>
-          <span class="leader-text">The Armorer</span>
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span>
+          <span class="leader-text">Admiral Piett</span>
+        </td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
+        <td class="num points">13.2</td>
+        <td class="num">2</td>
+        <td class="num">2</td>
+        <td class="best-result">2/4 — Planetary Qualifier Umeå (12 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">33</td>
+        <td class="leader">
+          <span class="icon icon-fallback">E</span>
+          <span class="leader-text">Ezra</span>
         </td>
         <td class="set"><span class="set-badge">ASH</span></td>
         <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
-        <td class="num points">14.6</td>
-        <td class="num">1</td>
-        <td class="num">1</td>
-        <td class="best-result">2/8 — Planetary Qualifier March (37 j.)</td>
+        <td class="num points">13.0</td>
+        <td class="num">2</td>
+        <td class="num">2</td>
+        <td class="best-result">5/8 — Planetary Qualifier Wilmington (40 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">27</td>
+        <td class="rank">34</td>
         <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Tobias-Beckett-LAW.webp')"></span>
-          <span class="leader-text">Tobias Beckett</span>
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span>
+          <span class="leader-text">Ahsoka Tano</span>
         </td>
-        <td class="set"><span class="set-badge">LAW</span></td>
-        <td class="base"><span class="dot" style="background:#c1443f" title="Rouge (Aggression)"></span>Red (30 PV)</td>
-        <td class="num points">14.0</td>
-        <td class="num">1</td>
-        <td class="num">1</td>
-        <td class="best-result">51/64 — Galactic Championship 2026 - Las Vegas (546 j.)</td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
+        <td class="num points">12.7</td>
+        <td class="num">2</td>
+        <td class="num">2</td>
+        <td class="best-result">5/8 — Planetary Qualifier Strasbourg (53 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">28</td>
+        <td class="rank">35</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Cad-Bane-ASH.webp')"></span>
           <span class="leader-text">Cad Bane</span>
@@ -527,35 +644,7 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">29</td>
-        <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span>
-          <span class="leader-text">Admiral Piett</span>
-        </td>
-        <td class="set"><span class="set-badge">JTL</span></td>
-        <td class="base"><span class="dot" style="background:#8a8f98" title="Gris (Neutre / multi-aspect)"></span>Red 27hp Multiaspect</td>
-        <td class="num points">10.3</td>
-        <td class="num">1</td>
-        <td class="num">1</td>
-        <td class="best-result">3/8 — Planetary Qualifier Ayrshire (25 j.)</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="rank">30</td>
-        <td class="leader">
-          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span>
-          <span class="leader-text">Ahsoka Tano</span>
-        </td>
-        <td class="set"><span class="set-badge">ASH</span></td>
-        <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
-        <td class="num points">10.0</td>
-        <td class="num">1</td>
-        <td class="num">1</td>
-        <td class="best-result">5/8 — Planetary Qualifier Strasbourg (53 j.)</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="rank">31</td>
+        <td class="rank">36</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Aurra-Sing-LAW.webp')"></span>
           <span class="leader-text">Aurra Sing</span>
@@ -569,21 +658,63 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">32</td>
+        <td class="rank">37</td>
+        <td class="leader">
+          <span class="icon icon-fallback">S</span>
+          <span class="leader-text">Shin Hati</span>
+        </td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4" title="Bleu (Vigilance)"></span>Blue (30 PV)</td>
+        <td class="num points">8.7</td>
+        <td class="num">1</td>
+        <td class="num">1</td>
+        <td class="best-result">1/4 — Planetary Qualifier Beijing (2) (10 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">38</td>
+        <td class="leader">
+          <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Mother-Talzin-LOF.webp')"></span>
+          <span class="leader-text">Mother Talzin</span>
+        </td>
+        <td class="set"><span class="set-badge">LOF</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b" title="Vert (Command) — variante Force"></span>Green Force</td>
+        <td class="num points">8.0</td>
+        <td class="num">2</td>
+        <td class="num">2</td>
+        <td class="best-result">7/8 — Planetary Qualifier Valencia (49 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">39</td>
+        <td class="leader">
+          <span class="icon icon-fallback">J</span>
+          <span class="leader-text">Jabba the Hutt</span>
+        </td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
+        <td class="num points">4.7</td>
+        <td class="num">1</td>
+        <td class="num">1</td>
+        <td class="best-result">3/4 — Showdown Southampton (12 j.)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="rank">40</td>
         <td class="leader">
           <span class="icon icon-fallback">E</span>
           <span class="leader-text">Ezra</span>
         </td>
         <td class="set"><span class="set-badge">ASH</span></td>
-        <td class="base"><span class="dot" style="background:#d4b23c" title="Jaune (Cunning)"></span>Yellow (30 PV)</td>
-        <td class="num points">8.7</td>
+        <td class="base"><span class="dot" style="background:#8a8f98" title="Gris (Neutre / multi-aspect)"></span>Blue 27hp Multiaspect (27 PV)</td>
+        <td class="num points">4.4</td>
         <td class="num">1</td>
         <td class="num">1</td>
-        <td class="best-result">5/8 — Planetary Qualifier Wilmington (40 j.)</td>
+        <td class="best-result">7/8 — Planetary Qualifier Darmstadt (42 j.)</td>
         <td></td>
       </tr>
       <tr>
-        <td class="rank">33</td>
+        <td class="rank">41</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span>
           <span class="leader-text">Ahsoka Tano</span>
@@ -597,7 +728,7 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">34</td>
+        <td class="rank">42</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Lando-Calrissian-LAW.webp')"></span>
           <span class="leader-text">Lando Calrissian (Full Sabacc)</span>
@@ -611,7 +742,7 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">35</td>
+        <td class="rank">43</td>
         <td class="leader">
           <span class="icon icon-fallback">O</span>
           <span class="leader-text">Obi-Wan Kenobi</span>
@@ -625,7 +756,7 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">36</td>
+        <td class="rank">44</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span>
           <span class="leader-text">Admiral Piett</span>
@@ -639,7 +770,7 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">37</td>
+        <td class="rank">45</td>
         <td class="leader">
           <span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Cad-Bane-ASH.webp')"></span>
           <span class="leader-text">Cad Bane</span>
@@ -653,7 +784,7 @@
         <td></td>
       </tr>
       <tr>
-        <td class="rank">38</td>
+        <td class="rank">46</td>
         <td class="leader">
           <span class="icon icon-fallback">H</span>
           <span class="leader-text">Han Solo</span>

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <title>Team AR Meta Analysis — Boba Fett, Any Methods Necessary</title>
 <style>
-  :root { --bg:#0f1115; --panel:#171a21; --border:#2a2e38; --text:#e8e8ec; --muted:#9aa0ac; --accent:#d4af37; --accent2:#6ea8fe; }
+  :root { --bg:#0f1115; --panel:#171a21; --border:#2a2e38; --text:#e8e8ec; --muted:#9aa0ac; --accent:#d4af37; --accent2:#6ea8fe; --best:#9a7fd4; }
   * { box-sizing: border-box; }
   body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; margin:0; padding:32px 24px 64px; }
-  .wrap { max-width:1000px; margin:0 auto; }
+  .wrap { max-width:1100px; margin:0 auto; }
   .site-brand { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: #d4af37; margin-bottom: 4px; font-weight: 600; }
   .back-nav { margin-bottom: 18px; }
   .back-nav a { color: #6ea8fe; text-decoration: none; font-size: 0.85rem; }
@@ -18,6 +18,7 @@
   header .meta { margin-top:10px; font-size:0.85rem; color:var(--muted); }
   header .meta a { color:var(--accent2); }
   .warning { margin-top:14px; background:#2a2013; border:1px solid #4a3820; border-radius:8px; padding:10px 14px; font-size:0.85rem; color:#e0c080; }
+  .best-info { margin-top:10px; background:#1f1a2e; border:1px solid #3d2f5c; border-radius:8px; padding:10px 14px; font-size:0.85rem; color:#c3b3e8; }
   details.decks { margin-top:16px; background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:10px 14px; }
   details.decks summary { cursor:pointer; color:var(--accent2); font-size:0.9rem; }
   details.decks table { margin-top:10px; }
@@ -29,6 +30,7 @@
   td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
   td.cost { color: var(--accent); font-weight: 700; text-align: right; }
   td.unknown-cost { color: var(--muted); font-weight: 400; font-style: italic; }
+  td.best, th.best { color: var(--best); font-weight: 600; }
   td.suggested, th.suggested { color:var(--accent2); font-weight:600; }
   tr.zero-suggested td { color:var(--muted); }
   tr.zero-suggested td.suggested { color:var(--muted); font-weight:600; }
@@ -46,21 +48,34 @@
   <div class="site-brand">Team AR Meta Analysis</div>
   <header>
     <h1>Deck ideal - Boba Fett, Any Methods Necessary</h1>
-    <div class="subtitle">Base etudiee : Lake Country (34 PV) - 2 decks (top 64), coefficient total 3.5</div>
+    <div class="subtitle">Base etudiee : Lake Country (34 PV) - 11 decks (saison complete, 9 tournois), coefficient total 141.09</div>
     <div class="meta">
-      Source : <a href="https://www.swu-competitivehub.com/event/galactic-championship-2026-07-25-ffg-las-vegas/" target="_blank">swu-competitivehub.com - Galactic Championship Las Vegas 2026</a> - Decklists via melee.gg<br>
-      Derniere mise a jour de ce rapport : 2026-08-03
+      Source : agregation de plusieurs tournois (voir <a href="swu_ranking_season.html">classement saison</a>) - Decklists via melee.gg<br>
+      Derniere mise a jour de ce rapport : 2026-08-13
     </div>
     <div class="warning">
-      Colonne "Cout" : 33/33 cartes verifiees (source : swuhub.com). Cartes triees par cout croissant au sein de chaque categorie.
+      Colonne "Cout" : 44/56 cartes verifiees (source : swuhub.com). Cartes triees par cout croissant au sein de chaque categorie.<br>
+      1 deck du classement saison n'a pas de decklist publiee (Showdown Southampton rang 1) - compte dans les points du classement mais pas dans ce rapport.
+    </div>
+    <div class="best-info">
+      Colonne "Meilleur classement" : deck de Cody72hill (Galactic Championship 2026 - Las Vegas, rang 2 - le deck avec le plus de points sur la saison, tous tournois ponderes confondus).
     </div>
     <details class="decks">
-      <summary>Voir les 2 decks utilises et leur coefficient</summary>
+      <summary>Voir les 11 decks utilises et leur poids (points ponderes par tournoi)</summary>
       <table>
-        <thead><tr><th>Rang</th><th>Joueur</th><th>Base reelle jouee</th><th>Coefficient</th></tr></thead>
+        <thead><tr><th>Tournoi</th><th>Rang</th><th>Joueur</th><th>Base reelle jouee</th><th>Poids (pts)</th></tr></thead>
         <tbody>
-        <tr><td>2</td><td>Cody72hill</td><td>Lake Country</td><td>3</td></tr>
-        <tr><td>56</td><td>CristianScazzosi</td><td>Lake Country</td><td>0.5</td></tr>
+        <tr><td>Galactic Championship 2026 - Las Vegas</td><td>2</td><td>Cody72hill</td><td>Lake Country</td><td>63.00</td></tr>
+        <tr><td>Planetary Qualifier Las Condes</td><td>4</td><td>Mandinga13</td><td>Lake Country</td><td>13.91</td></tr>
+        <tr><td>Planetary Qualifier Leon</td><td>2</td><td>Robertocello</td><td>Lake Country</td><td>11.24</td></tr>
+        <tr><td>Gamescon Indi SAT - 3PM</td><td>2</td><td>Peter_J</td><td>Lake Country</td><td>9.85</td></tr>
+        <tr><td>Galactic Championship 2026 - Las Vegas</td><td>56</td><td>CristianScazzosi</td><td>Lake Country</td><td>9.00</td></tr>
+        <tr><td>Planetary Qualifier Leon</td><td>4</td><td>Eneandro</td><td>Lake Country</td><td>8.03</td></tr>
+        <tr><td>Star Wars Jedi Trial</td><td>2</td><td>wasteeed</td><td>Lake Country</td><td>7.41</td></tr>
+        <tr><td>Planetary Qualifier Ayrshire</td><td>6</td><td>InfDave</td><td>Lake Country</td><td>5.14</td></tr>
+        <tr><td>Planetary Qualifier Curicó</td><td>7</td><td>Mandinga13</td><td>Lake Country</td><td>4.84</td></tr>
+        <tr><td>Planetary Qualifier Bogotá</td><td>6</td><td>WilmarDelgado</td><td>Lake Country</td><td>4.59</td></tr>
+        <tr><td>Gamescon Indi FRI - 3PM</td><td>3</td><td>mjbaysinger</td><td>Lake Country</td><td>4.08</td></tr>
         </tbody>
       </table>
     </details>
@@ -69,11 +84,11 @@
   <section class="global-summary">
     <h2>Total global</h2>
     <table>
-      <thead><tr><th></th><th>Qte moyenne</th><th>Qte ponderee</th><th>Qte suggeree</th></tr></thead>
+      <thead><tr><th></th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr></thead>
       <tbody>
-        <tr><td class="name">Maindeck</td><td class="num">50.0</td><td class="num">50.0</td><td class="num suggested">50</td></tr>
-        <tr><td class="name">Sideboard</td><td class="num">10.0</td><td class="num">10.0</td><td class="num suggested">10</td></tr>
-        <tr class="grand-total"><td class="name">Total (maindeck + sideboard)</td><td class="num">60.0</td><td class="num">60.0</td><td class="num suggested">60</td></tr>
+        <tr><td class="name">Maindeck</td><td class="num">51.5</td><td class="num">50.6</td><td class="num best">50.0</td><td class="num suggested">50</td></tr>
+        <tr><td class="name">Sideboard</td><td class="num">10.0</td><td class="num">10.0</td><td class="num best">10.0</td><td class="num suggested">10</td></tr>
+        <tr class="grand-total"><td class="name">Total (maindeck + sideboard)</td><td class="num">61.5</td><td class="num">60.6</td><td class="num best">60.0</td><td class="num suggested">60</td></tr>
       </tbody>
     </table>
   </section>
@@ -82,66 +97,98 @@
           <h2>Unit - Ground</h2>
           <table>
             <thead>
-              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Qte suggeree</th></tr>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
               <tr class="cat-subtotal">
-                <th>Total Unit - Ground</th><th></th><th class="num">14.0</th><th class="num">14.7</th><th class="num suggested">15</th>
+                <th>Total Unit - Ground</th><th></th><th class="num">16.5</th><th class="num">16.0</th><th class="num best">15.0</th><th class="num suggested">17</th>
               </tr>
             </thead>
             <tbody>
             <tr class="card-row">
               <td class="name">Syril Karn | Où Est-Il ?</td>
               <td class="num cost">2</td>
-              <td class="num">3.00</td>
-              <td class="num">3.00</td>
+              <td class="num">2.64</td>
+              <td class="num">2.80</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
             <tr class="card-row">
               <td class="name">BT-1 | Blastomech</td>
               <td class="num cost">2</td>
-              <td class="num">1.50</td>
-              <td class="num">2.57</td>
+              <td class="num">2.55</td>
+              <td class="num">2.65</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
             <tr class="card-row">
               <td class="name">HK-47 | Exclamation : Meurs, Sac À Viande !</td>
               <td class="num cost">2</td>
-              <td class="num">1.50</td>
-              <td class="num">2.57</td>
-              <td class="num suggested">3</td>
+              <td class="num">1.64</td>
+              <td class="num">1.97</td>
+              <td class="num best">3.00</td>
+              <td class="num suggested">2</td>
             </tr>
-            <tr class="card-row zero-suggested">
+            <tr class="card-row">
               <td class="name">Le Dévoué Général Pryde | Impitoyable Et Loyal</td>
               <td class="num cost">2</td>
-              <td class="num">1.50</td>
-              <td class="num">0.43</td>
-              <td class="num suggested">0</td>
+              <td class="num">1.45</td>
+              <td class="num">1.11</td>
+              <td class="num best">—</td>
+              <td class="num suggested">1</td>
             </tr>
-            <tr class="card-row zero-suggested">
+            <tr class="card-row">
               <td class="name">Connétable de la Bordure Extérieure</td>
               <td class="num cost">2</td>
-              <td class="num">1.00</td>
-              <td class="num">0.29</td>
-              <td class="num suggested">0</td>
+              <td class="num">1.09</td>
+              <td class="num">0.73</td>
+              <td class="num best">—</td>
+              <td class="num suggested">1</td>
             </tr>
             <tr class="card-row">
               <td class="name">0-0-0 | Traduction Et Torture</td>
               <td class="num cost">3</td>
-              <td class="num">1.50</td>
-              <td class="num">2.57</td>
+              <td class="num">2.64</td>
+              <td class="num">2.76</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
             <tr class="card-row">
               <td class="name">Cinta Kaz | La Lutte Avant Tout</td>
               <td class="num cost">6</td>
-              <td class="num">3.00</td>
-              <td class="num">3.00</td>
+              <td class="num">2.82</td>
+              <td class="num">2.90</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
-            <tr class="card-row zero-suggested">
+            <tr class="card-row">
               <td class="name">La Neuvième Sœur | Inquisitrice Imposante</td>
               <td class="num cost">7</td>
-              <td class="num">1.00</td>
-              <td class="num">0.29</td>
+              <td class="num">1.27</td>
+              <td class="num">0.81</td>
+              <td class="num best">—</td>
+              <td class="num suggested">1</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Dark Vador | Fléau Des Escadrons</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.18</td>
+              <td class="num">0.14</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Rancor de Boba Fett | Créature Aux Émotions Complexes</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.18</td>
+              <td class="num">0.07</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Esquif Pirate Shydopp</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.09</td>
+              <td class="num">0.06</td>
+              <td class="num best">—</td>
               <td class="num suggested">0</td>
             </tr>
             </tbody>
@@ -151,9 +198,9 @@
           <h2>Unit - Space</h2>
           <table>
             <thead>
-              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Qte suggeree</th></tr>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
               <tr class="cat-subtotal">
-                <th>Total Unit - Space</th><th></th><th class="num">27.0</th><th class="num">25.6</th><th class="num suggested">25</th>
+                <th>Total Unit - Space</th><th></th><th class="num">24.3</th><th class="num">24.2</th><th class="num best">25.0</th><th class="num suggested">23</th>
               </tr>
             </thead>
             <tbody>
@@ -162,34 +209,39 @@
               <td class="num cost">2</td>
               <td class="num">3.00</td>
               <td class="num">3.00</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
-            <tr class="card-row zero-suggested">
+            <tr class="card-row">
               <td class="name">X-Wing des Anges des Cavernes</td>
               <td class="num cost">2</td>
-              <td class="num">1.50</td>
-              <td class="num">0.43</td>
-              <td class="num suggested">0</td>
+              <td class="num">1.00</td>
+              <td class="num">0.63</td>
+              <td class="num best">—</td>
+              <td class="num suggested">1</td>
             </tr>
             <tr class="card-row">
               <td class="name">Plateforme à Missiles Droïde</td>
               <td class="num cost">3</td>
               <td class="num">3.00</td>
               <td class="num">3.00</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
             <tr class="card-row">
               <td class="name">Intercepteur TIE de Vonreg | As Du Premier Ordre</td>
               <td class="num cost">3</td>
-              <td class="num">2.50</td>
-              <td class="num">2.14</td>
+              <td class="num">1.36</td>
+              <td class="num">1.60</td>
+              <td class="num best">2.00</td>
               <td class="num suggested">2</td>
             </tr>
             <tr class="card-row zero-suggested">
               <td class="name">Prototype de TIE Advanced</td>
               <td class="num cost">3</td>
-              <td class="num">1.50</td>
-              <td class="num">0.43</td>
+              <td class="num">0.55</td>
+              <td class="num">0.30</td>
+              <td class="num best">—</td>
               <td class="num suggested">0</td>
             </tr>
             <tr class="card-row">
@@ -197,56 +249,80 @@
               <td class="num cost">4</td>
               <td class="num">3.00</td>
               <td class="num">3.00</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
             <tr class="card-row">
               <td class="name">IG-2000 | Aggressor De L'Assassin</td>
               <td class="num cost">4</td>
-              <td class="num">3.00</td>
-              <td class="num">3.00</td>
+              <td class="num">2.82</td>
+              <td class="num">2.90</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
             <tr class="card-row">
               <td class="name">Aggressor en Chasse</td>
               <td class="num cost">4</td>
-              <td class="num">1.00</td>
-              <td class="num">1.71</td>
-              <td class="num suggested">2</td>
+              <td class="num">1.45</td>
+              <td class="num">1.55</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">1</td>
             </tr>
             <tr class="card-row">
               <td class="name">Razor Crest | Armement Activé</td>
               <td class="num cost">4</td>
-              <td class="num">1.00</td>
-              <td class="num">1.71</td>
-              <td class="num suggested">2</td>
+              <td class="num">1.27</td>
+              <td class="num">1.38</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">1</td>
             </tr>
             <tr class="card-row zero-suggested">
               <td class="name">Decimator des Dissidents</td>
               <td class="num cost">4</td>
-              <td class="num">1.00</td>
-              <td class="num">0.29</td>
+              <td class="num">0.18</td>
+              <td class="num">0.13</td>
+              <td class="num best">—</td>
               <td class="num suggested">0</td>
             </tr>
             <tr class="card-row">
               <td class="name">Punishing One | Ne Fait Pas De Prisonniers</td>
               <td class="num cost">5</td>
-              <td class="num">2.50</td>
+              <td class="num">2.18</td>
               <td class="num">2.14</td>
+              <td class="num best">2.00</td>
               <td class="num suggested">2</td>
             </tr>
             <tr class="card-row">
               <td class="name">Justifier | Implacable</td>
               <td class="num cost">5</td>
-              <td class="num">1.00</td>
-              <td class="num">1.71</td>
-              <td class="num suggested">2</td>
+              <td class="num">1.36</td>
+              <td class="num">1.56</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">1</td>
             </tr>
             <tr class="card-row">
               <td class="name">Devastator | Traque La Rébellion</td>
               <td class="num cost">8</td>
-              <td class="num">3.00</td>
-              <td class="num">3.00</td>
+              <td class="num">2.73</td>
+              <td class="num">2.81</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Mini-chasseur de Vane | Téméraire Et Fier</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.18</td>
+              <td class="num">0.10</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Bombardier Lourd Forteresse Stellaire</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.18</td>
+              <td class="num">0.07</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
             </tr>
             </tbody>
           </table>
@@ -255,31 +331,50 @@
           <h2>Event</h2>
           <table>
             <thead>
-              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Qte suggeree</th></tr>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
               <tr class="cat-subtotal">
-                <th>Total Event</th><th></th><th class="num">9.0</th><th class="num">9.7</th><th class="num suggested">10</th>
+                <th>Total Event</th><th></th><th class="num">10.5</th><th class="num">10.4</th><th class="num best">10.0</th><th class="num suggested">10</th>
               </tr>
             </thead>
             <tbody>
+            <tr class="card-row zero-suggested">
+              <td class="name">Système Impacté</td>
+              <td class="num cost">1</td>
+              <td class="num">0.55</td>
+              <td class="num">0.38</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
             <tr class="card-row">
               <td class="name">Négociations Agressives</td>
               <td class="num cost">3</td>
-              <td class="num">3.00</td>
-              <td class="num">3.00</td>
+              <td class="num">2.45</td>
+              <td class="num">2.66</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
             <tr class="card-row">
               <td class="name">Dommage Collatéral</td>
               <td class="num cost">3</td>
-              <td class="num">0.50</td>
-              <td class="num">0.86</td>
+              <td class="num">1.36</td>
+              <td class="num">1.24</td>
+              <td class="num best">1.00</td>
               <td class="num suggested">1</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Appelons ça une Guerre</td>
+              <td class="num cost">3</td>
+              <td class="num">0.09</td>
+              <td class="num">0.10</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
             </tr>
             <tr class="card-row">
               <td class="name">Accusé de Trahison</td>
               <td class="num cost">4</td>
-              <td class="num">2.00</td>
-              <td class="num">2.00</td>
+              <td class="num">1.64</td>
+              <td class="num">1.76</td>
+              <td class="num best">2.00</td>
               <td class="num suggested">2</td>
             </tr>
             <tr class="card-row">
@@ -287,14 +382,45 @@
               <td class="num cost">5</td>
               <td class="num">3.00</td>
               <td class="num">3.00</td>
+              <td class="num best">3.00</td>
               <td class="num suggested">3</td>
             </tr>
             <tr class="card-row">
               <td class="name">Bombardement Planétaire</td>
               <td class="num cost">6</td>
-              <td class="num">0.50</td>
-              <td class="num">0.86</td>
+              <td class="num">1.27</td>
+              <td class="num">1.24</td>
+              <td class="num best">1.00</td>
               <td class="num suggested">1</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Opération Cendres</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.09</td>
+              <td class="num">0.03</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="category">
+          <h2>Upgrade</h2>
+          <table>
+            <thead>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
+              <tr class="cat-subtotal">
+                <th>Total Upgrade</th><th></th><th class="num">0.3</th><th class="num">0.1</th><th class="num best">0.0</th><th class="num suggested">0</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr class="card-row zero-suggested">
+              <td class="name">Oiseaux Siffleurs</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.27</td>
+              <td class="num">0.10</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
             </tr>
             </tbody>
           </table>
@@ -303,71 +429,190 @@
           <h2>Sideboard</h2>
           <table>
             <thead>
-              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Qte suggeree</th></tr>
+              <tr><th>Carte</th><th>Coût</th><th>Qte moyenne</th><th>Qte ponderee</th><th>Meilleur classement</th><th>Qte suggeree</th></tr>
               <tr class="cat-subtotal">
-                <th>Total Sideboard</th><th></th><th class="num">10.0</th><th class="num">10.0</th><th class="num suggested">10</th>
+                <th>Total Sideboard</th><th></th><th class="num">10.0</th><th class="num">10.0</th><th class="num best">10.0</th><th class="num suggested">10</th>
               </tr>
             </thead>
             <tbody>
             <tr class="card-row">
               <td class="name">Système Impacté</td>
               <td class="num cost">1</td>
-              <td class="num">2.00</td>
-              <td class="num">2.00</td>
+              <td class="num">1.18</td>
+              <td class="num">1.48</td>
+              <td class="num best">2.00</td>
               <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Débuter les Festivités</td>
+              <td class="num cost">1</td>
+              <td class="num">0.18</td>
+              <td class="num">0.10</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
             </tr>
             <tr class="card-row">
               <td class="name">Connétable de la Bordure Extérieure</td>
               <td class="num cost">2</td>
-              <td class="num">1.00</td>
-              <td class="num">1.71</td>
+              <td class="num">1.18</td>
+              <td class="num">1.43</td>
+              <td class="num best">2.00</td>
+              <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">X-Wing des Anges des Cavernes</td>
+              <td class="num cost">2</td>
+              <td class="num">0.18</td>
+              <td class="num">0.16</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Abattre</td>
+              <td class="num cost">2</td>
+              <td class="num">0.27</td>
+              <td class="num">0.10</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row">
+              <td class="name">Arvel Skeen | Gagner Et S'En Aller</td>
+              <td class="num cost">3</td>
+              <td class="num">1.45</td>
+              <td class="num">1.77</td>
+              <td class="num best">2.00</td>
               <td class="num suggested">2</td>
             </tr>
             <tr class="card-row">
               <td class="name">Dommage Collatéral</td>
               <td class="num cost">3</td>
-              <td class="num">2.00</td>
-              <td class="num">2.00</td>
-              <td class="num suggested">2</td>
-            </tr>
-            <tr class="card-row">
-              <td class="name">Arvel Skeen | Gagner Et S'En Aller</td>
-              <td class="num cost">3</td>
-              <td class="num">1.00</td>
-              <td class="num">1.71</td>
+              <td class="num">1.27</td>
+              <td class="num">1.48</td>
+              <td class="num best">2.00</td>
               <td class="num suggested">2</td>
             </tr>
             <tr class="card-row zero-suggested">
-              <td class="name">Coup au But !</td>
-              <td class="num cost">4</td>
-              <td class="num">1.00</td>
-              <td class="num">0.29</td>
+              <td class="name">Appelons ça une Guerre</td>
+              <td class="num cost">3</td>
+              <td class="num">0.09</td>
+              <td class="num">0.10</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Avant-Garde de TIE Dagger</td>
+              <td class="num cost">3</td>
+              <td class="num">0.09</td>
+              <td class="num">0.10</td>
+              <td class="num best">—</td>
               <td class="num suggested">0</td>
             </tr>
             <tr class="card-row zero-suggested">
               <td class="name">Accusé de Trahison</td>
               <td class="num cost">4</td>
-              <td class="num">0.50</td>
+              <td class="num">0.36</td>
+              <td class="num">0.23</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Aggressor en Chasse</td>
+              <td class="num cost">4</td>
+              <td class="num">0.18</td>
               <td class="num">0.14</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Navette ST-149 | Sous L'Autorité De Krennic</td>
+              <td class="num cost">4</td>
+              <td class="num">0.18</td>
+              <td class="num">0.14</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Coup au But !</td>
+              <td class="num cost">4</td>
+              <td class="num">0.18</td>
+              <td class="num">0.13</td>
+              <td class="num best">—</td>
               <td class="num suggested">0</td>
             </tr>
             <tr class="card-row">
               <td class="name">Bombardement Planétaire</td>
               <td class="num cost">6</td>
-              <td class="num">2.50</td>
-              <td class="num">2.14</td>
+              <td class="num">1.55</td>
+              <td class="num">1.68</td>
+              <td class="num best">2.00</td>
               <td class="num suggested">2</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Devastator | Traque La Rébellion</td>
+              <td class="num cost">8</td>
+              <td class="num">0.27</td>
+              <td class="num">0.19</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Allumage Primaire du Réacteur</td>
+              <td class="num cost">8</td>
+              <td class="num">0.18</td>
+              <td class="num">0.07</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Limiers Corelliens</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.55</td>
+              <td class="num">0.31</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Assaut Tempêtueux</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.36</td>
+              <td class="num">0.18</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Opération Cendres</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.09</td>
+              <td class="num">0.08</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Suspects Louches</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.09</td>
+              <td class="num">0.08</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
+            </tr>
+            <tr class="card-row zero-suggested">
+              <td class="name">Le Galleon | Vaisseau Pirate En Maraude</td>
+              <td class="num cost unknown-cost">?</td>
+              <td class="num">0.09</td>
+              <td class="num">0.05</td>
+              <td class="num best">—</td>
+              <td class="num suggested">0</td>
             </tr>
             </tbody>
           </table>
         </section>
 
   <footer>
-    Qte moyenne = moyenne simple sur les 2 decks. Qte ponderee = moyenne ponderee par le coefficient de classement
-    (regle : rang 1 = 4, rang 2 = 3, rangs 3-4 = 2.5, rangs 5-8 = 2, rangs 9-16 = 1.5, rangs 17-32 = 1, rangs 33-64 = 0.5).
+    Qte moyenne = moyenne simple sur les 11 decks. Qte ponderee = moyenne ponderee par le poids de chaque deck
+    (poids = 64 x racine(joueurs_tournoi/546) x (top_n+1-rang)/top_n, formule saison - reference = Galactic Championship, 546 joueurs).
+    Meilleur classement = quantite jouee dans le deck ayant le poids (points) le plus eleve de la saison pour cet archetype.
     Qte suggeree = qte ponderee arrondie (bornee 0-3). Ajustements +/- appliques pour respecter 50 cartes en maindeck et 10 en sideboard.
-    Au sein de chaque categorie, les cartes sont classees par cout croissant (a cout egal, la carte la plus jouee en premier).
-    Sur les 2 decks, meme base : Lake Country (34 PV).
+    Au sein de chaque categorie, les cartes sont classees par cout croissant.
     Couts de cartes : swuhub.com (voir swu_cards_costs.json).
   </footer>
 </div>

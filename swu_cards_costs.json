@@ -1156,6 +1156,16 @@
    "cost": 6,
    "set": "ASH 112",
    "source": "swuhub.com (api/cards/grid)"
+  },
+  "Crix Madine | Stratège De L'Équipe D'Assaut": {
+   "cost": 3,
+   "set": "ASH 915",
+   "source": "tcgcodex.com/motorcitygaming.net"
+  },
+  "Reforger": {
+   "cost": 2,
+   "set": "ASH 090",
+   "source": "swu.fan"
   }
  }
 }
