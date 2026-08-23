@@ -1166,6 +1166,121 @@
    "cost": 2,
    "set": "ASH 090",
    "source": "swu.fan"
+  },
+  "Ezra Bridger | En Harmonie Avec La Vie": {
+   "cost": 3,
+   "set": "LOF 46",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ficher le Camp": {
+   "cost": 4,
+   "set": "ASH 67",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Sabre Laser de Sabine | N'Est Pas Seule": {
+   "cost": 2,
+   "set": "ASH 114",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ailier Victor Trois | Backstabber": {
+   "cost": 3,
+   "set": "JTL 86",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Il n'y a pas de Conflit": {
+   "cost": 2,
+   "set": "ASH 199",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Jod Na Nawood | Détient Des Secrets": {
+   "cost": 3,
+   "set": "ASH 219",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Patrouille Non Autorisée": {
+   "cost": 4,
+   "set": "ASH 222",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Sabre Laser Assemblé": {
+   "cost": 3,
+   "set": "LOF 261",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "ARC-170 Héroïque": {
+   "cost": 4,
+   "set": "SEC 254",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Chasseur du Protectorat": {
+   "cost": 3,
+   "set": "ASH 124",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Défenseur du Bunker": {
+   "cost": 1,
+   "set": "JTL 107",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Hammerhead Rebelle": {
+   "cost": 6,
+   "set": "JTL 153",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Limiers Corelliens": {
+   "cost": 5,
+   "set": "SEC 170",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Pegasus Tri-Wing": {
+   "cost": 3,
+   "set": "ASH 171",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Phantom | Navette Des Spectres": {
+   "cost": 2,
+   "set": "LAW 144",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Poe Dameron | Un Sacré Pilote": {
+   "cost": 4,
+   "set": "JTL 100",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Préparation au Décollage": {
+   "cost": 2,
+   "set": "JTL 128",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "R2-D2 | Artooooooooo !": {
+   "cost": 1,
+   "set": "JTL 245",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Red Leader | Regroupez-Vous": {
+   "cost": 4,
+   "set": "JTL 101",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Symbole d'Unité": {
+   "cost": 3,
+   "set": "SEC 104",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Tourelle à Lasers Jumelés": {
+   "cost": 2,
+   "set": "JTL 172",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "U-Wing de Saw Gerrera | Enfreint Les Règles": {
+   "cost": 6,
+   "set": "SEC 174",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Éjection": {
+   "cost": 2,
+   "set": "JTL 126",
+   "source": "swuhub.com (api/cards/grid)"
   }
  }
 }
