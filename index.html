@@ -46,6 +46,16 @@
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
     color: #6b7280; margin: 28px 0 10px;
   }
+  .section-label-lg {
+    font-size: 26px; text-transform: none; letter-spacing: 0.01em;
+    color: #e6e8eb; font-weight: 700; margin: 28px 0 14px;
+  }
+  .card-row {
+    display: flex; gap: 14px; margin-bottom: 14px;
+  }
+  .card-row .card {
+    flex: 1 1 0; margin-bottom: 0; min-width: 0;
+  }
   .badge {
     display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 4px;
     background: #1c2b3d; color: #7fa8d3; margin-left: 8px;
@@ -63,10 +73,15 @@
     </div>
     <div class="disclaimer">AR-team is in no way affiliated with Disney or Fantasy Flight Games. Star Wars characters, cards, logos, and art are property of Disney and/or Fantasy Flight Games.</div>
 
-    <div class="section-label">Évènements</div>
-    <a class="card" href="evenements_swu.html" style="background-image:url('https://cdn.starwarsunlimited.com//SWH_Header_Leia_Organa_06e4e5ac65.jpg')">
-      <h2>Calendrier des évènements — Team AR</h2>
-    </a>
+    <div class="section-label-lg">Actualité</div>
+    <div class="card-row">
+      <a class="card" href="evenements_swu.html" style="background-image:url('https://cdn.starwarsunlimited.com//SWH_Header_Leia_Organa_06e4e5ac65.jpg')">
+        <h2>Calendrier des évènements — Team AR</h2>
+      </a>
+      <a class="card" href="actualites_swu.html" style="background-image:url('https://cdn.starwarsunlimited.com/SWH_Button_Keep_Fighting_13f8c1a7c3.jpg')">
+        <h2>Actualités &amp; annonces Star Wars</h2>
+      </a>
+    </div>
 
     <div class="section-label">Classement des archétypes</div>
     <a class="card" href="swu_ranking_season.html" style="background-image:url('https://cdn.starwarsunlimited.com/SWH_Title_Card_Grand_Admiral_Thrawn_8c81c1fd68.jpg')">
@@ -100,6 +115,11 @@
     </a>
     <a class="card" href="deck_type_lando_blue.html" style="background-image:url('https://cdn.starwarsunlimited.com/SWH_Background_Command_Center_e973b73b72.jpg')">
       <h2>Lando Calrissian, Full Sabacc <span class="badge">Blue</span></h2>
+    </a>
+
+    <div class="section-label">Ressources de l'Alliance</div>
+    <a class="card" href="https://www.swuhub.com/" target="_blank" rel="noopener" style="background-image:url('https://cdn.starwarsunlimited.com/SWH_Button_No_Good_to_Me_Dead_06140337bd.jpg')">
+      <h2>SWUHub — Base de cartes &amp; outils <span class="badge">Externe</span></h2>
     </a>
   </div>
 </body>
