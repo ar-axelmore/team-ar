@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team AR Meta Analysis — Tendance post-suspension Cad Bane</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    background: #0f1216; color: #e6e8eb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0; padding: 32px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  .site-brand { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: #d4af37; margin-bottom: 4px; font-weight: 600; }
+  .back-nav { margin-bottom: 16px; }
+  .back-nav a { color: #6ea8fe; text-decoration: none; font-size: 0.85rem; }
+  .back-nav a:hover { text-decoration: underline; }
+  h1 { font-size: 24px; margin: 0 0 6px; color: #d4af37; }
+  .meta { color: #9aa1ab; font-size: 13px; margin-bottom: 20px; }
+  .stats-row { display: flex; gap: 14px; margin-bottom: 24px; flex-wrap: wrap; }
+  .stat-card { flex: 1 1 160px; background: #171b21; border: 1px solid #24282f; border-radius: 10px; padding: 14px 16px; }
+  .stat-card .num { font-size: 26px; font-weight: 800; color: #7fd39a; }
+  .stat-card .label { font-size: 12px; color: #9aa1ab; margin-top: 2px; }
+  .stat-card.cadbane .num { color: #ff8f6b; }
+  .timeline {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 28px; font-size: 13px; color: #c3c8cf;
+    background: #171b21; border: 1px solid #24282f; border-radius: 10px; padding: 14px 18px;
+  }
+  .timeline .stage { flex: 1; text-align: center; }
+  .timeline .stage.legal { color: #ff8f6b; font-weight: 700; }
+  .timeline .stage.banned { color: #7fd39a; font-weight: 700; }
+  .timeline .arrow { color: #6b7280; font-size: 18px; }
+  h2.section-title { font-size: 17px; margin: 32px 0 12px; border-left: 3px solid #d4af37; padding-left: 10px; }
+  h2.section-title.before { border-left-color: #ff8f6b; }
+  h2.section-title.after { border-left-color: #7fd39a; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+  @media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } }
+  table { border-collapse: collapse; width: 100%; background: #171b21; border: 1px solid #24282f; border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid #24282f; font-size: 13px; vertical-align: middle; }
+  th { color: #9aa1ab; font-weight: 600; text-transform: uppercase; font-size: 10.5px; letter-spacing: 0.03em; }
+  td.rank { color: #6b7280; width: 26px; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.points { font-weight: 600; color: #7fd39a; }
+  td.leader { display: flex; align-items: center; gap: 8px; }
+  .icon { display: inline-block; width: 24px; height: 24px; border-radius: 50%; background-size: cover; background-position: center top; background-color: #1c2027; border: 1px solid #2c313a; flex-shrink: 0; }
+  .icon-fallback { display: flex; align-items: center; justify-content: center; color: #6b7280; font-weight: 700; font-size: 12px; }
+  .set-badge { display: inline-block; padding: 1px 6px; border-radius: 4px; background: #1c2027; border: 1px solid #2c313a; font-size: 10px; font-weight: 600; color: #c3c8cf; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  tr:hover { background: #1b1f28; }
+  .warning { margin-bottom: 20px; background: #2a2013; border: 1px solid #4a3820; border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; color: #e0c080; }
+  .note { margin-top: 30px; color: #6b7280; font-size: 12px; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="back-nav"><a href="index.html">&larr; Retour à l'accueil</a> &nbsp;·&nbsp; <a href="swu_ranking_season.html">Classement saison complet</a></div>
+    <div class="site-brand">Team AR Meta Analysis</div>
+    <h1>🚫 Tendance post-suspension de Cad Bane</h1>
+    <div class="meta">
+      Analyse ciblée sur les résultats depuis le 25/08/2026 — 48 tournois, 359 entrées de top 8 — comparaison du dernier weekend avec Cad Bane légal et du premier weekend sans.
+    </div>
+
+    <div class="timeline">
+      <div class="stage legal">29-30/08 — Cad Bane encore légal (23 tournois)</div>
+      <div class="arrow">→</div>
+      <div style="text-align:center; color:#8a7268;">31/08 — Suspension effective</div>
+      <div class="arrow">→</div>
+      <div class="stage banned">05-06/09 — Cad Bane banni (25 tournois)</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card"><div class="num">48</div><div class="label">Tournois analysés (≥ 25/08)</div></div>
+      <div class="stat-card"><div class="num">359</div><div class="label">Entrées top 8 au total</div></div>
+      <div class="stat-card cadbane"><div class="num">15.0%</div><div class="label">Part de Cad Bane sur la période (avant + après)</div></div>
+      <div class="stat-card"><div class="num">54</div><div class="label">Entrées Cad Bane (toutes avant le 31/08)</div></div>
+    </div>
+
+    <h2 class="section-title">Classement combiné (25/08 → 06/09) — hors Cad Bane</h2>
+    <div class="meta">Cad Bane exclu du classement ci-dessous (carte suspendue) : ce tableau répond à la question "qui domine le méta maintenant que Cad Bane est hors-jeu ?"</div>
+    <table>
+      <thead><tr><th>#</th><th>Leader</th><th>Édition</th><th>Base</th><th style="text-align:right">Points</th><th style="text-align:right">Decks</th><th style="text-align:right">Tournois</th></tr></thead>
+      <tbody>
+      <tr>
+        <td class="rank">1</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Director-Krennic-LAW.webp')"></span><span class="leader-text">Director Krennic</span></td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">482.6</td>
+        <td class="num">44</td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="rank">2</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span><span class="leader-text">Ahsoka Tano</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">294.3</td>
+        <td class="num">29</td>
+        <td class="num">23</td>
+      </tr>
+      <tr>
+        <td class="rank">3</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Darth-Vader-Victor-Squadron-Leader-JTL.webp')"></span><span class="leader-text">Darth Vader</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c"></span>Yellow (30 PV)</td>
+        <td class="num points">278.2</td>
+        <td class="num">24</td>
+        <td class="num">22</td>
+      </tr>
+      <tr>
+        <td class="rank">4</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Dark-Maul-LOF.webp')"></span><span class="leader-text">Darth Maul</span></td>
+        <td class="set"><span class="set-badge">LOF</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue Force (28 PV)</td>
+        <td class="num points">214.0</td>
+        <td class="num">20</td>
+        <td class="num">17</td>
+      </tr>
+      <tr>
+        <td class="rank">5</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span><span class="leader-text">Luke Skywalker (Hero of Yavin)</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">197.6</td>
+        <td class="num">20</td>
+        <td class="num">16</td>
+      </tr>
+      <tr>
+        <td class="rank">6</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/The-Mandalorian-ASH.webp')"></span><span class="leader-text">The Mandalorian</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Colossus (35 PV)</td>
+        <td class="num points">194.6</td>
+        <td class="num">23</td>
+        <td class="num">19</td>
+      </tr>
+      <tr>
+        <td class="rank">7</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/11/Dedra-Meero.webp')"></span><span class="leader-text">Dedra Meero</span></td>
+        <td class="set"><span class="set-badge">SEC</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Colossus (35 PV)</td>
+        <td class="num points">186.6</td>
+        <td class="num">16</td>
+        <td class="num">13</td>
+      </tr>
+      <tr>
+        <td class="rank">8</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Lando-Calrissian-LAW.webp')"></span><span class="leader-text">Lando Calrissian (Full Sabacc)</span></td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">171.0</td>
+        <td class="num">13</td>
+        <td class="num">12</td>
+      </tr>
+      <tr>
+        <td class="rank">9</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Boba-Fett-JTL.webp')"></span><span class="leader-text">Boba Fett</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#8a8f98"></span>Lake Country (34 PV)</td>
+        <td class="num points">105.4</td>
+        <td class="num">11</td>
+        <td class="num">9</td>
+      </tr>
+      <tr>
+        <td class="rank">10</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span><span class="leader-text">Luke Skywalker (I Can Save Him)</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">73.4</td>
+        <td class="num">9</td>
+        <td class="num">8</td>
+      </tr>
+      <tr>
+        <td class="rank">11</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Aurra-Sing-LAW.webp')"></span><span class="leader-text">Aurra Sing</span></td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">54.4</td>
+        <td class="num">5</td>
+        <td class="num">5</td>
+      </tr>
+      <tr>
+        <td class="rank">12</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Mother-Talzin-LOF.webp')"></span><span class="leader-text">Mother Talzin</span></td>
+        <td class="set"><span class="set-badge">LOF</span></td>
+        <td class="base"><span class="dot" style="background:#c1443f"></span>Red Force (28 PV)</td>
+        <td class="num points">49.5</td>
+        <td class="num">7</td>
+        <td class="num">7</td>
+      </tr>
+      <tr>
+        <td class="rank">13</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Boba-Fett-JTL.webp')"></span><span class="leader-text">Boba Fett</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">48.5</td>
+        <td class="num">4</td>
+        <td class="num">4</td>
+      </tr>
+      <tr>
+        <td class="rank">14</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Greef-Karga-ASH.webp')"></span><span class="leader-text">Greef Karga</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#c1443f"></span>Red (30 PV)</td>
+        <td class="num points">46.8</td>
+        <td class="num">6</td>
+        <td class="num">6</td>
+      </tr>
+      <tr>
+        <td class="rank">15</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Admiral-Piett-Commanding-the-Armada-JTL.webp')"></span><span class="leader-text">Admiral Piett</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#8a8f98"></span>Red 27hp Multiaspect</td>
+        <td class="num points">40.5</td>
+        <td class="num">4</td>
+        <td class="num">4</td>
+      </tr>
+      <tr>
+        <td class="rank">16</td>
+        <td class="leader"><span class="icon icon-fallback">G</span><span class="leader-text">Grand Admiral Sloane</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">37.9</td>
+        <td class="num">3</td>
+        <td class="num">2</td>
+      </tr>
+      <tr>
+        <td class="rank">17</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Greef-Karga-ASH.webp')"></span><span class="leader-text">Greef Karga</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">37.7</td>
+        <td class="num">5</td>
+        <td class="num">5</td>
+      </tr>
+      <tr>
+        <td class="rank">18</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Boba-Fett-JTL.webp')"></span><span class="leader-text">Boba Fett</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">34.1</td>
+        <td class="num">4</td>
+        <td class="num">4</td>
+      </tr>
+      <tr>
+        <td class="rank">19</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span><span class="leader-text">Ahsoka Tano</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c"></span>Yellow (30 PV)</td>
+        <td class="num points">34.1</td>
+        <td class="num">4</td>
+        <td class="num">4</td>
+      </tr>
+      <tr>
+        <td class="rank">20</td>
+        <td class="leader"><span class="icon icon-fallback">T</span><span class="leader-text">The Armorer</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c"></span>Yellow (30 PV)</td>
+        <td class="num points">33.8</td>
+        <td class="num">5</td>
+        <td class="num">5</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="two-col">
+      <div>
+        <h2 class="section-title before">Avant — 29-30/08 (Cad Bane légal)</h2>
+        <table>
+          <thead><tr><th>#</th><th>Leader</th><th>Éd.</th><th>Base</th><th style="text-align:right">Pts</th><th style="text-align:right">Decks</th></tr></thead>
+          <tbody>
+      <tr>
+        <td class="rank">1</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Cad-Bane-ASH.webp')"></span><span class="leader-text">Cad Bane</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">488.5</td>
+        <td class="num">50</td>
+        <td class="num">20</td>
+      </tr>
+      <tr>
+        <td class="rank">2</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/11/Dedra-Meero.webp')"></span><span class="leader-text">Dedra Meero</span></td>
+        <td class="set"><span class="set-badge">SEC</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Colossus (35 PV)</td>
+        <td class="num points">140.9</td>
+        <td class="num">12</td>
+        <td class="num">9</td>
+      </tr>
+      <tr>
+        <td class="rank">3</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Director-Krennic-LAW.webp')"></span><span class="leader-text">Director Krennic</span></td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">130.0</td>
+        <td class="num">13</td>
+        <td class="num">11</td>
+      </tr>
+      <tr>
+        <td class="rank">4</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/The-Mandalorian-ASH.webp')"></span><span class="leader-text">The Mandalorian</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Colossus (35 PV)</td>
+        <td class="num points">108.7</td>
+        <td class="num">13</td>
+        <td class="num">11</td>
+      </tr>
+      <tr>
+        <td class="rank">5</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Darth-Vader-Victor-Squadron-Leader-JTL.webp')"></span><span class="leader-text">Darth Vader</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c"></span>Yellow (30 PV)</td>
+        <td class="num points">101.7</td>
+        <td class="num">9</td>
+        <td class="num">9</td>
+      </tr>
+      <tr>
+        <td class="rank">6</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Lando-Calrissian-LAW.webp')"></span><span class="leader-text">Lando Calrissian (Full Sabacc)</span></td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">94.9</td>
+        <td class="num">7</td>
+        <td class="num">6</td>
+      </tr>
+      <tr>
+        <td class="rank">7</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span><span class="leader-text">Ahsoka Tano</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">91.7</td>
+        <td class="num">9</td>
+        <td class="num">8</td>
+      </tr>
+      <tr>
+        <td class="rank">8</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span><span class="leader-text">Luke Skywalker (Hero of Yavin)</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">66.7</td>
+        <td class="num">8</td>
+        <td class="num">7</td>
+      </tr>
+      <tr>
+        <td class="rank">9</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Dark-Maul-LOF.webp')"></span><span class="leader-text">Darth Maul</span></td>
+        <td class="set"><span class="set-badge">LOF</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue Force (28 PV)</td>
+        <td class="num points">43.7</td>
+        <td class="num">5</td>
+        <td class="num">5</td>
+      </tr>
+      <tr>
+        <td class="rank">10</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Cad-Bane-ASH.webp')"></span><span class="leader-text">Cad Bane</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c"></span>Yellow (30 PV)</td>
+        <td class="num points">40.3</td>
+        <td class="num">3</td>
+        <td class="num">3</td>
+      </tr>
+      <tr>
+        <td class="rank">11</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Greef-Karga-ASH.webp')"></span><span class="leader-text">Greef Karga</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#c1443f"></span>Red (30 PV)</td>
+        <td class="num points">35.7</td>
+        <td class="num">3</td>
+        <td class="num">3</td>
+      </tr>
+      <tr>
+        <td class="rank">12</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span><span class="leader-text">Luke Skywalker (I Can Save Him)</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">30.0</td>
+        <td class="num">4</td>
+        <td class="num">3</td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h2 class="section-title after">Après — 05-06/09 (Cad Bane banni)</h2>
+        <table>
+          <thead><tr><th>#</th><th>Leader</th><th>Éd.</th><th>Base</th><th style="text-align:right">Pts</th><th style="text-align:right">Decks</th></tr></thead>
+          <tbody>
+      <tr>
+        <td class="rank">1</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Director-Krennic-LAW.webp')"></span><span class="leader-text">Director Krennic</span></td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">352.7</td>
+        <td class="num">31</td>
+        <td class="num">19</td>
+      </tr>
+      <tr>
+        <td class="rank">2</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/Ahsoka-Tano-ASH.webp')"></span><span class="leader-text">Ahsoka Tano</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">202.6</td>
+        <td class="num">20</td>
+        <td class="num">15</td>
+      </tr>
+      <tr>
+        <td class="rank">3</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Darth-Vader-Victor-Squadron-Leader-JTL.webp')"></span><span class="leader-text">Darth Vader</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#d4b23c"></span>Yellow (30 PV)</td>
+        <td class="num points">176.5</td>
+        <td class="num">15</td>
+        <td class="num">13</td>
+      </tr>
+      <tr>
+        <td class="rank">4</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Dark-Maul-LOF.webp')"></span><span class="leader-text">Darth Maul</span></td>
+        <td class="set"><span class="set-badge">LOF</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue Force (28 PV)</td>
+        <td class="num points">170.3</td>
+        <td class="num">15</td>
+        <td class="num">12</td>
+      </tr>
+      <tr>
+        <td class="rank">5</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span><span class="leader-text">Luke Skywalker (Hero of Yavin)</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">130.9</td>
+        <td class="num">12</td>
+        <td class="num">9</td>
+      </tr>
+      <tr>
+        <td class="rank">6</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/06/The-Mandalorian-ASH.webp')"></span><span class="leader-text">The Mandalorian</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Colossus (35 PV)</td>
+        <td class="num points">85.9</td>
+        <td class="num">10</td>
+        <td class="num">8</td>
+      </tr>
+      <tr>
+        <td class="rank">7</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Boba-Fett-JTL.webp')"></span><span class="leader-text">Boba Fett</span></td>
+        <td class="set"><span class="set-badge">JTL</span></td>
+        <td class="base"><span class="dot" style="background:#8a8f98"></span>Lake Country (34 PV)</td>
+        <td class="num points">84.8</td>
+        <td class="num">8</td>
+        <td class="num">6</td>
+      </tr>
+      <tr>
+        <td class="rank">8</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2026/03/Lando-Calrissian-LAW.webp')"></span><span class="leader-text">Lando Calrissian (Full Sabacc)</span></td>
+        <td class="set"><span class="set-badge">LAW</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">76.1</td>
+        <td class="num">6</td>
+        <td class="num">6</td>
+      </tr>
+      <tr>
+        <td class="rank">9</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/07/Mother-Talzin-LOF.webp')"></span><span class="leader-text">Mother Talzin</span></td>
+        <td class="set"><span class="set-badge">LOF</span></td>
+        <td class="base"><span class="dot" style="background:#c1443f"></span>Red Force (28 PV)</td>
+        <td class="num points">49.5</td>
+        <td class="num">7</td>
+        <td class="num">7</td>
+      </tr>
+      <tr>
+        <td class="rank">10</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/11/Dedra-Meero.webp')"></span><span class="leader-text">Dedra Meero</span></td>
+        <td class="set"><span class="set-badge">SEC</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Colossus (35 PV)</td>
+        <td class="num points">45.6</td>
+        <td class="num">4</td>
+        <td class="num">4</td>
+      </tr>
+      <tr>
+        <td class="rank">11</td>
+        <td class="leader"><span class="icon" style="background-image:url('https://www.swu-competitivehub.com/wp-content/uploads/2025/03/Luke-Skywalker-JTL.webp')"></span><span class="leader-text">Luke Skywalker (I Can Save Him)</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#4c9a5b"></span>Data Vault (33 PV)</td>
+        <td class="num points">43.5</td>
+        <td class="num">5</td>
+        <td class="num">5</td>
+      </tr>
+      <tr>
+        <td class="rank">12</td>
+        <td class="leader"><span class="icon icon-fallback">G</span><span class="leader-text">Grand Admiral Sloane</span></td>
+        <td class="set"><span class="set-badge">ASH</span></td>
+        <td class="base"><span class="dot" style="background:#3b82c4"></span>Blue (30 PV)</td>
+        <td class="num points">37.9</td>
+        <td class="num">3</td>
+        <td class="num">2</td>
+      </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="note">
+      Points calculés avec la même formule que le classement saison (poids = 64 × √(joueurs/546) × (top_n+1-rang)/top_n). Contrairement au classement saison, cette page ne couvre que les tournois du 25/08/2026 au 06/09/2026, pour isoler l'effet de la suspension.
+      Sur le tableau "Avant", Cad Bane est laissé visible car légal à ce moment-là ; sur "Après" il n'apparaît naturellement plus (dernières entrées légales : Toulouse, Toronto, Charlottetown, Vilsheim, Taipei, Shanghai — 29-30/08).
+      Échantillon complet : 48/48 tournois éligibles de la période intégrés (100%).
+      Voir le <a href="swu_ranking_season.html" style="color:#7fa8d3;">classement saison complet</a> pour l'historique cumulé de toute la saison (Cad Bane y reste grisé mais visible pour la mémoire de la saison).
+    </div>
+  </div>
+</body>
+</html>

@@ -1281,6 +1281,11 @@
    "cost": 2,
    "set": "JTL 126",
    "source": "swuhub.com (api/cards/grid)"
+  },
+  "On Met la Gomme": {
+   "cost": 1,
+   "set": "JTL 231",
+   "source": "swuhub.com (api/cards/grid)"
   }
  }
 }
