@@ -1286,6 +1286,76 @@
    "cost": 1,
    "set": "JTL 231",
    "source": "swuhub.com (api/cards/grid)"
+  },
+  "Autorité Morale": {
+   "cost": 3,
+   "set": "SEC 256",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Biggs Darklighter | Ils Ne Nous Arrêteront Jamais": {
+   "cost": 3,
+   "set": "JTL 150",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Brouiller les Communications": {
+   "cost": 1,
+   "set": "JTL 207",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Cham Syndulla | Ralliement De Ryloth": {
+   "cost": 4,
+   "set": "JTL 164",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Confiant en la Victoire": {
+   "cost": 10,
+   "set": "SEC 145",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Défenseurs de la Forêt": {
+   "cost": 5,
+   "set": "ASH 129",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Démanteler la Conspiration": {
+   "cost": 6,
+   "set": "SEC 106",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Navette d'Attaque Flarestar": {
+   "cost": 2,
+   "set": "ASH 167",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Raddus | Ultime Commandement D'Holdo": {
+   "cost": 7,
+   "set": "JTL 104",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Ski Speeder Délabré": {
+   "cost": 3,
+   "set": "JTL 248",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Tantive IV | Fuit Devant L'Empire": {
+   "cost": 7,
+   "set": "JTL 252",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Intercepteur TIE de Flanc": {
+   "cost": 2,
+   "set": "ASH 215",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Le Mal Est Partout": {
+   "cost": 3,
+   "set": "SEC 247",
+   "source": "swuhub.com (api/cards/grid)"
+  },
+  "Navette de l'Inspecteur": {
+   "cost": 2,
+   "set": "SEC 260",
+   "source": "swuhub.com (api/cards/grid)"
   }
  }
 }
