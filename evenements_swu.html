@@ -41,6 +41,8 @@
   .type-sector { background:#2a203a; color:#c17dff; }
   .type-regional { background:#3a2020; color:#ff8f7d; }
   .type-prerelease { background:#2a3a2a; color:#8fff9d; }
+  .type-training { background:#3a2a20; color:#ffb27d; }
+  .badge-training { background:#3a2a20; color:#ffb27d; }
   .type-release { background:#3a2a4a; color:#d89dff; }
   .new-badge { display:inline-block; background:#e6483c; color:#fff; font-size:0.65rem; font-weight:800; letter-spacing:0.04em; padding:2px 6px; border-radius:8px; margin-left:6px; vertical-align:middle; }
   .empty-note { color:var(--muted); font-style:italic; font-size:0.85rem; padding:10px 12px; }
@@ -52,8 +54,8 @@
   .places-note { display:block; font-size:0.68rem; color:var(--muted); font-style:italic; }
   .wrap { max-width:1200px; }
   td.team { min-width:130px; }
-  .chip { display:inline-flex; align-items:center; justify-content:center; min-width:26px; height:26px; padding:0 5px; margin:0 3px 3px 0; border-radius:13px; background:#243247; color:#9cc4ff; font-size:0.7rem; font-weight:700; cursor:default; }
-  .chip.me { background:var(--accent); color:#1a1a1a; }
+  .chip { display:inline-flex; align-items:center; justify-content:center; min-width:28px; height:28px; padding:0 6px; margin:0 3px 3px 0; border-radius:14px; color:#fff; font-size:0.7rem; font-weight:700; cursor:default; border:2px solid transparent; }
+  .chip.me { border-color:#fff; }
   .team-count { display:block; font-size:0.72rem; color:var(--muted); margin-bottom:4px; }
   .join-btn { background:transparent; border:1px solid var(--accent2); color:var(--accent2); border-radius:12px; padding:3px 10px; font-size:0.72rem; cursor:pointer; }
   .join-btn:hover { background:#1d2a3f; }
@@ -81,11 +83,11 @@
       Team AR Meta Analysis — Instantané généré le 07/10/2026, à rafraîchir manuellement (voir note en bas de page)
     </div>
     <div class="warning">
-      🔄 Mise à jour du 07/10/2026 : évènements passés retirés. <span class="new-badge">NEW</span> = 3 weeklies Ludotrotter Lille (17, 24 et 31/10, samedi 10h). AP Au Beau Jeu demain (18/20) ; Draft (15/10) et Construit (29/10) chez Lord of the Games presque complets. Aucun nouveau Planetary Qualifier dans la zone. Ludotrotter Faches ajoutée à la surveillance (pas encore d'évènement SWU publié).
+      🏠 Nouveau : entraînements Team AR au QG (chez Alex) — prochain samedi 17/10, 16h30-22h00. 🔄 Mise à jour du 07/10/2026 : évènements passés retirés. <span class="new-badge">NEW</span> = 3 weeklies Ludotrotter Lille (17, 24 et 31/10, samedi 10h). AP Au Beau Jeu demain (18/20) ; Draft (15/10) et Construit (29/10) chez Lord of the Games presque complets. Aucun nouveau Planetary Qualifier dans la zone. Ludotrotter Faches ajoutée à la surveillance (pas encore d'évènement SWU publié).
     </div>
     <div class="teambar" id="teambar">
       <span>👥 <strong>Team AR</strong> :</span>
-      <input id="tb-name" placeholder="Ton prénom" maxlength="30" autocomplete="given-name">
+      <input id="tb-name" placeholder="Nom Prénom ou pseudo AR" maxlength="30" autocomplete="name" style="width:210px" title="Nom Prénom (→ initiales) ou pseudo AR (→ premières lettres)">
       <input id="tb-code" placeholder="Code équipe" type="password" autocomplete="off">
       <button id="tb-save">Valider</button>
       <span class="summary" id="tb-summary"></span>
@@ -96,7 +98,7 @@
   <section class="category">
     <h2>📅 Tous les évènements</h2>
     <div class="desc">
-      Weeklies à Lille (&lt; 20 min) · Store Showdowns (boutiques Lilloises, un par saison) · Avant-premières (AP, une par sortie de set) · <span class="type-badge type-release" style="font-size:0.7rem;">🎉 Sorties de sets</span> · Planetary Qualifiers (&lt; 3h de Lille — zone : Hauts-de-France / Île-de-France / Normandie / ouest Grand Est, Belgique, sud Pays-Bas, ouest Allemagne, Royaume-Uni Sud-Est, Luxembourg) · Sector &amp; Regional Qualifiers en Europe (sans limite de distance).
+      Weeklies à Lille (&lt; 20 min) · <span class="type-badge type-training" style="font-size:0.7rem;">🏠 Entraînements QG</span> · Store Showdowns (boutiques Lilloises, un par saison) · Avant-premières (AP, une par sortie de set) · <span class="type-badge type-release" style="font-size:0.7rem;">🎉 Sorties de sets</span> · Planetary Qualifiers (&lt; 3h de Lille — zone : Hauts-de-France / Île-de-France / Normandie / ouest Grand Est, Belgique, sud Pays-Bas, ouest Allemagne, Royaume-Uni Sud-Est, Luxembourg) · Sector &amp; Regional Qualifiers en Europe (sans limite de distance).
       Triés par ordre chronologique. Source qualifiers : swu-competitivehub.com.<br>
       <strong>Colonne Places</strong> — <span class="places places-ok" style="padding:1px 6px;border-radius:6px;background:#12331f;">X/Y</span> inscrits confirmés · <span class="places places-full" style="padding:1px 6px;border-radius:6px;background:#3a1414;">Complet</span> = plus de places · <span class="places places-unknown" style="padding:1px 6px;border-radius:6px;background:#1d2129;">n/d</span> = donnée non trouvée ou source ne l'affichant pas. Les valeurs marquées "estimé" sont déduites indirectement (voir note en bas de page), pas lues telles quelles sur une page d'inscription.
     </div>
@@ -110,7 +112,8 @@
         <tr data-id="2026-10-10_weekly_ludotrotter-lille"><td><span class="dow">Samedi</span>10/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille</td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~16 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td><td class="team"></td></tr>
         <tr data-id="2026-10-15_weekly_au-beau-jeu"><td><span class="dow">Jeudi</span>15/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">11/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td><td class="team"></td></tr>
         <tr data-id="2026-10-15_weekly_lord-of-the-games"><td><span class="dow">Jeudi</span>15/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi Draft — Set 9 Homeworlds 19h00 — Lord of the Games</td><td><span class="badge badge-limited">Draft</span></td><td>Wasquehal</td><td>🇫🇷 France</td><td class="places places-low">Presque complet<span class="places-note">24 places · 20€, 3 pods de 8, 3 boosters HMW fournis</span></td><td><a class="linkbtn" href="https://www.eventbrite.fr/e/billets-star-wars-unlimited-tournoi-draft-2002328659923" target="_blank">Eventbrite</a></td><td class="team"></td></tr>
-        <tr data-id="2026-10-17_weekly_ludotrotter-lille"><td><span class="dow">Samedi</span>17/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~14 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-17_weekly_ludotrotter-lille"><td rowspan="2"><span class="dow">Samedi</span>17/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~14 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-17_training_qg-alex"><td><span class="type-badge type-training">🏠 Entraînement</span></td><td>Entraînement QG Alex 16h30 → 22h00 <span class="country">(chez Alex)</span><span class="new-badge">NEW</span></td><td><span class="badge badge-training">Entraînement équipe</span></td><td>Chez Alex</td><td>—</td><td class="places places-unknown">—</td><td>—</td><td class="team"></td></tr>
         <tr data-id="2026-10-22_weekly_au-beau-jeu"><td><span class="dow">Jeudi</span>22/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">11/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td><td class="team"></td></tr>
         <tr data-id="2026-10-24_weekly_ludotrotter-lille"><td><span class="dow">Samedi</span>24/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~16 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td><td class="team"></td></tr>
         <tr data-id="2026-10-29_weekly_au-beau-jeu"><td><span class="dow">Jeudi</span>29/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">8/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td><td class="team"></td></tr>
@@ -173,14 +176,49 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwvfUSQ2lMmEBfTmXTJuWak
   let me = store.get('swu_name'), code = store.get('swu_code'), regs = [];
   $('tb-name').value = me; $('tb-code').value = code;
 
-  const initials = n => {
-    const w = n.trim().split(/[\s-]+/).filter(Boolean);
-    return (w.length > 1 ? w.map(x => x[0]).join('').slice(0, 3) : n.trim().slice(0, 2)).toUpperCase();
+  // Initiales : « Nom Prénom » (2 mots ou +) -> initiales ; pseudo (1 mot) -> premières lettres.
+  // Doublon entre deux personnes -> 3 lettres (puis 4 si besoin).
+  const cands = n => {
+    const w = n.trim().split(/[\s-]+/).filter(Boolean), a = w[0] || '?';
+    const z = w.length > 1 ? w[w.length - 1][0] : '';
+    return (w.length > 1 ? [1, 2, 3, 4] : [2, 3, 4, 5]).map(k => (a.slice(0, k) + z).toUpperCase());
   };
+  let initMap = {};
+  function buildInitials() {
+    const names = []; const seen = new Set();
+    regs.forEach(r => { const k = r.name.trim().toLowerCase(); if (!seen.has(k)) { seen.add(k); names.push(r.name.trim()); } });
+    if (me.trim() && !seen.has(me.trim().toLowerCase())) names.push(me.trim());
+    const lvl = {}; names.forEach(n => { lvl[n.toLowerCase()] = 0; });
+    for (let guard = 0; guard < 4; guard++) {
+      const groups = {};
+      names.forEach(n => { const c = cands(n)[lvl[n.toLowerCase()]]; (groups[c] = groups[c] || []).push(n); });
+      let changed = false;
+      Object.values(groups).forEach(g => { if (g.length > 1) g.forEach(n => { if (lvl[n.toLowerCase()] < 3) { lvl[n.toLowerCase()]++; changed = true; } }); });
+      if (!changed) break;
+    }
+    initMap = {}; names.forEach(n => { initMap[n.toLowerCase()] = { v: cands(n)[lvl[n.toLowerCase()]] }; });
+    buildColors(names);
+  }
+  const initials = n => (initMap[n.trim().toLowerCase()] || { v: cands(n)[0] }).v;
+  // Couleurs : palette de 12 teintes bien distinctes ; index issu du nom, décalé si déjà pris (ordre d'inscription = stable).
+  const PALETTE = ['#c0392b', '#d35400', '#b7950b', '#27ae60', '#16a085', '#2980b9', '#6c5ce7', '#8e44ad', '#c2185b', '#7f8c8d', '#2e7d32', '#00838f'];
+  let colorMap = {};
+  function buildColors(names) {
+    colorMap = {}; const taken = new Set();
+    names.forEach(n => {
+      const s = n.trim().toLowerCase(); let x = 2166136261;
+      for (let i = 0; i < s.length; i++) { x ^= s.charCodeAt(i); x = Math.imul(x, 16777619) >>> 0; }
+      let k = x % PALETTE.length, tries = 0;
+      while (taken.has(k) && tries++ < PALETTE.length) k = (k + 1) % PALETTE.length;
+      taken.add(k); colorMap[s] = PALETTE[k];
+    });
+  }
+  const color = n => colorMap[n.trim().toLowerCase()] || PALETTE[0];
   const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const mine = r => r.name.toLowerCase() === me.trim().toLowerCase();
 
   function render() {
+    buildInitials();
     let total = 0, slots = 0;
     document.querySelectorAll('tr[data-id]').forEach(tr => {
       const id = tr.dataset.id, cell = tr.querySelector('td.team');
@@ -190,7 +228,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwvfUSQ2lMmEBfTmXTJuWak
       if (list.length) {
         total += list.length; slots++;
         html += '<span class="team-count">' + list.length + ' inscrit' + (list.length > 1 ? 's' : '') + '</span>';
-        html += list.map(r => '<span class="chip' + (mine(r) ? ' me' : '') + '" title="' + esc(r.name) + '">' + esc(initials(r.name)) + '</span>').join('');
+        html += list.map(r => '<span class="chip' + (mine(r) ? ' me' : '') + '" style="background:' + color(r.name) + '" title="' + esc(r.name) + '">' + esc(initials(r.name)) + '</span>').join('');
         html += '<br>';
       }
       if (API_URL) html += '<button class="join-btn' + (joined ? ' leave' : '') + '" data-id="' + id + '">' + (joined ? 'Je ne viens plus' : 'Je participe') + '</button>';
@@ -234,7 +272,7 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwvfUSQ2lMmEBfTmXTJuWak
     // Prend en compte les champs même si « Valider » n'a pas été cliqué
     me = $('tb-name').value; code = $('tb-code').value;
     if (!me.trim() || !code) {
-      toast('Renseigne d\u2019abord ton prénom et le code équipe (en haut de la page), puis clique sur « Valider ».');
+      toast('Renseigne d\u2019abord ton nom prénom (ou pseudo AR) et le code équipe (en haut de la page), puis clique sur « Valider ».');
       const f = !me.trim() ? $('tb-name') : $('tb-code');
       f.scrollIntoView({ behavior: 'smooth', block: 'center' }); f.focus();
       return;
