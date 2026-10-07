@@ -65,6 +65,8 @@
   .teambar button { background:var(--accent2); color:#0f1115; border:0; border-radius:6px; padding:5px 12px; font-weight:600; cursor:pointer; }
   .teambar .summary { color:var(--text); font-weight:600; }
   .teambar .err { color:#ff8f7d; }
+  #toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:#2a2013; border:1px solid #4a3820; color:#f0d9a0; padding:10px 16px; border-radius:10px; font-size:0.88rem; box-shadow:0 6px 24px rgba(0,0,0,.5); z-index:50; display:none; max-width:90vw; }
+  #toast.ok { background:#16281d; border-color:#2c5a3b; color:#9ff0b8; }
   footer { margin-top:40px; color:var(--muted); font-size:0.8rem; line-height:1.6; }
   footer h3 { color:var(--text); font-size:0.95rem; margin-bottom:6px; }
 </style>
@@ -157,6 +159,7 @@
     Zone "3h de Lille" actuelle : Hauts-de-France, Île-de-France, Normandie, ouest du Grand Est (jusqu'à Reims), Belgique entière, sud des Pays-Bas, ouest de l'Allemagne (jusqu'à Cologne/Aix-la-Chapelle), Royaume-Uni Sud-Est, Luxembourg. Ajustable sur demande.
   </footer>
 </div>
+<div id="toast"></div>
 <script>
 // ⚙️ Colle ici l'URL « …/exec » de ton application web Google Apps Script (voir apps_script_team_ar.gs)
 const API_URL = 'https://script.google.com/macros/s/AKfycbwvfUSQ2lMmEBfTmXTJuWakC4rz-UwRCVL9qDOFH9ta9Y_xpzIMBGIEdGyPQzFfct3oXw/exec';
@@ -220,16 +223,31 @@ const API_URL = 'https://script.google.com/macros/s/AKfycbwvfUSQ2lMmEBfTmXTJuWak
     $('tb-err').textContent = ''; render();
   });
 
+  let toastTimer;
+  function toast(msg, ok) {
+    const t = $('toast'); t.textContent = msg; t.className = ok ? 'ok' : ''; t.style.display = 'block';
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.style.display = 'none'; }, 4500);
+  }
+
   document.addEventListener('click', async ev => {
     const b = ev.target.closest('.join-btn'); if (!b) return;
-    if (!me.trim() || !code) { $('tb-err').textContent = 'Renseigne ton prénom et le code équipe, puis clique sur Valider.'; return; }
+    // Prend en compte les champs même si « Valider » n'a pas été cliqué
+    me = $('tb-name').value; code = $('tb-code').value;
+    if (!me.trim() || !code) {
+      toast('Renseigne d\u2019abord ton prénom et le code équipe (en haut de la page), puis clique sur « Valider ».');
+      const f = !me.trim() ? $('tb-name') : $('tb-code');
+      f.scrollIntoView({ behavior: 'smooth', block: 'center' }); f.focus();
+      return;
+    }
+    store.set('swu_name', me); store.set('swu_code', code);
     const id = b.dataset.id, leaving = b.classList.contains('leave');
-    b.disabled = true;
+    const label = b.textContent; b.disabled = true; b.textContent = '…';
     try {
       const j = await post(leaving ? 'remove' : 'add', id);
-      if (!j.ok) $('tb-err').textContent = j.error === 'code' ? 'Code équipe incorrect.' : 'Erreur, réessaie.';
-      else $('tb-err').textContent = '';
-    } catch (e) { $('tb-err').textContent = 'Erreur réseau, réessaie.'; }
+      if (!j.ok) { toast(j.error === 'code' ? 'Code équipe incorrect.' : 'Erreur, réessaie.'); }
+      else { $('tb-err').textContent = ''; toast(leaving ? 'Inscription retirée.' : 'C\u2019est noté, tu participes !', true); }
+    } catch (e) { toast('Erreur réseau, réessaie dans un instant.'); }
+    b.textContent = label;
     await load();
   });
 
