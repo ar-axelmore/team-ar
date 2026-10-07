@@ -1,8 +1,8 @@
 {
   "meta": {
     "description": "Base de suivi des évènements Star Wars Unlimited pour Team AR : weeklies à Lille (<20 min), Planetary Qualifiers (<3h de Lille), Sector & Regional Qualifiers en Europe.",
-    "last_updated": "2026-09-28",
-    "notes": "MISE À JOUR MAJEURE du 28/09/2026 : (1) AVANT-PREMIÈRES SET 9 TROUVÉES : Au Beau Jeu (8/10, 19h15, 30€, session unique) et Lord of the Games (6 et 7/10, 19h00, 35€, 2 sessions de 24 places, boîte de pré-lancement incluse). Ludotrotter et Rocambole : rien trouvé. (2) Icons (mini-set IC27, 194 cartes) confirmé pour le 20/11/2026, ajouté au calendrier comme repère. (3) CORRECTIONS de dates suite à re-vérification swu-competitivehub : Tours était noté 03/10, correct = 04/10 (Ludotrotter Tours, différent de Ludotrotter Lille) ; Villepinte et Mons étaient notés 14/11, correct = 15/11 (même jour que Tournai — grosse journée belgo-française le 15/11 avec 3 PQ dans la zone). (4) 3 nouveaux Planetary Qualifiers Set 9 ajoutés dans la zone : Paris Eternal (06/12), Abbeville (13/12, Hauts-de-France), Liège Belgique (09/01/2027). (5) Ludotrotter : 2 nouvelles dates weekly trouvées (03/10, 10/10, créneau 10h00 au lieu de 10h30). (6) Événement du 24/09 (passé) retiré. AJOUT (2e passage 28/09) : 3 évènements manquants trouvés chez Lord of the Games, signalés par l'utilisateur — Tournoi Draft le 15/10 (19h, 20€, 24 places/3 pods, 3 boosters Homeworlds fournis, format Draft Set 9), Tournoi Construit le 29/10 (19h, 10€, 24 places, format Premier classique), et confirmation de l'heure du Store Showdown du 3/10 (10h00, déjà noté Complet). Ces 2 nouveaux tournois (Draft + Construit) semblent être une reprise de rythme régulier chez Lord of the Games après une pause — à surveiller si d'autres dates suivent en novembre.",
+    "last_updated": "2026-10-07",
+    "notes": "MISE À JOUR MAJEURE du 28/09/2026 : (1) AVANT-PREMIÈRES SET 9 TROUVÉES : Au Beau Jeu (8/10, 19h15, 30€, session unique) et Lord of the Games (6 et 7/10, 19h00, 35€, 2 sessions de 24 places, boîte de pré-lancement incluse). Ludotrotter et Rocambole : rien trouvé. (2) Icons (mini-set IC27, 194 cartes) confirmé pour le 20/11/2026, ajouté au calendrier comme repère. (3) CORRECTIONS de dates suite à re-vérification swu-competitivehub : Tours était noté 03/10, correct = 04/10 (Ludotrotter Tours, différent de Ludotrotter Lille) ; Villepinte et Mons étaient notés 14/11, correct = 15/11 (même jour que Tournai — grosse journée belgo-française le 15/11 avec 3 PQ dans la zone). (4) 3 nouveaux Planetary Qualifiers Set 9 ajoutés dans la zone : Paris Eternal (06/12), Abbeville (13/12, Hauts-de-France), Liège Belgique (09/01/2027). (5) Ludotrotter : 2 nouvelles dates weekly trouvées (03/10, 10/10, créneau 10h00 au lieu de 10h30). (6) Événement du 24/09 (passé) retiré. AJOUT (2e passage 28/09) : 3 évènements manquants trouvés chez Lord of the Games, signalés par l'utilisateur — Tournoi Draft le 15/10 (19h, 20€, 24 places/3 pods, 3 boosters Homeworlds fournis, format Draft Set 9), Tournoi Construit le 29/10 (19h, 10€, 24 places, format Premier classique), et confirmation de l'heure du Store Showdown du 3/10 (10h00, déjà noté Complet). Ces 2 nouveaux tournois (Draft + Construit) semblent être une reprise de rythme régulier chez Lord of the Games après une pause — à surveiller si d'autres dates suivent en novembre. | MAJ 07/10/2026 : (1) évènements passés (≤07/10) retirés (Showdown Ludotrotter 27/09, weeklies 01/10 et 03/10, Showdown LotG 03/10, PQ Tours 04/10, AP LotG 6-7/10). (2) badges NEW réinitialisés ; NEW = 3 weeklies Ludotrotter Lille 17, 24, 31/10 (Billetweb, page directe https://www.billetweb.fr/shop.php?event=planning-ludotrotter-lille : ouvrir chaque date de l'accordéon, lire les lignes 'Star Wars Unlimited - Weekly - 10h00'). (3) Places : Au Beau Jeu AP 18/20 ; weeklies 11/12, 11/12, 8/12 ; LotG Draft 15/10 et Construit 29/10 'Presque complet'. (4) Hub competitivehub (238 évènements) : aucun nouveau PQ dans la zone 3h ; Tournai absent du hub mais confirmé par le locator FFG (15/11, 9h30, 25€, Rue de l'Yser 19). Hors zone ou douteux non ajoutés : Haarlem (NL, 07/11, ~4h), Essen (DE, 21/11, ~4h30), Brighton (UK, 21/11), 'Saint-Hubert / Boutique Awesome' 07/11 (probablement Saint-Hubert, Québec). Nexus Qualifier HMW Londres (Spellbound Games) 10/10 : hors zone. (5) Locator FFG : AP Homeworlds Albion (Kortrijk, BE) 10/10 13h, 30 places, marquée 'Uitgesteld' (reportée) → non ajoutée. (6) Ludotrotter Faches ajoutée aux boutiques à surveiller (planning introuvable pour l'instant). (7) Rocambole : site non accessible depuis le navigateur ce soir, non revérifié. | Faches : page Facebook lue (teaser d'ouverture du 07/10, aucun évènement SWU lisible sans connexion).",
     "reference_location": "Lille, France",
     "zone_3h": {
       "description": "Zone de référence pour le filtre '<3h de route de Lille' appliqué aux Planetary Qualifiers",
@@ -110,157 +110,21 @@
         "format_default": "Premier (Construit)",
         "fetch_notes": "IMPORTANT : le calendrier par défaut (/evenements/) n'affiche qu'un seul évènement à la fois par mois et ne montre PAS les SWU par défaut — il faut utiliser la barre de recherche du site (taper 'Star Wars' et lancer la recherche) pour faire remonter les évènements tagués 'Star Wars Unlimited', qui ne sont pas forcément visibles dans le flux chronologique standard. Toujours chercher par mot-clé ici, ne jamais conclure à 'rien de prévu' sans avoir fait cette recherche.",
         "facebook": "https://www.facebook.com/rocambole.lille/"
+      },
+      {
+        "shop_name": "Ludotrotter Faches (Faches-Thumesnil)",
+        "address": "Centre commercial Auchan (Aushopping), Fâches-Thumesnil",
+        "events_url": "https://www.facebook.com/p/Ludotrotter-Faches-61570799130598/",
+        "shop_site": "https://ludotrotter.fr/",
+        "cadence": "À identifier",
+        "format_default": "Premier (Construit)",
+        "fetch_notes": "Lien Facebook fourni par l'utilisateur le 07/10/2026. Page lisible sans connexion : seul un post teaser du 07/10 (« Dans une galaxie lointaine, très lointaine… », ouverture de la boutique) visible, texte tronqué par le mur de connexion Facebook (non connecté volontairement). Pas de planning SWU lisible ; pas de page Billetweb trouvée. À vérifier : lire le post en entier / planning auprès de la boutique.",
+        "facebook": "https://www.facebook.com/p/Ludotrotter-Faches-61570799130598/",
+        "contact": "06 03 06 47 44 · faches@ludotrotter.com"
       }
     ]
   },
   "events": [
-    {
-      "date": "2026-09-27",
-      "day_of_week": "Dimanche",
-      "type": "showdown",
-      "name": "Store Showdown 10h00",
-      "shop_or_organizer": "Ludotrotter Lille",
-      "format": "Premier",
-      "location": "Lille",
-      "country": "France",
-      "distance_note": null,
-      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
-      "info_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
-      "places": {
-        "enrolled": null,
-        "capacity": null,
-        "status": "open_confirmed",
-        "source": "Confirmé réservable le 10/09/2026 : l'utilisateur a lui-même testé la réservation sur Billetweb (sélecteur de quantité fonctionnel, bouton 'Suivant' actif). Capacité totale toujours non affichée publiquement, seule la limite de 2 billets par commande est connue."
-      },
-      "is_new": false,
-      "confirmed": true,
-      "price": "20€ (PAF à régler sur place, billet gratuit à réserver, max 2 par commande)",
-      "note": "Dotation top cut inclut des boosters Set 9 (Homeworlds) — évènement de transition entre Ashes of the Empire et Homeworlds."
-    },
-    {
-      "date": "2026-10-01",
-      "day_of_week": "Jeudi",
-      "type": "weekly",
-      "name": "Tournoi hebdo 19h15",
-      "shop_or_organizer": "Au Beau Jeu",
-      "format": "Premier",
-      "location": "Lille",
-      "country": "France",
-      "distance_note": null,
-      "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
-      "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
-      "places": {
-        "enrolled": 10,
-        "capacity": 12,
-        "status": "open",
-        "source": "TCG Arena (compteur direct, mis à jour)"
-      },
-      "is_new": false
-    },
-    {
-      "date": "2026-10-03",
-      "day_of_week": "Samedi",
-      "type": "showdown",
-      "name": "Store Showdown - Les Cendres de l'Empire",
-      "shop_or_organizer": "Lord of the Games",
-      "format": "Premier",
-      "location": "Lille",
-      "country": "France",
-      "distance_note": null,
-      "status": "Sold Out",
-      "registration_url": "https://www.eventbrite.fr/o/79110845433",
-      "info_url": "https://www.eventbrite.fr/o/79110845433",
-      "is_new": false,
-      "places": {
-        "enrolled": null,
-        "capacity": null,
-        "status": "complet",
-        "source": "Eventbrite : badge 'Sold Out' visible sur la vignette (capture d'écran utilisateur du 07/08)."
-      }
-    },
-    {
-      "date": "2026-10-03",
-      "day_of_week": "Samedi",
-      "type": "weekly",
-      "name": "SWU - Weekly 10h00",
-      "shop_or_organizer": "Ludotrotter Lille",
-      "format": "Premier",
-      "location": "Lille",
-      "country": "France",
-      "distance_note": null,
-      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
-      "info_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
-      "places": {
-        "enrolled": null,
-        "capacity": null,
-        "status": "unknown",
-        "source": "Trouvé le 28/09 sur Billetweb"
-      },
-      "is_new": false
-    },
-    {
-      "date": "2026-10-04",
-      "day_of_week": "Dimanche",
-      "type": "planetary",
-      "name": "Planetary Qualifier Tours",
-      "shop_or_organizer": "Ludotrotter Tours",
-      "format": "Premier",
-      "location": "Tours",
-      "country": "France",
-      "distance_note": "~3h30-3h40, hors zone stricte",
-      "set": "ASH",
-      "registration_url": "https://starwarsunlimited.com/search?store=3947",
-      "info_url": "https://melee.gg/Tournament/View/468379",
-      "places": {
-        "enrolled": null,
-        "capacity": null,
-        "status": "unknown",
-        "source": "Date corrigée le 28/09 (était notée 03/10 par erreur)"
-      },
-      "is_new": false
-    },
-    {
-      "date": "2026-10-06",
-      "day_of_week": "Mardi",
-      "type": "prerelease",
-      "name": "Avant-Première Mondes Natals — Session 1",
-      "shop_or_organizer": "Lord of the Games",
-      "format": "Scellé",
-      "location": "Wasquehal",
-      "country": "France",
-      "distance_note": null,
-      "registration_url": "https://www.eventbrite.fr/e/billets-star-wars-unlimited-avant-premiere-mondes-natals-2002152984473",
-      "info_url": "https://www.eventbrite.fr/e/billets-star-wars-unlimited-avant-premiere-mondes-natals-2002152984473",
-      "places": {
-        "enrolled": null,
-        "capacity": 24,
-        "status": "open",
-        "source": "Eventbrite (trouvé 28/09) — 3 rondes suisses BO3, boîte de pré-lancement incluse"
-      },
-      "price": "35€",
-      "is_new": false
-    },
-    {
-      "date": "2026-10-07",
-      "day_of_week": "Mercredi",
-      "type": "prerelease",
-      "name": "Avant-Première Mondes Natals — Session 2",
-      "shop_or_organizer": "Lord of the Games",
-      "format": "Scellé",
-      "location": "Wasquehal",
-      "country": "France",
-      "distance_note": null,
-      "registration_url": "https://www.eventbrite.fr/e/billets-star-wars-unlimited-avant-premiere-mondes-natals-2002152984473",
-      "info_url": "https://www.eventbrite.fr/e/billets-star-wars-unlimited-avant-premiere-mondes-natals-2002152984473",
-      "places": {
-        "enrolled": null,
-        "capacity": 24,
-        "status": "open",
-        "source": "Eventbrite (trouvé 28/09) — accueil 18h45, deckbuilding 19h15"
-      },
-      "price": "35€",
-      "is_new": false
-    },
     {
       "date": "2026-10-08",
       "day_of_week": "Jeudi",
@@ -274,10 +138,10 @@
       "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
       "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
       "places": {
-        "enrolled": 17,
+        "enrolled": 18,
         "capacity": 20,
         "status": "open",
-        "source": "TCG Arena (compteur direct, trouvé 28/09)"
+        "source": "TCG Arena (compteur direct, 07/10)"
       },
       "price": "30€",
       "is_new": false
@@ -318,7 +182,7 @@
         "enrolled": null,
         "capacity": null,
         "status": "unknown",
-        "source": "Trouvé le 28/09 sur Billetweb"
+        "source": "Billetweb 07/10 : sélecteur jusqu'à 16 places (indicatif, capacité ~16)"
       },
       "is_new": false
     },
@@ -338,7 +202,7 @@
         "enrolled": 11,
         "capacity": 12,
         "status": "open",
-        "source": "TCG Arena (compteur direct, mis à jour)"
+        "source": "TCG Arena (compteur direct, 07/10)"
       },
       "is_new": false
     },
@@ -357,10 +221,30 @@
       "places": {
         "enrolled": null,
         "capacity": 24,
-        "status": "open",
-        "source": "Eventbrite (trouvé 28/09) — 3 pods de 8 joueurs, 3 boosters Homeworlds fournis, 3 rondes suisses BO3"
+        "status": "low",
+        "source": "Eventbrite (trouvé 28/09) — 3 pods de 8 joueurs, 3 boosters Homeworlds fournis, 3 rondes suisses BO3 | Eventbrite 07/10 : \"Presque complet\""
       },
       "price": "20€",
+      "is_new": false
+    },
+    {
+      "date": "2026-10-17",
+      "day_of_week": "Samedi",
+      "type": "weekly",
+      "name": "SWU - Weekly 10h00",
+      "shop_or_organizer": "Ludotrotter Lille",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "info_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "places": {
+        "enrolled": null,
+        "capacity": null,
+        "status": "unknown",
+        "source": "Billetweb 07/10 : sélecteur jusqu'à 14 places (indicatif)"
+      },
       "is_new": true
     },
     {
@@ -376,12 +260,32 @@
       "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
       "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
       "places": {
-        "enrolled": 9,
+        "enrolled": 11,
         "capacity": 12,
         "status": "open",
-        "source": "TCG Arena (compteur direct, mis à jour)"
+        "source": "TCG Arena (compteur direct, 07/10)"
       },
       "is_new": false
+    },
+    {
+      "date": "2026-10-24",
+      "day_of_week": "Samedi",
+      "type": "weekly",
+      "name": "SWU - Weekly 10h00",
+      "shop_or_organizer": "Ludotrotter Lille",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "info_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "places": {
+        "enrolled": null,
+        "capacity": null,
+        "status": "unknown",
+        "source": "Billetweb 07/10 : sélecteur jusqu'à 16 places (indicatif)"
+      },
+      "is_new": true
     },
     {
       "date": "2026-10-29",
@@ -396,10 +300,10 @@
       "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
       "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
       "places": {
-        "enrolled": 10,
+        "enrolled": 8,
         "capacity": 12,
         "status": "open",
-        "source": "TCG Arena (compteur direct, mis à jour)"
+        "source": "TCG Arena (compteur direct, 07/10)"
       },
       "is_new": false
     },
@@ -418,11 +322,11 @@
       "places": {
         "enrolled": null,
         "capacity": 24,
-        "status": "open",
-        "source": "Eventbrite (trouvé 28/09) — 3 à 4 rondes suisses BO3, deck 50 cartes min"
+        "status": "low",
+        "source": "Eventbrite (trouvé 28/09) — 3 à 4 rondes suisses BO3, deck 50 cartes min | Eventbrite 07/10 : \"Presque complet\""
       },
       "price": "10€",
-      "is_new": true
+      "is_new": false
     },
     {
       "date": "2026-10-30",
@@ -465,6 +369,26 @@
         "source": "Fanfinity PlayerLink, billetterie ouverte depuis le 09/09/2026"
       },
       "is_new": false
+    },
+    {
+      "date": "2026-10-31",
+      "day_of_week": "Samedi",
+      "type": "weekly",
+      "name": "SWU - Weekly 10h00",
+      "shop_or_organizer": "Ludotrotter Lille",
+      "format": "Premier",
+      "location": "Lille",
+      "country": "France",
+      "distance_note": null,
+      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "info_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
+      "places": {
+        "enrolled": null,
+        "capacity": null,
+        "status": "unknown",
+        "source": "Billetweb 07/10 : sélecteur jusqu'à 16 places (indicatif)"
+      },
+      "is_new": true
     },
     {
       "date": "2026-11-01",

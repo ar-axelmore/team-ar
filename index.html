@@ -3,164 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alliance Rebelle — Team AR Meta Analysis</title>
+<title>Team AR Meta Analysis — Star Wars: Unlimited</title>
 <style>
   :root { color-scheme: dark; }
   * { box-sizing: border-box; }
   body {
     background: #0f1216; color: #e6e8eb;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    margin: 0; padding: 0 32px 48px;
+    margin: 0; padding: 48px 32px;
   }
   .wrap { max-width: 760px; margin: 0 auto; }
-  .banner {
-    display: flex; align-items: center; gap: 20px;
-    padding: 32px 0 28px; border-bottom: 1px solid #24282f; margin-bottom: 12px;
-  }
-  .banner img {
-    width: 84px; height: 84px; border-radius: 50%; flex-shrink: 0;
-    box-shadow: 0 0 0 2px #3a1414, 0 0 22px rgba(193,68,63,0.35);
-  }
-  .banner-text h1 { font-size: 24px; margin: 0 0 4px; letter-spacing: 0.02em; }
-  .banner-text .site-sub { color: #c1443f; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
-  .disclaimer { color: #6b7280; font-size: 11px; line-height: 1.5; margin-bottom: 28px; max-width: 640px; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .tagline { color: #9aa1ab; font-size: 14px; margin-bottom: 36px; }
   .card {
-    position: relative; display: block; height: 130px; border-radius: 10px; overflow: hidden;
-    margin-bottom: 14px; text-decoration: none; color: inherit;
-    background-size: cover; background-position: center;
-    border: 1px solid #24282f; transition: border-color 0.15s, transform 0.15s;
+    display: block; background: #171b21; border: 1px solid #24282f; border-radius: 10px;
+    padding: 18px 20px; margin-bottom: 14px; text-decoration: none; color: inherit;
+    transition: border-color 0.15s;
   }
-  .card:hover { border-color: #6b5620; transform: scale(1.01); }
-  .card::before {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(15,17,22,0.15) 0%, rgba(15,17,22,0.55) 55%, rgba(15,17,22,0.92) 100%);
-  }
-  .card h2 {
-    position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 14px 18px;
-    font-size: 16px; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.6); z-index: 1;
-  }
-  .card h2 .deck-count-inline {
-    display: block; font-size: 12px; font-weight: 500; color: #7fd39a;
-    margin-top: 3px; text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  }
-  .card .badge {
-    background: rgba(28,43,61,0.85); color: #a9cdf5;
-  }
+  .card:hover { border-color: #3b5a78; }
+  .card h2 { margin: 0 0 4px; font-size: 16px; color: #7fa8d3; }
+  .card p { margin: 0; font-size: 13px; color: #9aa1ab; }
   .section-label {
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;
     color: #6b7280; margin: 28px 0 10px;
-  }
-  .section-label-lg {
-    font-size: 26px; text-transform: none; letter-spacing: 0.01em;
-    color: #e6e8eb; font-weight: 700; margin: 28px 0 14px;
-  }
-  .card-row {
-    display: flex; gap: 14px; margin-bottom: 14px;
-  }
-  .card-row .card {
-    flex: 1 1 0; margin-bottom: 0; min-width: 0;
-  }
-  .card-row .card-tall {
-    height: 390px;
   }
   .badge {
     display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 4px;
     background: #1c2b3d; color: #7fa8d3; margin-left: 8px;
   }
-  .deck-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 14px; margin-bottom: 14px;
-  }
-  .deck-card {
-    display: flex; flex-direction: column; text-decoration: none; color: inherit;
-    background: #171b21; border: 1px solid #24282f; border-radius: 10px; overflow: hidden;
-    transition: border-color 0.15s, transform 0.15s;
-  }
-  .deck-card:hover { border-color: #6b5620; transform: scale(1.02); }
-  .deck-card .deck-title {
-    padding: 10px 10px 8px; font-size: 12.5px; font-weight: 600; line-height: 1.3;
-    text-align: center; border-bottom: 1px solid #24282f;
-  }
-  .deck-card .deck-title .badge { display: block; margin: 4px auto 0; width: fit-content; }
-  .deck-title .rank-num { color: #d4af37; font-weight: 800; margin-right: 4px; }
-  .deck-card .card-img {
-    width: 100%; height: auto; display: block;
-  }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="banner">
-      <img src="alliance_rebelle_logo.jpg" alt="Logo Alliance Rebelle">
-      <div class="banner-text">
-        <div class="site-sub">Site web de l'Alliance Rebelle</div>
-        <h1>Toute l'info SWU</h1>
-      </div>
-    </div>
-    <div class="disclaimer">AR-team is in no way affiliated with Disney or Fantasy Flight Games. Star Wars characters, cards, logos, and art are property of Disney and/or Fantasy Flight Games.</div>
+    <h1>Team AR Meta Analysis</h1>
+    <div class="tagline">Analyse du métagame Star Wars: Unlimited à partir des résultats de compétitions officielles.</div>
 
-    <div class="section-label-lg">Actualité</div>
-    <div class="card-row">
-      <a class="card card-tall" href="evenements_swu.html" style="background-image:url('image_tournoi.jpeg')">
-        <h2>Calendrier des évènements — Team AR<span class="deck-count-inline">Mis à jour le 10/09/2026</span></h2>
-      </a>
-      <a class="card card-tall" href="actualites_swu.html" style="background-image:url('https://starwarsunlimited.com/_next/image?url=https%3A%2F%2Fcdn.starwarsunlimited.com%2F%2FSWH_09_Article_Teaser_preview_b1e030e517.jpg&w=640&q=75')">
-        <h2>Actualités &amp; annonces Star Wars</h2>
-      </a>
-    </div>
-
-    <div class="section-label-lg">Analyse des tournois du SET 8</div>
-    <a class="card card-tall" href="swu_ranking_post_ban.html" style="background-image:url('https://cdn.starwarsunlimited.com/SWH_Button_No_Good_to_Me_Dead_06140337bd.jpg')">
-      <h2>🚫 Synthèse compétitive post-suspension Cad Bane<span class="deck-count-inline">48 tournois &gt; 32 joueurs · 2694 joueurs · Données SWU Competitive Hub</span></h2>
+    <div class="section-label">Évènements</div>
+    <a class="card" href="evenements_swu.html">
+      <h2>Calendrier des évènements SWU <span class="badge">Lille &amp; Europe</span></h2>
+      <p>Weeklies, Store Showdowns, Planetary/Sector/Regional Qualifiers · Dernière mise à jour : 07/10/2026</p>
     </a>
 
-    <div class="section-label-lg">Decks Optimisés par IA</div>
-    <div class="deck-grid">
-      <a class="deck-card" href="deck_type_cadbane_blue.html">
-        <div class="deck-title"><span class="rank-num">#1</span>Cad Bane, Still Faster than You<span class="badge">Blue</span></div>
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_08010011_EN_Cad_Bane_Leader_ec7bb7f9a7.png" alt="Cad Bane">
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_08010020_EN_Nevarro_City_Restored_Base_1aed0bd306.png" alt="Nevarro City, Restored">
-      </a>
-      <a class="deck-card" href="deck_type_vader_yellow.html">
-        <div class="deck-title"><span class="rank-num">#2</span>Darth Vader, Victor Squadron Leader<span class="badge">Yellow</span></div>
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_04010006_EN_Darth_Vader_Leader_dacc2c03a2.png" alt="Darth Vader">
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_04010030_EN_Mos_Eisley_Base_93c54ed4d6.png" alt="Mos Eisley">
-      </a>
-      <a class="deck-card" href="deck_type_luke_datavault.html">
-        <div class="deck-title"><span class="rank-num">#3</span>Luke Skywalker, Hero of Yavin<span class="badge">Data Vault</span></div>
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_04010012_EN_Luke_Skywalker_Leader_2b85b5b1af.png" alt="Luke Skywalker">
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_04010024_EN_Data_Vault_Base_60bed5990a.png" alt="Data Vault">
-      </a>
-      <a class="deck-card" href="deck_type_krennic_blue.html">
-        <div class="deck-title"><span class="rank-num">#4</span>Director Krennic, Amidst My Achievement<span class="badge">Blue</span></div>
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_07010008_EN_Director_Krennic_Leader_c2ef2c962c.png" alt="Director Krennic">
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_08010019_EN_Fortress_of_the_Great_Mothers_Base_88cb8bca99.png" alt="Fortress of the Great Mothers">
-      </a>
-      <a class="deck-card" href="deck_type_ahsoka_blue.html">
-        <div class="deck-title"><span class="rank-num">#5</span>Ahsoka Tano, Trust in the Force<span class="badge">Blue</span></div>
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_08010009_EN_Ahsoka_Tano_Leader_d77ad232df.png" alt="Ahsoka Tano">
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_08010020_EN_Nevarro_City_Restored_Base_1aed0bd306.png" alt="Nevarro City, Restored">
-      </a>
-      <a class="deck-card" href="deck_type_lando_blue.html">
-        <div class="deck-title"><span class="rank-num">#6</span>Lando Calrissian, Full Sabacc<span class="badge">Blue</span></div>
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_07010018_EN_Lando_Calrissian_Leader_6d754de495.png" alt="Lando Calrissian">
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_08010019_EN_Fortress_of_the_Great_Mothers_Base_88cb8bca99.png" alt="Fortress of the Great Mothers">
-      </a>
-      <a class="deck-card" href="deck_type_bobafett_lakecountry.html">
-        <div class="deck-title"><span class="rank-num">#7</span>Boba Fett, Any Methods Necessary<span class="badge">Lake Country</span></div>
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_04010009_EN_Boba_Fett_Leader_2055d09e00.png" alt="Boba Fett">
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_04010031_EN_Lake_Country_Base_7e5f1bfa08.png" alt="Lake Country">
-      </a>
-      <a class="deck-card" href="deck_type_piett_red.html">
-        <div class="deck-title"><span class="rank-num">#8</span>Admiral Piett, Commanding the Armada<span class="badge">Red</span></div>
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_04010005_EN_Admiral_Piett_Leader_bae505b3a0.png" alt="Admiral Piett">
-        <img class="card-img" src="https://cdn.starwarsunlimited.com//card_06010023_EN_Imperial_Prison_Complex_Base_73981b541f.png" alt="Imperial Prison Complex">
-      </a>
-    </div>
+    <div class="section-label">Classement des archétypes</div>
+    <a class="card" href="swu_ranking_season.html">
+      <h2>Classement Saison — 16 compétitions (Set ASH)</h2>
+      <p>Points pondérés par la taille du tournoi · Galactic Championship + 15 Qualifiers/Minors · 6 analyses de deck type disponibles</p>
+    </a>
 
-    <div class="section-label">Ressources de l'Alliance</div>
-    <a class="card" href="https://www.swuhub.com/" target="_blank" rel="noopener" style="background-image:url('https://cdn.starwarsunlimited.com/SWH_Button_No_Good_to_Me_Dead_06140337bd.jpg')">
-      <h2>SWUHub — Base de cartes &amp; outils <span class="badge">Externe</span></h2>
+    <div class="section-label">Analyses de deck type</div>
+    <a class="card" href="deck_type_cadbane_blue.html">
+      <h2>Cad Bane, Still Faster than You <span class="badge">Blue</span></h2>
+      <p>16 decks · Vainqueur du tournoi · Archétype dominant du top 64</p>
+    </a>
+    <a class="card" href="deck_type_ahsoka_blue.html">
+      <h2>Ahsoka Tano, Trust in the Force <span class="badge">Blue</span></h2>
+      <p>7 decks · Archétype très consensuel (plusieurs listes strictement identiques)</p>
+    </a>
+    <a class="card" href="deck_type_krennic_blue.html">
+      <h2>Director Krennic, Amidst My Achievement <span class="badge">Blue</span></h2>
+      <p>5 decks · Base variable d'un deck à l'autre</p>
+    </a>
+    <a class="card" href="deck_type_vader_yellow.html">
+      <h2>Darth Vader, Victor Squadron Leader <span class="badge">Yellow</span></h2>
+      <p>9 decks · 2e archétype du classement · Deck full space (Yellow/vaisseaux)</p>
+    </a>
+    <a class="card" href="deck_type_bobafett_lakecountry.html">
+      <h2>Boba Fett, Any Methods Necessary <span class="badge">Lake Country</span></h2>
+      <p>2 decks · Échantillon réduit, à interpréter avec prudence</p>
+    </a>
+    <a class="card" href="deck_type_piett_red.html">
+      <h2>Admiral Piett, Commanding the Armada <span class="badge">Red</span></h2>
+      <p>2 decks · Échantillon réduit, à interpréter avec prudence</p>
+    </a>
+    <a class="card" href="deck_type_luke_datavault.html">
+      <h2>Luke Skywalker, Hero of Yavin <span class="badge">Data Vault</span></h2>
+      <p>16 decks sur la saison · Deck full escadrons spatiaux</p>
+    </a>
+    <a class="card" href="deck_type_lando_blue.html">
+      <h2>Lando Calrissian, Full Sabacc <span class="badge">30 PV</span></h2>
+      <p>6 decks sur la saison · Ground midrange avec Chimaera/Corona Quatre</p>
+    </a>
+    <a class="card" href="deck_type_luke_datavault.html">
+      <h2>Luke Skywalker, Hero of Yavin <span class="badge">Data Vault</span></h2>
+      <p>16 decks (Saison ASH) · Archétype Space/Escadrons très consensuel</p>
+    </a>
+    <a class="card" href="deck_type_lando_blue.html">
+      <h2>Lando Calrissian, Full Sabacc <span class="badge">Blue</span></h2>
+      <p>7 decks (Saison ASH) · Ground/Mandalorien, base variable</p>
+    </a>
+
+    <div class="section-label">Données</div>
+    <a class="card" href="swu_ranking_data.json">
+      <h2>Fichier de données maître (JSON)</h2>
+      <p>Résultats bruts par compétition, référence des PV de bases, icônes de leaders — sert de source pour régénérer les pages ci-dessus</p>
     </a>
   </div>
 </body>
