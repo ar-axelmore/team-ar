@@ -50,6 +50,21 @@
   .places-full { color:#e6483c; font-weight:700; }
   .places-unknown { color:var(--muted); font-style:italic; }
   .places-note { display:block; font-size:0.68rem; color:var(--muted); font-style:italic; }
+  .wrap { max-width:1200px; }
+  td.team { min-width:130px; }
+  .chip { display:inline-flex; align-items:center; justify-content:center; min-width:26px; height:26px; padding:0 5px; margin:0 3px 3px 0; border-radius:13px; background:#243247; color:#9cc4ff; font-size:0.7rem; font-weight:700; cursor:default; }
+  .chip.me { background:var(--accent); color:#1a1a1a; }
+  .team-count { display:block; font-size:0.72rem; color:var(--muted); margin-bottom:4px; }
+  .join-btn { background:transparent; border:1px solid var(--accent2); color:var(--accent2); border-radius:12px; padding:3px 10px; font-size:0.72rem; cursor:pointer; }
+  .join-btn:hover { background:#1d2a3f; }
+  .join-btn.leave { border-color:var(--muted); color:var(--muted); }
+  .join-btn[disabled] { opacity:0.5; cursor:wait; }
+  tr.has-team td { background:#161d29; }
+  .teambar { margin-top:14px; background:#141b27; border:1px solid #243247; border-radius:8px; padding:10px 14px; font-size:0.85rem; color:var(--muted); display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+  .teambar input { background:#0f1115; border:1px solid var(--border); border-radius:6px; color:var(--text); padding:5px 8px; font-size:0.85rem; width:130px; }
+  .teambar button { background:var(--accent2); color:#0f1115; border:0; border-radius:6px; padding:5px 12px; font-weight:600; cursor:pointer; }
+  .teambar .summary { color:var(--text); font-weight:600; }
+  .teambar .err { color:#ff8f7d; }
   footer { margin-top:40px; color:var(--muted); font-size:0.8rem; line-height:1.6; }
   footer h3 { color:var(--text); font-size:0.95rem; margin-bottom:6px; }
 </style>
@@ -66,6 +81,14 @@
     <div class="warning">
       🔄 Mise à jour du 07/10/2026 : évènements passés retirés. <span class="new-badge">NEW</span> = 3 weeklies Ludotrotter Lille (17, 24 et 31/10, samedi 10h). AP Au Beau Jeu demain (18/20) ; Draft (15/10) et Construit (29/10) chez Lord of the Games presque complets. Aucun nouveau Planetary Qualifier dans la zone. Ludotrotter Faches ajoutée à la surveillance (pas encore d'évènement SWU publié).
     </div>
+    <div class="teambar" id="teambar">
+      <span>👥 <strong>Team AR</strong> :</span>
+      <input id="tb-name" placeholder="Ton prénom" maxlength="30" autocomplete="given-name">
+      <input id="tb-code" placeholder="Code équipe" type="password" autocomplete="off">
+      <button id="tb-save">Valider</button>
+      <span class="summary" id="tb-summary"></span>
+      <span class="err" id="tb-err"></span>
+    </div>
   </header>
 
   <section class="category">
@@ -77,34 +100,34 @@
     </div>
     <table>
       <thead>
-        <tr><th>Date</th><th>Type</th><th>Évènement</th><th>Format</th><th>Lieu</th><th>Pays</th><th>Places</th><th>Inscription</th></tr>
+        <tr><th>Date</th><th>Type</th><th>Évènement</th><th>Format</th><th>Lieu</th><th>Pays</th><th>Places</th><th>Inscription</th><th>Team AR</th></tr>
       </thead>
       <tbody>
-        <tr><td><span class="dow">Jeudi</span>08/10/2026</td><td><span class="type-badge type-prerelease">🎴 AP</span></td><td>Avant-Première Set 9 Homeworlds 19h15 — Au Beau Jeu</td><td><span class="badge badge-limited">Scellé</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">18/20<span class="places-note">30€</span></td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td></tr>
-        <tr><td><span class="dow">Vendredi</span>09/10/2026</td><td><span class="type-badge type-release">🎉 Sortie</span></td><td colspan="6" style="color:#d89dff;font-weight:600;">Sortie officielle du Set 9 — Homeworlds (HMW)</td></tr>
-        <tr><td><span class="dow">Samedi</span>10/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille</td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~16 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td></tr>
-        <tr><td><span class="dow">Jeudi</span>15/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">11/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td></tr>
-        <tr><td><span class="dow">Jeudi</span>15/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi Draft — Set 9 Homeworlds 19h00 — Lord of the Games</td><td><span class="badge badge-limited">Draft</span></td><td>Wasquehal</td><td>🇫🇷 France</td><td class="places places-low">Presque complet<span class="places-note">24 places · 20€, 3 pods de 8, 3 boosters HMW fournis</span></td><td><a class="linkbtn" href="https://www.eventbrite.fr/e/billets-star-wars-unlimited-tournoi-draft-2002328659923" target="_blank">Eventbrite</a></td></tr>
-        <tr><td><span class="dow">Samedi</span>17/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~14 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td></tr>
-        <tr><td><span class="dow">Jeudi</span>22/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">11/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td></tr>
-        <tr><td><span class="dow">Samedi</span>24/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~16 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td></tr>
-        <tr><td><span class="dow">Jeudi</span>29/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">8/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td></tr>
-        <tr><td><span class="dow">Jeudi</span>29/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi Construit 19h00 — Lord of the Games</td><td><span class="badge badge-premier">Premier</span></td><td>Wasquehal</td><td>🇫🇷 France</td><td class="places places-low">Presque complet<span class="places-note">24 places · 10€</span></td><td><a class="linkbtn" href="https://www.eventbrite.fr/e/billets-star-wars-unlimited-tournoi-construit-2002328691016" target="_blank">Eventbrite</a></td></tr>
-        <tr><td><span class="dow">Vendredi</span>30/10/2026</td><td><span class="type-badge type-regional">👑 Regional</span></td><td>Regional Championship Utrecht — Friday Main Event <span class="country">(Sealed Deck)</span></td><td><span class="badge badge-limited">Limited</span></td><td>Utrecht</td><td>🇳🇱 Pays-Bas</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://my.fanfinity.gg/event/regional-championship-friday-main-event-ticket-2i1nqv" target="_blank">50€ - Billetterie</a></td></tr>
-        <tr><td rowspan="2"><span class="dow">Samedi</span>31/10/2026</td><td><span class="type-badge type-regional">👑 Regional</span></td><td>Regional Championship Utrecht — Saturday Main Event</td><td><span class="badge badge-premier">Premier</span></td><td>Utrecht</td><td>🇳🇱 Pays-Bas</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://my.fanfinity.gg/event/regional-championship-saturday-main-event-ticket-o9b7ap" target="_blank">50€ - Billetterie</a></td></tr>
-        <tr><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~16 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td></tr>
-        <tr><td><span class="dow">Dimanche</span>01/11/2026</td><td><span class="type-badge type-regional">👑 Regional</span></td><td>Regional Open</td><td><span class="badge badge-eternal">Eternal</span></td><td>Utrecht</td><td>🇳🇱 Pays-Bas</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://my.fanfinity.gg/event/regional-open-constructed-1b5y4e" target="_blank">50€ - Billetterie</a></td></tr>
-        <tr><td><span class="dow">Dimanche</span>08/11/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Vire</td><td><span class="badge badge-limited">Limited</span></td><td>Vire <span class="country">(~2h30, Normandie)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=2671" target="_blank">Lien</a></td></tr>
-        <tr><td rowspan="3"><span class="dow">Dimanche</span>15/11/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Tournai — Hasard Ludique Tournai</td><td><span class="badge badge-premier">Premier</span></td><td>Rue de l'Yser 19, Tournai <span class="country">(~1h15)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d<span class="places-note">25€</span></td><td><a class="linkbtn" href="https://www.hasardludique.com/fr/produit/15-11-inscription-planetary-qualifier/100038458" target="_blank">Billetterie</a></td></tr>
-        <tr><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Villepinte <span class="country">(organisé par Ludotrotter Lille)</span></td><td><span class="badge badge-premier">Premier</span></td><td>Villepinte <span class="country">(~2h, région parisienne)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=4728" target="_blank">Lien</a></td></tr>
-        <tr><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Mons </td><td><span class="badge badge-premier">Premier</span></td><td>Mons <span class="country">(~1h15)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=444" target="_blank">Lien</a></td></tr>
-        <tr><td><span class="dow">Vendredi</span>20/11/2026</td><td><span class="type-badge type-release">🎉 Sortie</span></td><td colspan="6" style="color:#d89dff;font-weight:600;">Sortie du mini-set Icons (IC27, 194 cartes)</td></tr>
-        <tr><td><span class="dow">Samedi</span>21/11/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Kontich</td><td><span class="badge badge-limited">Limited</span></td><td>Kontich <span class="country">(~2h, région d'Anvers)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=2959" target="_blank">Lien</a></td></tr>
-        <tr><td><span class="dow">Samedi</span>28/11/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Sotteville-lès-Rouen</td><td><span class="badge badge-premier">Premier</span></td><td>Sotteville-lès-Rouen <span class="country">(~2h20)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=4001" target="_blank">Lien</a></td></tr>
-        <tr><td><span class="dow">Samedi</span>05/12/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Ghent</td><td><span class="badge badge-eternal">Eternal</span></td><td>Ghent <span class="country">(~1h30)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=1223" target="_blank">Lien</a></td></tr>
-        <tr><td><span class="dow">Dimanche</span>06/12/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Paris </td><td><span class="badge badge-eternal">Eternal</span></td><td>Paris — Playin Paris BNF <span class="country">(~2h10)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=490" target="_blank">Lien</a></td></tr>
-        <tr><td><span class="dow">Dimanche</span>13/12/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Abbeville </td><td><span class="badge badge-premier">Premier</span></td><td>Abbeville <span class="country">(~1h, Hauts-de-France)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=478" target="_blank">Lien</a></td></tr>
-        <tr><td><span class="dow">Samedi</span>09/01/2027</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Liège </td><td><span class="badge badge-premier">Premier</span></td><td>Liège <span class="country">(~1h30)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=2729" target="_blank">Lien</a></td></tr>
+        <tr data-id="2026-10-08_prerelease_au-beau-jeu"><td><span class="dow">Jeudi</span>08/10/2026</td><td><span class="type-badge type-prerelease">🎴 AP</span></td><td>Avant-Première Set 9 Homeworlds 19h15 — Au Beau Jeu</td><td><span class="badge badge-limited">Scellé</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">18/20<span class="places-note">30€</span></td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td><td class="team"></td></tr>
+        <tr><td><span class="dow">Vendredi</span>09/10/2026</td><td><span class="type-badge type-release">🎉 Sortie</span></td><td colspan="7" style="color:#d89dff;font-weight:600;">Sortie officielle du Set 9 — Homeworlds (HMW)</td></tr>
+        <tr data-id="2026-10-10_weekly_ludotrotter-lille"><td><span class="dow">Samedi</span>10/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille</td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~16 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-15_weekly_au-beau-jeu"><td><span class="dow">Jeudi</span>15/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">11/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-15_weekly_lord-of-the-games"><td><span class="dow">Jeudi</span>15/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi Draft — Set 9 Homeworlds 19h00 — Lord of the Games</td><td><span class="badge badge-limited">Draft</span></td><td>Wasquehal</td><td>🇫🇷 France</td><td class="places places-low">Presque complet<span class="places-note">24 places · 20€, 3 pods de 8, 3 boosters HMW fournis</span></td><td><a class="linkbtn" href="https://www.eventbrite.fr/e/billets-star-wars-unlimited-tournoi-draft-2002328659923" target="_blank">Eventbrite</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-17_weekly_ludotrotter-lille"><td><span class="dow">Samedi</span>17/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~14 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-22_weekly_au-beau-jeu"><td><span class="dow">Jeudi</span>22/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">11/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-24_weekly_ludotrotter-lille"><td><span class="dow">Samedi</span>24/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~16 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-29_weekly_au-beau-jeu"><td><span class="dow">Jeudi</span>29/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi hebdo 19h15 — Au Beau Jeu</td><td><span class="badge badge-premier">Premier</span></td><td>127 rue du Molinel, Lille</td><td>🇫🇷 France</td><td class="places places-ok">8/12</td><td><a class="linkbtn" href="https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6" target="_blank">TCG Arena</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-29_weekly_lord-of-the-games"><td><span class="dow">Jeudi</span>29/10/2026</td><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>Tournoi Construit 19h00 — Lord of the Games</td><td><span class="badge badge-premier">Premier</span></td><td>Wasquehal</td><td>🇫🇷 France</td><td class="places places-low">Presque complet<span class="places-note">24 places · 10€</span></td><td><a class="linkbtn" href="https://www.eventbrite.fr/e/billets-star-wars-unlimited-tournoi-construit-2002328691016" target="_blank">Eventbrite</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-30_regional_utrecht"><td><span class="dow">Vendredi</span>30/10/2026</td><td><span class="type-badge type-regional">👑 Regional</span></td><td>Regional Championship Utrecht — Friday Main Event <span class="country">(Sealed Deck)</span></td><td><span class="badge badge-limited">Limited</span></td><td>Utrecht</td><td>🇳🇱 Pays-Bas</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://my.fanfinity.gg/event/regional-championship-friday-main-event-ticket-2i1nqv" target="_blank">50€ - Billetterie</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-31_regional_utrecht"><td rowspan="2"><span class="dow">Samedi</span>31/10/2026</td><td><span class="type-badge type-regional">👑 Regional</span></td><td>Regional Championship Utrecht — Saturday Main Event</td><td><span class="badge badge-premier">Premier</span></td><td>Utrecht</td><td>🇳🇱 Pays-Bas</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://my.fanfinity.gg/event/regional-championship-saturday-main-event-ticket-o9b7ap" target="_blank">50€ - Billetterie</a></td><td class="team"></td></tr>
+        <tr data-id="2026-10-31_weekly_ludotrotter-lille"><td><span class="type-badge type-weekly">🎲 Weekly</span></td><td>SWU - Weekly 10h00 — Ludotrotter Lille<span class="new-badge">NEW</span></td><td><span class="badge badge-premier">Premier</span></td><td>357 avenue de Dunkerque, Lomme (Lille)</td><td>🇫🇷 France</td><td class="places places-ok">~16 restantes<span class="places-note">indicatif</span></td><td><a class="linkbtn" href="https://www.billetweb.fr/planning-ludotrotter-lille" target="_blank">Billetweb</a></td><td class="team"></td></tr>
+        <tr data-id="2026-11-01_regional_utrecht"><td><span class="dow">Dimanche</span>01/11/2026</td><td><span class="type-badge type-regional">👑 Regional</span></td><td>Regional Open</td><td><span class="badge badge-eternal">Eternal</span></td><td>Utrecht</td><td>🇳🇱 Pays-Bas</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://my.fanfinity.gg/event/regional-open-constructed-1b5y4e" target="_blank">50€ - Billetterie</a></td><td class="team"></td></tr>
+        <tr data-id="2026-11-08_planetary_vire"><td><span class="dow">Dimanche</span>08/11/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Vire</td><td><span class="badge badge-limited">Limited</span></td><td>Vire <span class="country">(~2h30, Normandie)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=2671" target="_blank">Lien</a></td><td class="team"></td></tr>
+        <tr data-id="2026-11-15_planetary_hasard-ludique-tournai"><td rowspan="3"><span class="dow">Dimanche</span>15/11/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Tournai — Hasard Ludique Tournai</td><td><span class="badge badge-premier">Premier</span></td><td>Rue de l'Yser 19, Tournai <span class="country">(~1h15)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d<span class="places-note">25€</span></td><td><a class="linkbtn" href="https://www.hasardludique.com/fr/produit/15-11-inscription-planetary-qualifier/100038458" target="_blank">Billetterie</a></td><td class="team"></td></tr>
+        <tr data-id="2026-11-15_planetary_ludotrotter-lille"><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Villepinte <span class="country">(organisé par Ludotrotter Lille)</span></td><td><span class="badge badge-premier">Premier</span></td><td>Villepinte <span class="country">(~2h, région parisienne)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=4728" target="_blank">Lien</a></td><td class="team"></td></tr>
+        <tr data-id="2026-11-15_planetary_hasard-ludique-mons"><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Mons </td><td><span class="badge badge-premier">Premier</span></td><td>Mons <span class="country">(~1h15)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=444" target="_blank">Lien</a></td><td class="team"></td></tr>
+        <tr><td><span class="dow">Vendredi</span>20/11/2026</td><td><span class="type-badge type-release">🎉 Sortie</span></td><td colspan="7" style="color:#d89dff;font-weight:600;">Sortie du mini-set Icons (IC27, 194 cartes)</td></tr>
+        <tr data-id="2026-11-21_planetary_kontich"><td><span class="dow">Samedi</span>21/11/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Kontich</td><td><span class="badge badge-limited">Limited</span></td><td>Kontich <span class="country">(~2h, région d'Anvers)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=2959" target="_blank">Lien</a></td><td class="team"></td></tr>
+        <tr data-id="2026-11-28_planetary_sotteville-les-rouen"><td><span class="dow">Samedi</span>28/11/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Sotteville-lès-Rouen</td><td><span class="badge badge-premier">Premier</span></td><td>Sotteville-lès-Rouen <span class="country">(~2h20)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=4001" target="_blank">Lien</a></td><td class="team"></td></tr>
+        <tr data-id="2026-12-05_planetary_ghent"><td><span class="dow">Samedi</span>05/12/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Ghent</td><td><span class="badge badge-eternal">Eternal</span></td><td>Ghent <span class="country">(~1h30)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=1223" target="_blank">Lien</a></td><td class="team"></td></tr>
+        <tr data-id="2026-12-06_planetary_playin-paris-bnf"><td><span class="dow">Dimanche</span>06/12/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Paris </td><td><span class="badge badge-eternal">Eternal</span></td><td>Paris — Playin Paris BNF <span class="country">(~2h10)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=490" target="_blank">Lien</a></td><td class="team"></td></tr>
+        <tr data-id="2026-12-13_planetary_maxi-reves"><td><span class="dow">Dimanche</span>13/12/2026</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Abbeville </td><td><span class="badge badge-premier">Premier</span></td><td>Abbeville <span class="country">(~1h, Hauts-de-France)</span></td><td>🇫🇷 France</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=478" target="_blank">Lien</a></td><td class="team"></td></tr>
+        <tr data-id="2027-01-09_planetary_toysplanets-dragon-comics"><td><span class="dow">Samedi</span>09/01/2027</td><td><span class="type-badge type-planetary">🪐 Planetary</span></td><td>Planetary Qualifier Liège </td><td><span class="badge badge-premier">Premier</span></td><td>Liège <span class="country">(~1h30)</span></td><td>🇧🇪 Belgique</td><td class="places places-unknown">n/d</td><td><a class="linkbtn" href="https://starwarsunlimited.com/search?store=2729" target="_blank">Lien</a></td><td class="team"></td></tr>
       </tbody>
     </table>
     <div class="empty-note" style="margin-top:10px;">
@@ -134,5 +157,85 @@
     Zone "3h de Lille" actuelle : Hauts-de-France, Île-de-France, Normandie, ouest du Grand Est (jusqu'à Reims), Belgique entière, sud des Pays-Bas, ouest de l'Allemagne (jusqu'à Cologne/Aix-la-Chapelle), Royaume-Uni Sud-Est, Luxembourg. Ajustable sur demande.
   </footer>
 </div>
+<script>
+// ⚙️ Colle ici l'URL « …/exec » de ton application web Google Apps Script (voir apps_script_team_ar.gs)
+const API_URL = 'https://script.google.com/macros/s/AKfycbwvfUSQ2lMmEBfTmXTJuWakC4rz-UwRCVL9qDOFH9ta9Y_xpzIMBGIEdGyPQzFfct3oXw/exec';
+
+(function () {
+  const $ = id => document.getElementById(id);
+  const store = {
+    get(k) { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+  let me = store.get('swu_name'), code = store.get('swu_code'), regs = [];
+  $('tb-name').value = me; $('tb-code').value = code;
+
+  const initials = n => {
+    const w = n.trim().split(/[\s-]+/).filter(Boolean);
+    return (w.length > 1 ? w.map(x => x[0]).join('').slice(0, 3) : n.trim().slice(0, 2)).toUpperCase();
+  };
+  const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const mine = r => r.name.toLowerCase() === me.trim().toLowerCase();
+
+  function render() {
+    let total = 0, slots = 0;
+    document.querySelectorAll('tr[data-id]').forEach(tr => {
+      const id = tr.dataset.id, cell = tr.querySelector('td.team');
+      const list = regs.filter(r => r.id === id);
+      const joined = me && list.some(mine);
+      let html = '';
+      if (list.length) {
+        total += list.length; slots++;
+        html += '<span class="team-count">' + list.length + ' inscrit' + (list.length > 1 ? 's' : '') + '</span>';
+        html += list.map(r => '<span class="chip' + (mine(r) ? ' me' : '') + '" title="' + esc(r.name) + '">' + esc(initials(r.name)) + '</span>').join('');
+        html += '<br>';
+      }
+      if (API_URL) html += '<button class="join-btn' + (joined ? ' leave' : '') + '" data-id="' + id + '">' + (joined ? 'Je ne viens plus' : 'Je participe') + '</button>';
+      cell.innerHTML = html;
+      tr.classList.toggle('has-team', list.length > 0);
+    });
+    $('tb-summary').textContent = !API_URL ? '' : (total ? total + ' inscription' + (total > 1 ? 's' : '') + ' sur ' + slots + ' évènement' + (slots > 1 ? 's' : '') : 'Aucune inscription pour le moment');
+    if (!API_URL) $('tb-err').textContent = 'Fonction équipe pas encore activée (URL du script à renseigner).';
+  }
+
+  async function load() {
+    if (!API_URL) return render();
+    try {
+      const r = await fetch(API_URL);
+      const j = await r.json();
+      regs = j.registrations || [];
+      $('tb-err').textContent = '';
+    } catch (e) { $('tb-err').textContent = 'Impossible de lire les inscriptions pour le moment.'; }
+    render();
+  }
+
+  async function post(action, id) {
+    const r = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action, id, name: me.trim(), code }) });
+    return r.json();
+  }
+
+  $('tb-save').addEventListener('click', () => {
+    me = $('tb-name').value; code = $('tb-code').value;
+    store.set('swu_name', me); store.set('swu_code', code);
+    $('tb-err').textContent = ''; render();
+  });
+
+  document.addEventListener('click', async ev => {
+    const b = ev.target.closest('.join-btn'); if (!b) return;
+    if (!me.trim() || !code) { $('tb-err').textContent = 'Renseigne ton prénom et le code équipe, puis clique sur Valider.'; return; }
+    const id = b.dataset.id, leaving = b.classList.contains('leave');
+    b.disabled = true;
+    try {
+      const j = await post(leaving ? 'remove' : 'add', id);
+      if (!j.ok) $('tb-err').textContent = j.error === 'code' ? 'Code équipe incorrect.' : 'Erreur, réessaie.';
+      else $('tb-err').textContent = '';
+    } catch (e) { $('tb-err').textContent = 'Erreur réseau, réessaie.'; }
+    await load();
+  });
+
+  load();
+  if (API_URL) setInterval(load, 60000);
+})();
+</script>
 </body>
 </html>
