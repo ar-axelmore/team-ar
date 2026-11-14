@@ -1,8 +1,8 @@
 {
   "meta": {
     "description": "Base de suivi des évènements Star Wars Unlimited pour Team AR : weeklies à Lille (<20 min), Planetary Qualifiers (<3h de Lille), Sector & Regional Qualifiers en Europe.",
-    "last_updated": "2026-11-09",
-    "notes": "MISE À JOUR MAJEURE du 28/09/2026 : (1) AVANT-PREMIÈRES SET 9 TROUVÉES : Au Beau Jeu (8/10, 19h15, 30€, session unique) et Lord of the Games (6 et 7/10, 19h00, 35€, 2 sessions de 24 places, boîte de pré-lancement incluse). Ludotrotter et Rocambole : rien trouvé. (2) Icons (mini-set IC27, 194 cartes) confirmé pour le 20/11/2026, ajouté au calendrier comme repère. (3) CORRECTIONS de dates suite à re-vérification swu-competitivehub : Tours était noté 03/10, correct = 04/10 (Ludotrotter Tours, différent de Ludotrotter Lille) ; Villepinte et Mons étaient notés 14/11, correct = 15/11 (même jour que Tournai — grosse journée belgo-française le 15/11 avec 3 PQ dans la zone). (4) 3 nouveaux Planetary Qualifiers Set 9 ajoutés dans la zone : Paris Eternal (06/12), Abbeville (13/12, Hauts-de-France), Liège Belgique (09/01/2027). (5) Ludotrotter : 2 nouvelles dates weekly trouvées (03/10, 10/10, créneau 10h00 au lieu de 10h30). (6) Événement du 24/09 (passé) retiré. AJOUT (2e passage 28/09) : 3 évènements manquants trouvés chez Lord of the Games, signalés par l'utilisateur — Tournoi Draft le 15/10 (19h, 20€, 24 places/3 pods, 3 boosters Homeworlds fournis, format Draft Set 9), Tournoi Construit le 29/10 (19h, 10€, 24 places, format Premier classique), et confirmation de l'heure du Store Showdown du 3/10 (10h00, déjà noté Complet). Ces 2 nouveaux tournois (Draft + Construit) semblent être une reprise de rythme régulier chez Lord of the Games après une pause — à surveiller si d'autres dates suivent en novembre. | MAJ 07/10/2026 : (1) évènements passés (≤07/10) retirés (Showdown Ludotrotter 27/09, weeklies 01/10 et 03/10, Showdown LotG 03/10, PQ Tours 04/10, AP LotG 6-7/10). (2) badges NEW réinitialisés ; NEW = 3 weeklies Ludotrotter Lille 17, 24, 31/10 (Billetweb, page directe https://www.billetweb.fr/shop.php?event=planning-ludotrotter-lille : ouvrir chaque date de l'accordéon, lire les lignes 'Star Wars Unlimited - Weekly - 10h00'). (3) Places : Au Beau Jeu AP 18/20 ; weeklies 11/12, 11/12, 8/12 ; LotG Draft 15/10 et Construit 29/10 'Presque complet'. (4) Hub competitivehub (238 évènements) : aucun nouveau PQ dans la zone 3h ; Tournai absent du hub mais confirmé par le locator FFG (15/11, 9h30, 25€, Rue de l'Yser 19). Hors zone ou douteux non ajoutés : Haarlem (NL, 07/11, ~4h), Essen (DE, 21/11, ~4h30), Brighton (UK, 21/11), 'Saint-Hubert / Boutique Awesome' 07/11 (probablement Saint-Hubert, Québec). Nexus Qualifier HMW Londres (Spellbound Games) 10/10 : hors zone. (5) Locator FFG : AP Homeworlds Albion (Kortrijk, BE) 10/10 13h, 30 places, marquée 'Uitgesteld' (reportée) → non ajoutée. (6) Ludotrotter Faches ajoutée aux boutiques à surveiller (planning introuvable pour l'instant). (7) Rocambole : site non accessible depuis le navigateur ce soir, non revérifié. | Faches : page Facebook lue (teaser d'ouverture du 07/10, aucun évènement SWU lisible sans connexion). | 08/10/2026 : ajout d'un champ 'id' stable par évènement (date_type_boutique) utilisé par la colonne Team AR (inscriptions via Google Sheet + Apps Script, voir apps_script_team_ar.gs). Ne pas changer les id d'un évènement existant sinon les inscriptions sont perdues. | 08/10/2026 : ajout du type 'training' (entraînements Team AR chez Alex, QG) — prochain : samedi 17/10, 16h30-22h00. Demander à Alex les prochaines dates à chaque mise à jour. Inscriptions Team AR : initiales calculées côté page (2 lettres, 3+ si doublon), couleur stable par personne. | MAJ 04/11/2026 (demandée le 03/11 au soir) : (1) évènements passés (<04/11) retirés. (2) NEW réinitialisés ; NEW = 4 weeklies Au Beau Jeu (5, 12, 19, 26/11, tous COMPLETS : 13/12, 15/12, 13/12, 13/12), 4 weeklies Ludotrotter Lille (samedis 7, 14, 21, 28/11 10h, Billetweb), Lord of the Games : Tournoi Construit 7/11 14h (10€), Weekly Play 21/11 15h (5€, 16 places), STORE SHOWDOWN Mondes Natals 5/12 10h (15€, 20 places, déjà SOLD OUT) ; Sector Qualifier Wroclaw 23/01/2027 (Pologne, Europe). (3) Hub competitivehub (235 évènements) : aucun nouveau PQ dans la zone 3h (Nancy 15/11, Milton Keynes 19/12, London 9/01, Hamburg 19/12 = hors zone ou borderline, non ajoutés). (4) Locator FFG autour de Tournai : seul le PQ Hasard Ludique du 15/11 (9h30, 25€) ; rien d'autre. (5) Rocambole : tag SWU inchangé (seul le Showdown de l'été), rien de nouveau. (6) Ludotrotter Faches non revérifiée (Facebook protégé par connexion). (7) Aucune date d'entraînement QG communiquée depuis le 17/10 : à demander à Alex. (8) Piège Eventbrite : le statut qualitatif ('Ça va vite', 'Sold Out') est AVANT le titre de l'évènement dans le texte de la page.  | MAJ 09/11/2026 : (1) retirés : weekly AbJ 05/11, Ludotrotter 07/11, LotG Construit 07/11, PQ Vire 08/11. (2) NEW réinitialisés ; NEW = Sector Open Wroclaw (24/01/2027, Limited, 50€, Fanfinity). Main Event Wroclaw précisé (23/01, Premier, 50€, billetterie my.fanfinity.gg) ; date d'ouverture des ventes non publiée. (3) Au Beau Jeu : 3 weeklies restants (12, 19, 26/11) tous COMPLETS (17/14, 14/14, 15/14 — la jauge est passée de 12 à 14 joueurs). (4) Lord of the Games : Weekly Play 21/11 sans badge de tension (places dispo), Store Showdown 05/12 toujours Sold Out ; aucun nouvel évènement SWU. (5) Ludotrotter Lille : 3 weeklies samedi (14, 21, 28/11) toujours ouverts. (6) Hub (213 évènements) : nouveaux hors-zone/borderline non ajoutés : London 28/11 (Spellbound Games), Southampton 06/12 (Board in the City). PQ zone 3h inchangés (Tournai/Mons/Villepinte 15/11, Kontich 21/11, Sotteville 28/11, Ghent 05/12, Paris 06/12, Abbeville 13/12, Liège 09/01). (7) Locator FFG autour de Tournai : seul le PQ Hasard Ludique du 15/11 (9h30, 25€). (8) Rocambole : rien de nouveau. Ludotrotter Faches non revérifiée. Pas de nouvelle date d'entraînement QG communiquée.",
+    "last_updated": "2026-11-14",
+    "notes": "MISE À JOUR MAJEURE du 28/09/2026 : (1) AVANT-PREMIÈRES SET 9 TROUVÉES : Au Beau Jeu (8/10, 19h15, 30€, session unique) et Lord of the Games (6 et 7/10, 19h00, 35€, 2 sessions de 24 places, boîte de pré-lancement incluse). Ludotrotter et Rocambole : rien trouvé. (2) Icons (mini-set IC27, 194 cartes) confirmé pour le 20/11/2026, ajouté au calendrier comme repère. (3) CORRECTIONS de dates suite à re-vérification swu-competitivehub : Tours était noté 03/10, correct = 04/10 (Ludotrotter Tours, différent de Ludotrotter Lille) ; Villepinte et Mons étaient notés 14/11, correct = 15/11 (même jour que Tournai — grosse journée belgo-française le 15/11 avec 3 PQ dans la zone). (4) 3 nouveaux Planetary Qualifiers Set 9 ajoutés dans la zone : Paris Eternal (06/12), Abbeville (13/12, Hauts-de-France), Liège Belgique (09/01/2027). (5) Ludotrotter : 2 nouvelles dates weekly trouvées (03/10, 10/10, créneau 10h00 au lieu de 10h30). (6) Événement du 24/09 (passé) retiré. AJOUT (2e passage 28/09) : 3 évènements manquants trouvés chez Lord of the Games, signalés par l'utilisateur — Tournoi Draft le 15/10 (19h, 20€, 24 places/3 pods, 3 boosters Homeworlds fournis, format Draft Set 9), Tournoi Construit le 29/10 (19h, 10€, 24 places, format Premier classique), et confirmation de l'heure du Store Showdown du 3/10 (10h00, déjà noté Complet). Ces 2 nouveaux tournois (Draft + Construit) semblent être une reprise de rythme régulier chez Lord of the Games après une pause — à surveiller si d'autres dates suivent en novembre. | MAJ 07/10/2026 : (1) évènements passés (≤07/10) retirés (Showdown Ludotrotter 27/09, weeklies 01/10 et 03/10, Showdown LotG 03/10, PQ Tours 04/10, AP LotG 6-7/10). (2) badges NEW réinitialisés ; NEW = 3 weeklies Ludotrotter Lille 17, 24, 31/10 (Billetweb, page directe https://www.billetweb.fr/shop.php?event=planning-ludotrotter-lille : ouvrir chaque date de l'accordéon, lire les lignes 'Star Wars Unlimited - Weekly - 10h00'). (3) Places : Au Beau Jeu AP 18/20 ; weeklies 11/12, 11/12, 8/12 ; LotG Draft 15/10 et Construit 29/10 'Presque complet'. (4) Hub competitivehub (238 évènements) : aucun nouveau PQ dans la zone 3h ; Tournai absent du hub mais confirmé par le locator FFG (15/11, 9h30, 25€, Rue de l'Yser 19). Hors zone ou douteux non ajoutés : Haarlem (NL, 07/11, ~4h), Essen (DE, 21/11, ~4h30), Brighton (UK, 21/11), 'Saint-Hubert / Boutique Awesome' 07/11 (probablement Saint-Hubert, Québec). Nexus Qualifier HMW Londres (Spellbound Games) 10/10 : hors zone. (5) Locator FFG : AP Homeworlds Albion (Kortrijk, BE) 10/10 13h, 30 places, marquée 'Uitgesteld' (reportée) → non ajoutée. (6) Ludotrotter Faches ajoutée aux boutiques à surveiller (planning introuvable pour l'instant). (7) Rocambole : site non accessible depuis le navigateur ce soir, non revérifié. | Faches : page Facebook lue (teaser d'ouverture du 07/10, aucun évènement SWU lisible sans connexion). | 08/10/2026 : ajout d'un champ 'id' stable par évènement (date_type_boutique) utilisé par la colonne Team AR (inscriptions via Google Sheet + Apps Script, voir apps_script_team_ar.gs). Ne pas changer les id d'un évènement existant sinon les inscriptions sont perdues. | 08/10/2026 : ajout du type 'training' (entraînements Team AR chez Alex, QG) — prochain : samedi 17/10, 16h30-22h00. Demander à Alex les prochaines dates à chaque mise à jour. Inscriptions Team AR : initiales calculées côté page (2 lettres, 3+ si doublon), couleur stable par personne. | MAJ 04/11/2026 (demandée le 03/11 au soir) : (1) évènements passés (<04/11) retirés. (2) NEW réinitialisés ; NEW = 4 weeklies Au Beau Jeu (5, 12, 19, 26/11, tous COMPLETS : 13/12, 15/12, 13/12, 13/12), 4 weeklies Ludotrotter Lille (samedis 7, 14, 21, 28/11 10h, Billetweb), Lord of the Games : Tournoi Construit 7/11 14h (10€), Weekly Play 21/11 15h (5€, 16 places), STORE SHOWDOWN Mondes Natals 5/12 10h (15€, 20 places, déjà SOLD OUT) ; Sector Qualifier Wroclaw 23/01/2027 (Pologne, Europe). (3) Hub competitivehub (235 évènements) : aucun nouveau PQ dans la zone 3h (Nancy 15/11, Milton Keynes 19/12, London 9/01, Hamburg 19/12 = hors zone ou borderline, non ajoutés). (4) Locator FFG autour de Tournai : seul le PQ Hasard Ludique du 15/11 (9h30, 25€) ; rien d'autre. (5) Rocambole : tag SWU inchangé (seul le Showdown de l'été), rien de nouveau. (6) Ludotrotter Faches non revérifiée (Facebook protégé par connexion). (7) Aucune date d'entraînement QG communiquée depuis le 17/10 : à demander à Alex. (8) Piège Eventbrite : le statut qualitatif ('Ça va vite', 'Sold Out') est AVANT le titre de l'évènement dans le texte de la page.  | MAJ 09/11/2026 : (1) retirés : weekly AbJ 05/11, Ludotrotter 07/11, LotG Construit 07/11, PQ Vire 08/11. (2) NEW réinitialisés ; NEW = Sector Open Wroclaw (24/01/2027, Limited, 50€, Fanfinity). Main Event Wroclaw précisé (23/01, Premier, 50€, billetterie my.fanfinity.gg) ; date d'ouverture des ventes non publiée. (3) Au Beau Jeu : 3 weeklies restants (12, 19, 26/11) tous COMPLETS (17/14, 14/14, 15/14 — la jauge est passée de 12 à 14 joueurs). (4) Lord of the Games : Weekly Play 21/11 sans badge de tension (places dispo), Store Showdown 05/12 toujours Sold Out ; aucun nouvel évènement SWU. (5) Ludotrotter Lille : 3 weeklies samedi (14, 21, 28/11) toujours ouverts. (6) Hub (213 évènements) : nouveaux hors-zone/borderline non ajoutés : London 28/11 (Spellbound Games), Southampton 06/12 (Board in the City). PQ zone 3h inchangés (Tournai/Mons/Villepinte 15/11, Kontich 21/11, Sotteville 28/11, Ghent 05/12, Paris 06/12, Abbeville 13/12, Liège 09/01). (7) Locator FFG autour de Tournai : seul le PQ Hasard Ludique du 15/11 (9h30, 25€). (8) Rocambole : rien de nouveau. Ludotrotter Faches non revérifiée. Pas de nouvelle date d'entraînement QG communiquée. | MAJ 14/11/2026 : retirés (passés) AbJ weekly 12/11 et Ludotrotter weekly 14/11. NEW = Store Showdown Au Beau Jeu 21/11 (10h15, 15€, 8/16), sortie set 10 Legacy of Skywalker (mars 2027, date exacte et AP non annoncées ; ligne release à date approximative 'Mars 2027', clé id date 2027-03-01), Galactic Championship 2027 (hub : 21/05/2027, Anaheim, FFG, capacité 2042 ; Disneyland Resort, 3 jours en mai ; billetterie annoncée ouverte fin oct. selon Lorenzone mais prix/date non publiés). AbJ weeklies 19/11 (14/14) et 26/11 (16/14) complets. LotG : Weekly Play 21/11 'Ça va vite', Showdown 05/12 Sold Out, rien de nouveau en SWU jusqu'au 23/12. Ludotrotter : weeklies 21 et 28/11 (16 places indicatives). Rocambole : rien. Tournai : seul PQ Hasard Ludique 15/11 9h30. Hub : aucun nouveau PQ zone 3h. Wroclaw confirmé (Gem Hotel, 23-24/01).",
     "reference_location": "Lille, France",
     "zone_3h": {
       "description": "Zone de référence pour le filtre '<3h de route de Lille' appliqué aux Planetary Qualifiers",
@@ -35,7 +35,8 @@
       "regional": "Regional Qualifier / Championship",
       "prerelease": "Avant-première (AP) : évènement casual organisé par chaque boutique juste avant la sortie officielle d'un nouveau set, permettant de jouer avec les nouvelles cartes en premier (format scellé/sealed).",
       "release": "Sortie officielle d'un nouveau set de cartes (pas un tournoi) — repère chronologique pour situer les Store Showdown/AP/Qualifiers autour de la sortie.",
-      "training": "Entraînement d'équipe Team AR au QG (chez Alex), pas une boutique. Dates communiquées par Alex dans le chat."
+      "training": "Entraînement d'équipe Team AR au QG (chez Alex), pas une boutique. Dates communiquées par Alex dans le chat.",
+      "galactic": "Galactic Championship : finale annuelle (3 jours, tournoi principal + opens + évènements annexes)"
     }
   },
   "sources": {
@@ -127,50 +128,6 @@
   },
   "events": [
     {
-      "id": "2026-11-12_weekly_au-beau-jeu",
-      "date": "2026-11-12",
-      "day_of_week": "Jeudi",
-      "type": "weekly",
-      "name": "Tournoi hebdo 19h15",
-      "shop_or_organizer": "Au Beau Jeu",
-      "format": "Premier",
-      "location": "Lille",
-      "country": "France",
-      "distance_note": null,
-      "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
-      "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
-      "places": {
-        "enrolled": 17,
-        "capacity": 14,
-        "status": "full",
-        "source": "TCG Arena (compteur direct, 09/11) : 17/14, complet (jauge relevée de 12 à 14)"
-      },
-      "price": "6€",
-      "is_new": false
-    },
-    {
-      "id": "2026-11-14_weekly_ludotrotter-lille",
-      "date": "2026-11-14",
-      "day_of_week": "Samedi",
-      "type": "weekly",
-      "name": "SWU - Weekly 10h00",
-      "shop_or_organizer": "Ludotrotter Lille",
-      "format": "Premier",
-      "location": "Lille",
-      "country": "France",
-      "distance_note": null,
-      "registration_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
-      "info_url": "https://www.billetweb.fr/planning-ludotrotter-lille",
-      "places": {
-        "enrolled": null,
-        "capacity": null,
-        "status": "unknown",
-        "source": "Billetweb 09/11 : sélecteur jusqu'à 16 places (indicatif)"
-      },
-      "price": null,
-      "is_new": false
-    },
-    {
       "date": "2026-11-15",
       "day_of_week": "Dimanche",
       "type": "planetary",
@@ -253,7 +210,7 @@
         "enrolled": 14,
         "capacity": 14,
         "status": "full",
-        "source": "TCG Arena (compteur direct, 09/11) : 14/14, complet (jauge relevée de 12 à 14)"
+        "source": "TCG Arena (compteur direct, 14/11) : 14/14, complet"
       },
       "price": "6€",
       "is_new": false
@@ -302,6 +259,28 @@
       "id": "2026-11-21_planetary_kontich"
     },
     {
+      "id": "2026-11-21_showdown_au-beau-jeu",
+      "date": "2026-11-21",
+      "day_of_week": "Samedi",
+      "type": "showdown",
+      "name": "Store Showdown Mondes Natals 10h15 — Au Beau Jeu",
+      "shop_or_organizer": "Au Beau Jeu",
+      "format": "Premier",
+      "location": "127 rue du Molinel, Lille",
+      "country": "France",
+      "distance_note": "Lille centre",
+      "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
+      "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
+      "places": {
+        "enrolled": 8,
+        "capacity": 16,
+        "status": "ok",
+        "source": "TCG Arena (compteur direct, 14/11) : 8/16"
+      },
+      "price": "15€",
+      "is_new": true
+    },
+    {
       "id": "2026-11-21_weekly_lord-of-the-games",
       "date": "2026-11-21",
       "day_of_week": "Samedi",
@@ -317,8 +296,8 @@
       "places": {
         "enrolled": null,
         "capacity": 16,
-        "status": "open",
-        "source": "Eventbrite 09/11 : aucun badge de tension (\"Libre\") ; 15h-18h, 16 places, 1 booster Weekly Play offert (set 9)"
+        "status": "low",
+        "source": "Eventbrite 14/11 : badge \"Ça va vite\" ; 15h-18h, 16 places"
       },
       "price": "5€",
       "is_new": false
@@ -340,7 +319,7 @@
         "enrolled": null,
         "capacity": null,
         "status": "unknown",
-        "source": "Billetweb 09/11 : sélecteur jusqu'à 16 places (indicatif)"
+        "source": "Billetweb 14/11 : sélecteur jusqu'à 16 places (indicatif)"
       },
       "price": null,
       "is_new": false
@@ -359,10 +338,10 @@
       "registration_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
       "info_url": "https://tcg-arena.aubeaujeu.com/events?tab=upcoming&tcg=6",
       "places": {
-        "enrolled": 15,
+        "enrolled": 16,
         "capacity": 14,
         "status": "full",
-        "source": "TCG Arena (compteur direct, 09/11) : 15/14, complet (jauge relevée de 12 à 14)"
+        "source": "TCG Arena (compteur direct, 14/11) : 16/14, complet"
       },
       "price": "6€",
       "is_new": false
@@ -406,7 +385,7 @@
         "enrolled": null,
         "capacity": null,
         "status": "unknown",
-        "source": "Billetweb 09/11 : sélecteur jusqu'à 16 places (indicatif)"
+        "source": "Billetweb 14/11 : sélecteur jusqu'à 16 places (indicatif)"
       },
       "price": null,
       "is_new": false
@@ -450,7 +429,7 @@
         "enrolled": null,
         "capacity": 20,
         "status": "full",
-        "source": "Eventbrite 09/11 : Sold Out. 20 places, accueil 9h30, Top 8, tapis officiel au vainqueur"
+        "source": "Eventbrite 14/11 : Sold Out"
       },
       "price": "15€",
       "is_new": false
@@ -563,6 +542,50 @@
         "source": "Fanfinity 09/11 : Sector Open 24/01 9h, €50, Sealed Deck"
       },
       "price": "€50.00",
+      "is_new": false
+    },
+    {
+      "id": "2027-03-01_release_legacy-of-skywalker-set-10",
+      "date": "2027-03-01",
+      "date_approx": "Mars 2027",
+      "day_of_week": "",
+      "type": "release",
+      "name": "Sortie du set 10 : Legacy of Skywalker (mars 2027, date exacte et avant-premières non annoncées)",
+      "shop_or_organizer": null,
+      "format": null,
+      "location": null,
+      "country": null,
+      "distance_note": null,
+      "registration_url": null,
+      "info_url": "https://themythicstore.com/blogs/daily-news/star-wars-unlimited-everything-we-know-for-2027",
+      "places": {
+        "enrolled": null,
+        "capacity": null,
+        "status": "n/a",
+        "source": null
+      },
+      "is_new": true
+    },
+    {
+      "id": "2027-05-21_galactic_anaheim",
+      "date": "2027-05-21",
+      "day_of_week": "Vendredi",
+      "type": "galactic",
+      "name": "Galactic Championship 2027 (Saison 2) — Disneyland Resort",
+      "shop_or_organizer": "FFG",
+      "format": "Premier / Eternal",
+      "location": "Anaheim, CA (Disneyland Resort)",
+      "country": "USA",
+      "distance_note": "Hors zone",
+      "registration_url": "https://galacticchampionship.starwarsunlimited.com/",
+      "info_url": "https://www.laughingplace.com/disney-parks/star-wars-unlimited-galactic-championship-2027-dlr/",
+      "places": {
+        "enrolled": null,
+        "capacity": 2042,
+        "status": "unknown",
+        "source": "SWU Competitive Hub 14/11 : 21/05/2027, capacité 2042 ; 3 jours en mai 2027, dates exactes et billetterie à confirmer"
+      },
+      "price": null,
       "is_new": true
     }
   ],
